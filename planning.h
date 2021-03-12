@@ -3,7 +3,7 @@
 #include<QString>
 #include<QSqlQuery>
 #include<QsqlQueryModel>
-
+//test
 class planning
 {
     QString absence, emploi,nom;
