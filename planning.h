@@ -18,7 +18,7 @@ public:
     //Getters
     QString get_nom(){return nom;}
     QString get_emploi(){return emploi;}
-    QString get_absence(){return service;}
+    QString get_absence(){return absence;}
     int get_cin(){return cin;}
 
 
