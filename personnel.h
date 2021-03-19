@@ -1,44 +1,32 @@
 #ifndef PERSONNEL_H
 #define PERSONNEL_H
-#include<QString>
-#include<QSqlQuery>
-#include<QSqlQueryModel>
+#include <QString>
+#include <QSqlQueryModel>
 
-class personnel
+class Personnel
 {
-    QString nom, mail,service, mot_de_passe;
-    int cin,tel;
-
 public:
-
-    //Constructeurs
-    personnel(){}
-    personnel(int,int,QString,QString,QString,QString);
-
-    //Getters
-    QString get_nom(){return nom;}
-    QString get_mail(){return mail;}
-    QString get_service(){return service;}
-    QString get_mot_de_passe(){return mot_de_passe;}
-    int get_cin(){return cin;}
-    int get_tel(){return tel;}
-
-     //Setters
-    void set_nom(QString n){nom=n;}
-    void set_mail(QString m){mail=m;}
-    void set_service(QString s){service=s;}
-    void set_mot_de_passe(QString x){mot_de_passe=x;}
-    void set_cin(int cin){this->cin=cin;}
-    void set_tel(int tel){this->tel=tel;}
-
-    //Fonctionnalites de Base relatives a l'entite commande
+    Personnel();
+    Personnel(int,int,QString,QString,QString,QString);
+    int getcin();
+    int gettel();
+    QString getservice();
+    QString getnom();
+    QString getmail();
+    QString getmot_de_passe();
+    void setcin(int);
+    void settel(int);
+    void setservice(QString);
+    void setnom(QString);
+    void setmail(QString);
+    void setmot_de_passe(QString);
     bool ajouter();
-    QSqlQueryModel * afficher();
-    bool supprimer (int);
+    QSqlQueryModel* afficher();
+    bool supprimer(int);
 
-
-
+private:
+    int tel,cin;
+    QString nom, mail, service,mot_de_passe;
 };
-
 
 #endif // PERSONNEL_H
