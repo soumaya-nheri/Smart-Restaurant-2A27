@@ -29,15 +29,18 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     connection.cpp \
-    personnel.cpp
+    personnel.cpp \
+    supprimer.cpp
 
 HEADERS += \
         mainwindow.h \
     connection.h \
-    personnel.h
+    personnel.h \
+    supprimer.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+        supprimer.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

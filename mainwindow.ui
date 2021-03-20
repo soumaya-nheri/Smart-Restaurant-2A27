@@ -19,9 +19,75 @@
      <rect>
       <x>20</x>
       <y>40</y>
-      <width>991</width>
+      <width>1011</width>
       <height>511</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">  QPushButton {
+         border: 2px solid #8f8f91;
+         border-radius: 6px;
+         background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                           stop: 0 #f6f7fa, stop: 1 #dadbde);
+         min-width: 80px;
+     }
+
+     QPushButton:pressed {
+         background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                           stop: 0 #dadbde, stop: 1 #f6f7fa);
+     }
+
+     QPushButton:flat {
+         border: none; /* no border for a flat push button */
+     }
+
+     QPushButton:default {
+         border-color: navy; /* make the default button prominent */
+     }
+ QLineEdit {
+     border: 2px solid gray;
+     border-radius: 10px;
+     padding: 0 8px;
+     background: #66ffff	;
+     selection-background-color: darkgray;
+ }
+   QTabWidget::pane { /* The tab widget frame */
+         border-top: 2px solid #C2C7CB;
+     }
+
+     QTabWidget::tab-bar {
+         left: 5px; /* move to the right by 5px */
+     }
+
+     /* Style the tab using the tab sub-control. Note that
+         it reads QTabBar _not_ QTabWidget */
+     QTabBar::tab {
+         background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                     stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                     stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+         border: 2px solid #C4C4C3;
+         border-bottom-color: #C2C7CB; /* same as the pane color */
+         border-top-left-radius: 4px;
+         border-top-right-radius: 4px;
+         min-width: 8ex;
+         padding: 2px;
+     }
+
+     QTabBar::tab:selected, QTabBar::tab:hover {
+         background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                     stop: 0 #fafafa, stop: 0.4 #f4f4f4,
+                                     stop: 0.5 #e7e7e7, stop: 1.0 #fafafa);
+     }
+
+     QTabBar::tab:selected {
+         border-color: #9B9B9B;
+         border-bottom-color: #C2C7CB; /* same as pane color */
+     }
+
+     QTabBar::tab:!selected {
+         margin-top: 2px; /* make non-selected tabs look smaller */
+     }
+</string>
     </property>
     <property name="currentIndex">
      <number>0</number>
@@ -30,7 +96,7 @@
      <attribute name="title">
       <string>Les personnels</string>
      </attribute>
-     <widget class="QTableView" name="tab_etudiant">
+     <widget class="QTableView" name="tab_personnel">
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -38,6 +104,9 @@
         <width>791</width>
         <height>371</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
       </property>
      </widget>
      <widget class="QLineEdit" name="lineEdit">
@@ -138,9 +207,9 @@
       <widget class="QLineEdit" name="le_id">
        <property name="geometry">
         <rect>
-         <x>110</x>
+         <x>90</x>
          <y>40</y>
-         <width>113</width>
+         <width>151</width>
          <height>22</height>
         </rect>
        </property>
@@ -148,9 +217,9 @@
       <widget class="QLineEdit" name="le_nom">
        <property name="geometry">
         <rect>
-         <x>110</x>
+         <x>90</x>
          <y>90</y>
-         <width>113</width>
+         <width>151</width>
          <height>22</height>
         </rect>
        </property>
@@ -158,9 +227,9 @@
       <widget class="QLineEdit" name="le_prenom">
        <property name="geometry">
         <rect>
-         <x>110</x>
+         <x>90</x>
          <y>140</y>
-         <width>113</width>
+         <width>151</width>
          <height>22</height>
         </rect>
        </property>
@@ -194,11 +263,20 @@
       <widget class="QLineEdit" name="le_service">
        <property name="geometry">
         <rect>
-         <x>380</x>
+         <x>370</x>
          <y>90</y>
-         <width>113</width>
+         <width>141</width>
          <height>22</height>
         </rect>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+       <property name="cursorPosition">
+        <number>0</number>
+       </property>
+       <property name="cursorMoveStyle">
+        <enum>Qt::LogicalMoveStyle</enum>
        </property>
       </widget>
       <widget class="QLabel" name="label_2">
@@ -217,9 +295,9 @@
       <widget class="QLineEdit" name="le_tel">
        <property name="geometry">
         <rect>
-         <x>380</x>
+         <x>370</x>
          <y>40</y>
-         <width>113</width>
+         <width>141</width>
          <height>22</height>
         </rect>
        </property>
@@ -227,11 +305,14 @@
       <widget class="QLineEdit" name="le_mdp">
        <property name="geometry">
         <rect>
-         <x>380</x>
+         <x>370</x>
          <y>140</y>
-         <width>113</width>
+         <width>141</width>
          <height>22</height>
         </rect>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
        </property>
       </widget>
       <widget class="QLabel" name="label_3">
@@ -247,47 +328,6 @@
         <string>Mot de passe</string>
        </property>
       </widget>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab_3">
-     <attribute name="title">
-      <string>Supprimer etudiant</string>
-     </attribute>
-     <widget class="QLabel" name="label_4">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>80</y>
-        <width>81</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>identifiant</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="le_id_supp">
-      <property name="geometry">
-       <rect>
-        <x>120</x>
-        <y>80</y>
-        <width>113</width>
-        <height>22</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pb_supprimer">
-      <property name="geometry">
-       <rect>
-        <x>230</x>
-        <y>160</y>
-        <width>93</width>
-        <height>28</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>supprimer</string>
-      </property>
      </widget>
     </widget>
    </widget>

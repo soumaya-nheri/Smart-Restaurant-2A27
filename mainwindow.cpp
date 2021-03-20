@@ -3,6 +3,7 @@
 #include"personnel.h"
 #include <QMessageBox>
 #include <QIntValidator>
+#include <supprimer.h>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -10,7 +11,8 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->le_id->setValidator( new QIntValidator(0, 99999999, this));
-    ui->tab_etudiant->setModel(P.afficher());
+    ui->le_tel->setValidator( new QIntValidator(0, 99999999, this));
+    ui->tab_personnel->setModel(P.afficher());
 }
 
 MainWindow::~MainWindow()
@@ -31,26 +33,19 @@ bool test=P.ajouter();
 if(test)
 { QMessageBox::information(nullptr,QObject::tr("OK"),
             QObject::tr("Ajout effectué"), QMessageBox::Cancel);
-    ui->tab_etudiant->setModel(P.afficher());
+    ui->tab_personnel->setModel(P.afficher());
 }
 else
     QMessageBox::critical(nullptr,QObject::tr("Not OK"),
                           QObject::tr("Ajout non effectué"), QMessageBox::Cancel);
 }
 
-void MainWindow::on_pb_supprimer_clicked()
+
+
+
+void MainWindow::on_pushButton_2_clicked()
 {
-    Personnel P1; P1.setcin(ui->le_id_supp->text().toInt());
-    bool test=P1.supprimer(P1.getcin());
-
-    QMessageBox msgBox;
-    if(test)
-    {
-    msgBox.setText("Suppression avec succes.");
-    ui->tab_etudiant->setModel(P.afficher());
-    }
-    else
-    msgBox.setText("Echec de suppression");
-    msgBox.exec();
+    supprimer supp;
+    supp.setModal(true);
+    supp.exec();
 }
-

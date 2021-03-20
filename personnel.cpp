@@ -53,12 +53,12 @@ QSqlQueryModel * Personnel::afficher()
     QSqlQueryModel* model=new QSqlQueryModel();
 
           model->setQuery("SELECT * FROM personnel");
-          model->setHeaderData(0, Qt::Horizontal, QObject::tr("cin"));
-          model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom"));
-          model->setHeaderData(2, Qt::Horizontal, QObject::tr("mail"));
-          model->setHeaderData(3, Qt::Horizontal, QObject::tr("service"));
-          model->setHeaderData(4, Qt::Horizontal, QObject::tr("tel"));
-          model->setHeaderData(5, Qt::Horizontal, QObject::tr("mot de passe"));
+          model->setHeaderData(0, Qt::Horizontal, QObject::tr("CIN"));
+          model->setHeaderData(1, Qt::Horizontal, QObject::tr("NOM"));
+          model->setHeaderData(2, Qt::Horizontal, QObject::tr("MAIL"));
+          model->setHeaderData(3, Qt::Horizontal, QObject::tr("SERVICE"));
+          model->setHeaderData(4, Qt::Horizontal, QObject::tr("TEL"));
+          model->setHeaderData(5, Qt::Horizontal, QObject::tr("MOT DE PASSE"));
 
 
 
