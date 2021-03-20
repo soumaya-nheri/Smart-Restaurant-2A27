@@ -11,6 +11,8 @@ CONFIG += c++11
 
 SOURCES += \
     article.cpp \
+    categorie.cpp \
+    categorie_impl.cpp \
     connexion.cpp \
     fournisseur.cpp \
     main.cpp \
@@ -18,11 +20,14 @@ SOURCES += \
 
 HEADERS += \
     article.h \
+    categorie.h \
+    categorie_impl.h \
     connexion.h \
     fournisseur.h \
     mainwindow.h
 
 FORMS += \
+    categorie.ui \
     mainwindow.ui
 
 # Default rules for deployment.
