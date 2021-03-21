@@ -2,6 +2,8 @@
 #define PERSONNEL_H
 #include <QString>
 #include <QSqlQueryModel>
+#include <QTableView>
+#include <QSqlTableModel>
 
 class Personnel
 {
@@ -23,6 +25,9 @@ public:
     bool ajouter();
     QSqlQueryModel* afficher();
     bool supprimer(int);
+    void cleartable(QTableView * table);
+    void recherche(QTableView * tabl, QString);
+
 
 private:
     int tel,cin;

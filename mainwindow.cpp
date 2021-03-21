@@ -29,7 +29,13 @@ void MainWindow::on_pb_ajouter_clicked()
     QString mail=ui->le_prenom->text();
     QString mot_de_passe=ui->le_mdp->text();
     Personnel P(cin,tel,service,nom,mail,mot_de_passe);
-bool test=P.ajouter();
+    if(nom == ""||service==""||mail==""||mot_de_passe=="")
+        {
+            QMessageBox::critical(nullptr, QObject::tr("Problem "),
+                                           QObject::tr("Champ vide !\n"
+                                                       "Click Cancel to exit."), QMessageBox::Cancel);
+        }
+   else{ bool test=P.ajouter();
 if(test)
 { QMessageBox::information(nullptr,QObject::tr("OK"),
             QObject::tr("Ajout effectué"), QMessageBox::Cancel);
@@ -40,7 +46,7 @@ else
                           QObject::tr("Ajout non effectué"), QMessageBox::Cancel);
 }
 
-
+}
 
 
 void MainWindow::on_pushButton_2_clicked()
@@ -49,3 +55,19 @@ void MainWindow::on_pushButton_2_clicked()
     supp.setModal(true);
     supp.exec();
 }
+
+void MainWindow::on_lineEdit_textChanged(const QString &arg1)
+{
+    Personnel P;
+
+    P.cleartable(ui->tab_personnel);
+QString nom = ui->lineEdit->text();
+P.recherche(ui->tab_personnel,nom);
+if (ui->lineEdit->text().isEmpty())
+{
+    ui->tab_personnel->setModel(P.afficher());
+}
+}
+
+
+

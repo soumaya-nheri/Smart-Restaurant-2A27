@@ -2,6 +2,9 @@
 #include <QSqlQuery>
 #include <QtDebug>
 #include <QObject>
+#include <QTableView>
+#include <QSqlTableModel>
+#include <QDate>
 
 Personnel::Personnel()
 {
@@ -73,3 +76,24 @@ bool Personnel::supprimer(int cin)
     return query.exec();
 
 }
+void Personnel :: recherche(QTableView * table ,QString nom )
+{
+    QSqlQueryModel *model= new QSqlQueryModel();
+
+    QSqlQuery *query=new QSqlQuery;
+    query->prepare("select * from personnel where NOM like '%"+nom+"%' ;");
+
+
+    query->exec();
+    model->setQuery(*query);
+    table->setModel(model);
+    table->show();
+
+}
+void Personnel::cleartable(QTableView * table)
+{
+    QSqlQueryModel *model= new QSqlQueryModel();
+    model->clear();
+    table->setModel(model);
+}
+

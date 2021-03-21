@@ -38,7 +38,7 @@
      border: 2px solid gray;
      border-radius: 10px;
      padding: 0 8px;
-     background: #66ffff	;
+     background: #e0ebeb	;
      selection-background-color: darkgray;
  }
    QTabWidget::pane { /* The tab widget frame */

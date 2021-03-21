@@ -48,7 +48,7 @@
      border: 2px solid gray;
      border-radius: 10px;
      padding: 0 8px;
-     background: #66ffff	;
+     background: #e0ebeb	;
      selection-background-color: darkgray;
  }
    QTabWidget::pane { /* The tab widget frame */
@@ -106,7 +106,48 @@
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">/*QTableView Top left style */
+QTableView QTableCornerButton::section {
+   /*  background: red;
+    border: 2px outset red;*/
+    color: red;
+    background-color: rgb(64, 64, 64);
+    border: 5px solid #f6f7fa;
+    border-radius:0px;
+    border-color: rgb(64, 64, 64);
+ }
+
+ QTableView {
+         Color: white; /* text color in the table */
+         Gridline-color: black; /*The inner frame color*/
+         Background-color: rgb(108, 108, 108); /* background color in the table*/
+    alternate-background-color: rgb(64, 64, 64);
+         Selection-color: white; /* The text color of the selected area*/
+         Selection-background-color: rgb(77, 77, 77); /*The background color of the selected area*/
+    border: 2px groove gray;
+    border-radius: 0px;
+    padding: 2px 4px;
+}
+
+QHeaderView {
+    color: white;
+    font: bold 10pt;
+    background-color: rgb(108, 108, 108);
+    border: 0px solid rgb(144, 144, 144);
+    border:0px solid rgb(191,191,191);
+    border-left-color: rgba(255, 255, 255, 0);
+    border-top-color: rgba(255, 255, 255, 0);
+    border-radius:0px;
+    min-height:29px;
+}
+
+QHeaderView::section {
+    color: white;
+    background-color: rgb(64, 64, 64);
+    border: 5px solid #f6f7fa;
+    border-radius:0px;
+    border-color: rgb(64, 64, 64);
+} </string>
       </property>
      </widget>
      <widget class="QLineEdit" name="lineEdit">
@@ -119,6 +160,9 @@
        </rect>
       </property>
       <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
        <string>Recherche</string>
       </property>
      </widget>
@@ -182,7 +226,7 @@
        <property name="geometry">
         <rect>
          <x>20</x>
-         <y>100</y>
+         <y>90</y>
          <width>55</width>
          <height>16</height>
         </rect>
@@ -195,7 +239,7 @@
        <property name="geometry">
         <rect>
          <x>20</x>
-         <y>150</y>
+         <y>140</y>
          <width>55</width>
          <height>16</height>
         </rect>
