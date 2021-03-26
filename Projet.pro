@@ -20,16 +20,19 @@ SOURCES += \
     connection.cpp \
     main.cpp \
     mainwindow.cpp \
-    menu.cpp
+    menu.cpp \
+    menu_impl.cpp
 
 HEADERS += \
     commande.h \
     connection.h \
     mainwindow.h \
-    menu.h
+    menu.h \
+    menu_impl.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    menu.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -6,23 +6,24 @@
 
 class commande
 {
-    QString plats, prixtotale;
+    QString plats;
+    float prixtotale;
     int id;
 
 public:
 
     //Constructeurs
     commande(){}
-    commande(int,QString,QString);
+    commande(int,QString,float);
 
     //Getters
     QString get_plats(){return plats;}
-    QString get_prixtotale(){return prixtotale;}
+    float get_prixtotale(){return prixtotale;}
     int get_id(){return id;}
 
      //Setters
     void set_plats(QString n){plats=n;}
-    void set_prixtotale(QString p){prixtotale=p;}
+    void set_prixtotale(float p){prixtotale=p;}
     void set_id(int id){this->id=id;}
 
     //Fonctionnalites de Base relatives a l'entite commande

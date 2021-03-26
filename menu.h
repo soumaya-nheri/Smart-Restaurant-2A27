@@ -1,36 +1,29 @@
 #ifndef MENU_H
 #define MENU_H
-#include<QString>
-#include<QSqlQuery>
-#include<QSqlQueryModel>
-class menu
+
+#include <QMainWindow>
+
+namespace Ui {
+class Menu;
+}
+
+class Menu : public QMainWindow
 {
-    QString nom, prix;
-    int id;
+    Q_OBJECT
 
 public:
+    explicit Menu(QWidget *parent = nullptr);
+    ~Menu();
 
-    //Constructeurs
-    menu(){}
-    menu(int,QString,QString);
+private slots:
+    void on_Ajouter_clicked();
 
-    //Getters
-    QString get_nom(){return nom;}
-    QString get_prix(){return prix;}
-    int get_id(){return id;}
+    void on_Supprimer_clicked();
 
-     //Setters
-    void set_nom(QString n){nom=n;}
-    void set_prix(QString p){prix=p;}
-    void set_id(int id){this->id=id;}
+    void on_txt_Search_textChanged(const QString &arg1);
 
-    //Fonctionnalites de Base relatives a l'entite menu
-    bool ajouter();
-    QSqlQueryModel * afficher();
-    bool supprimer (int);
-
-
-
+private:
+    Ui::Menu *ui;
 };
 
 #endif // MENU_H

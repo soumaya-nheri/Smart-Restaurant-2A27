@@ -1,6 +1,6 @@
 #include "commande.h"
 
-commande::commande(int id,QString plats ,QString prixtotale)
+commande::commande(int id,QString plats ,float prixtotale)
 {
     this->id=id;
     this->plats=plats;
