@@ -9,6 +9,7 @@ class Menu_Impl
 
    QString nom ;
    QString prix;
+   int statut;
 public:
    //Constructeurs
       Menu_Impl();

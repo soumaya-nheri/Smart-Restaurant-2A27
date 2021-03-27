@@ -4,36 +4,30 @@
 #include<QSqlQuery>
 #include<QSqlQueryModel>
 
-class commande
+#include <QMainWindow>
+
+/*namespace Ui {
+class Menu;
+}
+
+class Menu : public QMainWindow
 {
-    QString plats;
-    float prixtotale;
-    int id;
+    Q_OBJECT
 
 public:
+    explicit Menu(QWidget *parent = nullptr);
+    ~Menu();
 
-    //Constructeurs
-    commande(){}
-    commande(int,QString,float);
+private slots:
+    void on_Valider_clicked();
 
-    //Getters
-    QString get_plats(){return plats;}
-    float get_prixtotale(){return prixtotale;}
-    int get_id(){return id;}
+    void on_Supprimer_clicked();
 
-     //Setters
-    void set_plats(QString n){plats=n;}
-    void set_prixtotale(float p){prixtotale=p;}
-    void set_id(int id){this->id=id;}
+    void on_txt_Search_textChanged(const QString &arg1);
 
-    //Fonctionnalites de Base relatives a l'entite commande
-    bool ajouter();
-    QSqlQueryModel * afficher();
-    bool supprimer (int);
-
-
-
+private:
+    Ui::Menu *ui;
 };
 
-
+*/
 #endif // COMMANDE_H

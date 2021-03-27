@@ -17,6 +17,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     commande.cpp \
+    commande_impl.cpp \
     connection.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -25,6 +26,7 @@ SOURCES += \
 
 HEADERS += \
     commande.h \
+    commande_impl.h \
     connection.h \
     mainwindow.h \
     menu.h \

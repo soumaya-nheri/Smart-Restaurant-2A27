@@ -1,6 +1,8 @@
 #include "menu.h"
+#include "commande.h"
 #include "ui_menu.h"
 #include "menu_impl.h"
+#include "commande_impl.h"
 #include <QMessageBox>
 
 Menu::Menu(QWidget *parent) :
@@ -9,6 +11,10 @@ Menu::Menu(QWidget *parent) :
 {
     ui->setupUi(this);
     Menu_Impl cat ;
+    Commande_Impl com ;
+  //  com.cleartable(ui->tableView2);
+    com.platsstatut(ui->tableView2);
+  //  ui->tableView2->setModel(com.afficher());
     ui->tableView->setModel(cat.afficher());
 }
 
@@ -68,4 +74,10 @@ if (ui->txt_Search->text().isEmpty())
 {
     ui->tableView->setModel(c.afficher());
 }
+}
+void Menu::on_Actualiser_clicked()
+{
+    Commande_Impl com ;
+   com.cleartable(ui->tableView2);
+    com.platsstatut(ui->tableView2);
 }

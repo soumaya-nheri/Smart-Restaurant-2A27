@@ -22,6 +22,9 @@ private slots:
 
     void on_txt_Search_textChanged(const QString &arg1);
 
+
+    void on_Valider_clicked();
+     void on_Actualiser_clicked();
 private:
     Ui::Menu *ui;
 };

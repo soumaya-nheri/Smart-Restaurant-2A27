@@ -1,51 +1,61 @@
-#include "commande.h"
+#include "menu.h"
+#include "ui_menu.h"
+#include "menu_impl.h"
+#include "commande_impl.h"
+#include <QMessageBox>
 
-commande::commande(int id,QString plats ,float prixtotale)
+/*Menu::Menu(QWidget *parent) :
+    QMainWindow(parent),
+    ui(new Ui::Menu)
 {
-    this->id=id;
-    this->plats=plats;
-    this->prixtotale=prixtotale;
+    ui->setupUi(this);
+    Commande_Impl cat ;
+    ui->tableView2->setModel(cat.afficher());
+}
+Menu::~Menu()
+{
+    delete ui;
+}*/
+
+void Menu::on_Valider_clicked()
+{
+    QString plats = ui->txt_Nom->text();
+     QString prixtotale = ui->txt_Nom->text();
+
+
+    if(plats == "")
+    {
+        QMessageBox::critical(nullptr, QObject::tr("Probleme"),
+                                       QObject::tr("Case obligatoire\nverifier le nom\n"), QMessageBox::Cancel);
+    }
+    else
+    {
+        Commande_Impl cat ;
+        cat.ajouter(plats,prixtotale);
+           ui->tableView->setModel(cat.afficher());
+    }
+
 
 }
 
-
-
-bool commande::ajouter()
+/*void Menu::on_Supprimer_clicked()
 {
-    QSqlQuery query;
-    QString res = QString::number(id);
-
-    //prepare() prend la requete en parametre pour la preparer a l'execution
-
-    query.prepare("insert into commande (id,plats,prixtotale)" "values (:id, :plats, :prixtotale)");
-
-    //Creation des variables liées
-    query.bindValue(":id",res);
-    query.bindValue(":plats",plats);
-    query.bindValue(":prixtotale",prixtotale);
-
-    return query.exec(); //exec() envoie la requete pour l"executeur
+    Menu_Impl cat ;
+    cat.supprimer()->removeRow(ui->tableView->currentIndex().row());
+      ui->tableView->setModel(cat.afficher());
 
 }
 
-
-QSqlQueryModel * commande::afficher()
+void Menu::on_txt_Search_textChanged(const QString &arg1)
 {
-    QSqlQueryModel * model=new QSqlQueryModel();
+    Menu_Impl c;
 
-    model->setQuery("select * from commande");
-    model->setHeaderData(0,Qt::Horizontal,QObject::tr("id"));
-    model->setHeaderData(1,Qt::Horizontal,QObject::tr("plats"));
-    model->setHeaderData(2,Qt::Horizontal,QObject::tr("prixtotale"));
-
-    return model;
-}
-
-bool commande::supprimer(int id)
+    c.cleartable(ui->tableView);
+QString nom = ui->txt_Search->text();
+c.recherche(ui->tableView,nom);
+if (ui->txt_Search->text().isEmpty())
 {
-    QSqlQuery query;
-    QString res = QString::number(id);
-    query.prepare("Delete from commande where ID=:id");
-    query.bindValue(":id",res);
-    return query.exec();
+    ui->tableView->setModel(c.afficher());
 }
+}
+*/
