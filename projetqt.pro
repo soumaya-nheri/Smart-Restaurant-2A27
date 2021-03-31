@@ -10,7 +10,8 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    article.cpp \
+    articles.cpp \
+    articles_impl.cpp \
     categorie.cpp \
     categorie_impl.cpp \
     connexion.cpp \
@@ -19,7 +20,8 @@ SOURCES += \
     mainwindow.cpp
 
 HEADERS += \
-    article.h \
+    articles.h \
+    articles_impl.h \
     categorie.h \
     categorie_impl.h \
     connexion.h \
@@ -27,6 +29,7 @@ HEADERS += \
     mainwindow.h
 
 FORMS += \
+    articles.ui \
     categorie.ui \
     mainwindow.ui
 
