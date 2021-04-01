@@ -23,8 +23,11 @@ public:
     void setmail(QString);
     void setmot_de_passe(QString);
     bool ajouter();
-    QSqlQueryModel* afficher();
+    QSqlQueryModel * afficher();
+    QSqlQueryModel * afficher_CIN();
+    QSqlQueryModel * afficher_NOM();
     bool supprimer(int);
+    bool modifier(int ,int ,QString , QString , QString ,QString );
     void cleartable(QTableView * table);
     void recherche(QTableView * tabl, QString);
 

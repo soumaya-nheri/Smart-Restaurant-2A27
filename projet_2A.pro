@@ -26,21 +26,20 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+    absence.cpp \
         main.cpp \
         mainwindow.cpp \
     connection.cpp \
-    personnel.cpp \
-    supprimer.cpp
+    personnel.cpp
 
 HEADERS += \
+    absence.h \
         mainwindow.h \
     connection.h \
-    personnel.h \
-    supprimer.h
+    personnel.h
 
 FORMS += \
-        mainwindow.ui \
-        supprimer.ui
+        mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -33,6 +33,7 @@ void Personnel::setnom(QString nom){this->nom=nom;}
 void Personnel::setmail(QString mail){this->mail=mail;}
 void Personnel::setmot_de_passe(QString mot_de_passe){this->mot_de_passe=mot_de_passe;}
 
+
 bool Personnel::ajouter(){
 
     QSqlQuery query;
@@ -48,7 +49,6 @@ bool Personnel::ajouter(){
 
 
     return query.exec();
-
 }
 
 QSqlQueryModel * Personnel::afficher()
@@ -56,6 +56,7 @@ QSqlQueryModel * Personnel::afficher()
     QSqlQueryModel* model=new QSqlQueryModel();
 
           model->setQuery("SELECT * FROM personnel");
+
           model->setHeaderData(0, Qt::Horizontal, QObject::tr("CIN"));
           model->setHeaderData(1, Qt::Horizontal, QObject::tr("NOM"));
           model->setHeaderData(2, Qt::Horizontal, QObject::tr("MAIL"));
@@ -76,6 +77,22 @@ bool Personnel::supprimer(int cin)
     return query.exec();
 
 }
+
+bool Personnel::modifier(int cin,int tel,QString service, QString nom, QString mail,QString mot_de_passe)
+{
+
+    QSqlQuery query;
+
+    query.prepare("UPDATE personnel SET CIN=:cin,SERVICE=:service,TEL=:tel,NOM=:nom,MAIL=:mail,MOT_DE_PASSE=:mot_de_passe where CIN=:CIN ");
+    query.bindValue(":CIN",cin);
+    query.bindValue(":TEL",tel);
+    query.bindValue(":SERVICE",service);
+    query.bindValue(":NOM",nom);
+    query.bindValue(":MAIL",mail);
+    query.bindValue(":MOT_DE_PASSE",mot_de_passe);
+          return    (query.exec());
+}
+
 void Personnel :: recherche(QTableView * table ,QString nom )
 {
     QSqlQueryModel *model= new QSqlQueryModel();
@@ -97,3 +114,24 @@ void Personnel::cleartable(QTableView * table)
     table->setModel(model);
 }
 
+QSqlQueryModel * Personnel ::afficher_CIN()
+{
+
+    QSqlQueryModel * model= new QSqlQueryModel();
+
+    model->setQuery("select * from personnel");
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("CIN"));
+
+        return model;
+}
+
+QSqlQueryModel * Personnel ::afficher_NOM()
+{
+
+    QSqlQueryModel * model= new QSqlQueryModel();
+
+    model->setQuery("select nom from personnel");
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("NOM"));
+
+        return model;
+}
