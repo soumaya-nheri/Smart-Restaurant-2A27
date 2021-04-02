@@ -1,49 +1,60 @@
 #include "fournisseur.h"
 
-Fournisseur::Fournisseur(int tel,int id_f,QString nom_f,QString type,QString date)
+#include "categorie_impl.h"
+#include "ui_fournisseur.h"
+#include "fournisseur_impl.h"
 
+#include <QMessageBox>
+Fournisseur::Fournisseur(QWidget *parent) :
+    QWidget(parent),
+    ui(new Ui::Fournisseur)
 {
-
-    this ->id_f=id_f;
-    this ->tel=tel;
-    this ->nom_f=nom_f;
-    this ->type=type;
-    this ->date=date;
-
-}
-bool Fournisseur::ajouter()
-{
-    QSqlQuery query;
-    QString res = QString::number(id_f);
-    query.prepare("insert into etudiants(id_f,type,nom_f,date,tel)"" values(:id_f,:type,:nom_f,:tel,:date)");
-    query.bindValue(":id_f",res);
-    query.bindValue(":nom_f",nom_f);
-    query.bindValue(":type",type);
-    query.bindValue(":date",date);
-      query.bindValue(":tel",tel);
-    return query.exec();
-
-
+    ui->setupUi(this);
+    Categorie_Impl c;
+     ui->comboBox->addItems(c.getNames());
 }
 
-QSqlQueryModel * Fournisseur::afficher()
+Fournisseur::~Fournisseur()
 {
-    QSqlQueryModel * model=new QSqlQueryModel();
-
-        model->setQuery("select * from article");
-        model->setHeaderData(0,Qt::Horizontal,QObject::tr("id_f"));
-        model->setHeaderData(1,Qt::Horizontal,QObject::tr("nom_f"));
-        model->setHeaderData(2,Qt::Horizontal,QObject::tr("type"));
-        model->setHeaderData(2,Qt::Horizontal,QObject::tr("date"));
-        model->setHeaderData(2,Qt::Horizontal,QObject::tr("tel"));
-
-        return model;
+    delete ui;
 }
-bool Fournisseur::supprimer(int id_f)
+
+void Fournisseur::on_pushButton_clicked()
 {
-    QSqlQuery query;
-    QString res = QString::number(id_f);
-    query.prepare("Delete from article where ID=:Id_f");
-    query.bindValue(":id_f",res);
-      return query.exec();
+    QString nom_f = ui->lineEdit->text();
+    int tel = ui->lineEdit_2->text().toInt();
+    QString categorie = ui->comboBox->currentText();
+
+
+
+    if(nom_f == "")
+    {
+        QMessageBox::critical(nullptr, QObject::tr("problem nom_f"),
+                                       QObject::tr("verifier nom_f\n"
+                                                   "Click Cancel to exit."), QMessageBox::Cancel);
+    }
+
+else if (tel<8){
+        QMessageBox::critical(nullptr, QObject::tr("problem tel"),
+                                       QObject::tr("verifier tel\n"
+                                                   "Click Cancel to exit."), QMessageBox::Cancel);
+    }
+    else if (categorie == ""){
+            QMessageBox::critical(nullptr, QObject::tr("problem categorie"),
+                                           QObject::tr("verifier categorie\n"
+                                                       "Click Cancel to exit."), QMessageBox::Cancel);
+        }
+    else
+    {
+        fournisseur_impl art ;
+        art.ajouter(nom_f,categorie,tel);
+           ui->tableView->setModel(art.afficher());
+    }
+}
+
+void Fournisseur::on_pushButton_2_clicked()
+{
+    fournisseur_impl art ;
+    art.supprimer()->removeRow(ui->tableView->currentIndex().row());
+      ui->tableView->setModel(art.afficher());
 }

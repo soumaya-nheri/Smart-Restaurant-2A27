@@ -29,6 +29,12 @@ void articles::on_pushButton_clicked()
                                        QObject::tr("verifier nom\n"
                                                    "Click Cancel to exit."), QMessageBox::Cancel);
     }
+
+else if (quantite<=0){
+        QMessageBox::critical(nullptr, QObject::tr("problem quantite"),
+                                       QObject::tr("verifier quantite\n"
+                                                   "Click Cancel to exit."), QMessageBox::Cancel);
+    }
     else
     {
         articles_impl art ;

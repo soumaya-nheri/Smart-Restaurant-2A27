@@ -12,7 +12,7 @@ public:
     Categorie_Impl();
       Categorie_Impl(QString);
       QString getNom() {return nom;}
-
+QStringList getNames();
       //setters
       void setNom(QString nom){this->nom=nom;}
       bool ajouter(QString);

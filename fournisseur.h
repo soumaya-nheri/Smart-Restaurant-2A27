@@ -1,32 +1,27 @@
 #ifndef FOURNISSEUR_H
 #define FOURNISSEUR_H
-#include <QSqlQuery>
-#include <QSqlQueryModel>
 
-class Fournisseur
+#include <QWidget>
+
+namespace Ui {
+class Fournisseur;
+}
+
+class Fournisseur : public QWidget
 {
-    QString nom_f,type,date ;
-    int tel,id_f;
+    Q_OBJECT
+
 public:
-    Fournisseur();
-    Fournisseur( int,int,QString,QString,QString);
-    //getters
-    QString getNom() {return nom_f;}
-     QString getType() {return type;}
-      QString getDate() {return date;}
-    int getID(){return id_f;}
-    int getTel(){return tel;}
-    //setters
-    void setNom(QString n_f){nom_f=n_f;}
-    void setType(QString t){type=t;}
-    void setDate(QString d){date=d;}
-    void setID(int id_f){this-> id_f=id_f;}
-    void setTel(int tel){this-> tel=tel;}
-bool ajouter();
-QSqlQueryModel * afficher();
-bool supprimer(int);
+    explicit Fournisseur(QWidget *parent = nullptr);
+    ~Fournisseur();
 
+private slots:
+    void on_pushButton_clicked();
 
+    void on_pushButton_2_clicked();
+
+private:
+    Ui::Fournisseur *ui;
 };
 
 #endif // FOURNISSEUR_H

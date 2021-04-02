@@ -15,6 +15,23 @@ Categorie_Impl::Categorie_Impl(QString nom )
 
 }
 
+QStringList Categorie_Impl::getNames(){
+    QStringList list;
+    QSqlQuery qry;
+                qry.prepare("SELECT * FROM CATEGORIE ");
+
+                if (qry.exec())
+                {
+                    while (qry.next())
+                    {
+                        list.append(qry.value(1).toString());
+                    }
+
+                }
+
+return list;
+
+}
 
 
    bool Categorie_Impl::ajouter(QString nom)

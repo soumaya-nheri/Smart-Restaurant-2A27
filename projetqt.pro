@@ -16,8 +16,10 @@ SOURCES += \
     categorie_impl.cpp \
     connexion.cpp \
     fournisseur.cpp \
+    fournisseur_impl.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    statistique.cpp
 
 HEADERS += \
     articles.h \
@@ -26,12 +28,16 @@ HEADERS += \
     categorie_impl.h \
     connexion.h \
     fournisseur.h \
-    mainwindow.h
+    fournisseur_impl.h \
+    mainwindow.h \
+    statistique.h
 
 FORMS += \
     articles.ui \
     categorie.ui \
-    mainwindow.ui
+    fournisseur.ui \
+    mainwindow.ui \
+    statistique.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
