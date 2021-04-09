@@ -9,31 +9,31 @@ class Personnel
 {
 public:
     Personnel();
-    Personnel(int,int,QString,QString,QString,QString);
-    int getcin();
-    int gettel();
+    Personnel(QString,QString,QString,QString,QString,QString);
+    QString getcin();
+    QString gettel();
     QString getservice();
     QString getnom();
     QString getmail();
     QString getmot_de_passe();
-    void setcin(int);
-    void settel(int);
+    void setcin(QString);
+    void settel(QString);
     void setservice(QString);
     void setnom(QString);
     void setmail(QString);
     void setmot_de_passe(QString);
     bool ajouter();
-    QSqlQueryModel * afficher();
+    //QSqlQueryModel * afficher();
+    QSqlTableModel * afficher();
     QSqlQueryModel * afficher_CIN();
     QSqlQueryModel * afficher_NOM();
-    bool supprimer(int);
-    bool modifier(int ,int ,QString , QString , QString ,QString );
+    bool supprimer(QString);
     void cleartable(QTableView * table);
     void recherche(QTableView * tabl, QString);
 
 
 private:
-    int tel,cin;
+    QString tel,cin;
     QString nom, mail, service,mot_de_passe;
 };
 

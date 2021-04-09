@@ -21,7 +21,8 @@ public:
 
 
     bool ajouterAB();
-    QSqlQueryModel * afficher_tab();
+    //QSqlQueryModel * afficher_tab();
+    QSqlTableModel *afficher();
     bool modifierAB(int id,QString nom,QString motif ,QString daate);
     QSqlQueryModel * afficher_ID();
     bool supprimerAB(int);

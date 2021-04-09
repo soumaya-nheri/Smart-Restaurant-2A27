@@ -27,7 +27,7 @@ bool Absence::ajouterAB()
      return    query.exec();
 }
 
-QSqlQueryModel * Absence ::afficher_tab()
+/*QSqlQueryModel * Absence ::afficher_tab()
 {
 
     QSqlQueryModel * model= new QSqlQueryModel();
@@ -39,6 +39,14 @@ QSqlQueryModel * Absence ::afficher_tab()
     model->setHeaderData(3, Qt::Horizontal, QObject::tr("DATE "));
 
         return model;
+}*/
+QSqlTableModel *Absence::afficher()
+{
+   QSqlTableModel *mmodel = new QSqlTableModel();
+    mmodel->setTable("ABSENCE");
+    mmodel->select();
+    return mmodel;
+
 }
 
 bool Absence :: supprimerAB(int id)
