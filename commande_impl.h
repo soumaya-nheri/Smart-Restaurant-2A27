@@ -4,12 +4,15 @@
 #include <QSqlTableModel>
 #include <QDate>
 #include <QTableView>
+#include<QPainter>
+#include<QPdfWriter>
+#include<QSystemTrayIcon>
 class Commande_Impl
 {
 
    QString plats ;
-   QString prixtotale;
-   int statut;
+   QString prix;
+   int quantite;
 public:
    //Constructeurs
       Commande_Impl();
@@ -17,15 +20,16 @@ public:
 
    //Getters
       QString getPlats() {return plats;}
-      QString getPrix(){return prixtotale;}
+      QString getPrix(){return prix;}
 
    //setters
       void setPlats(QString plats){this->plats=plats;}
-       void setPrix(QString p){this->prixtotale=p;}
+       void setPrix(QString p){this->prix=p;}
       bool ajouter(QString,QString);
       QSqlTableModel *supprimer();
-      QSqlTableModel* afficher();
+      QSqlTableModel* affichercommande();
       void cleartable(QTableView * table);
       void platsstatut(QTableView * tabl);
+         void  telecharger();
 };
 #endif // COMMANDE_IMPL_H

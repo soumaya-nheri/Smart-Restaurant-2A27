@@ -50,14 +50,12 @@ Menu_Impl::Menu_Impl(QString nom,QString prix )
    }
 
 
-    void Menu_Impl :: recherche(QTableView * table ,QString nom )
+    void Menu_Impl :: recherche(QTableView * table ,QString rech )
     {
         QSqlQueryModel *model= new QSqlQueryModel();
 
         QSqlQuery *query=new QSqlQuery;
-        query->prepare("select * from MENU where NOM like '%"+nom+"%' ;");
-
-
+        query->prepare("select * from MENU where NOM like '%"+rech+"%' or ID like '%"+rech+"%' or PRIX like '%"+rech+"%' ;");
         query->exec();
         model->setQuery(*query);
         table->setModel(model);

@@ -5,6 +5,7 @@
 #include "commande_impl.h"
 #include <QMessageBox>
 
+#include<QIntValidator>
 Menu::Menu(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Menu)
@@ -12,10 +13,12 @@ Menu::Menu(QWidget *parent) :
     ui->setupUi(this);
     Menu_Impl cat ;
     Commande_Impl com ;
+     ui->txt_Prix->setValidator(new QIntValidator(0,999999,this));
   //  com.cleartable(ui->tableView2);
     com.platsstatut(ui->tableView2);
   //  ui->tableView2->setModel(com.afficher());
     ui->tableView->setModel(cat.afficher());
+    ui->tableView3->setModel(com.affichercommande());
 }
 
 Menu::~Menu()
@@ -39,12 +42,7 @@ void Menu::on_Ajouter_clicked()
                                        QObject::tr("Case obligatoire\nverifier le prix\n"), QMessageBox::Cancel);
     }
 
-    if(prix == "")
-    {
-        QMessageBox::critical(nullptr, QObject::tr("Case obligatoire"),
-                                       QObject::tr("verifier le prix\n"
-                                                   "Click Cancel to exit."), QMessageBox::Cancel);
-    }
+
     else
     {
         Menu_Impl cat ;
@@ -78,6 +76,11 @@ if (ui->txt_Search->text().isEmpty())
 void Menu::on_Actualiser_clicked()
 {
     Commande_Impl com ;
+    Menu_Impl men;
    com.cleartable(ui->tableView2);
     com.platsstatut(ui->tableView2);
+    com.cleartable(ui->tableView3);
+     ui->tableView3->setModel(com.affichercommande());
+    men.cleartable(ui->tableView);
+      ui->tableView->setModel(men.afficher());
 }
