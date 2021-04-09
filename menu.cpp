@@ -84,3 +84,20 @@ void Menu::on_Actualiser_clicked()
     men.cleartable(ui->tableView);
       ui->tableView->setModel(men.afficher());
 }
+
+
+void Menu::on_Trier_clicked()
+{
+    Menu_Impl men;
+    QSqlQueryModel *model= new QSqlQueryModel();
+    QSqlQuery *query=new QSqlQuery;
+
+    query->prepare("select * from MENU ORDER BY NOM ASC ;");
+    query->exec();
+    model->setQuery(*query);
+     men.cleartable(ui->tableView);
+    ui->tableView->setModel(model);
+    ui->tableView->show();
+
+
+}

@@ -123,7 +123,7 @@ QTabBar::tab:selected
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>50</y>
+        <y>60</y>
         <width>541</width>
         <height>441</height>
        </rect>
@@ -176,8 +176,8 @@ QHeaderView::section {
      <widget class="QLabel" name="label_4">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>20</y>
+        <x>10</x>
+        <y>30</y>
         <width>101</width>
         <height>41</height>
        </rect>
@@ -301,10 +301,10 @@ QTabBar::tab:selected
      <widget class="QLineEdit" name="txt_Nom">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>500</y>
+        <x>40</x>
+        <y>510</y>
         <width>121</width>
-        <height>20</height>
+        <height>31</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -400,8 +400,8 @@ QTabBar::tab:selected
      <widget class="QLabel" name="label">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>500</y>
+        <x>0</x>
+        <y>520</y>
         <width>41</width>
         <height>16</height>
        </rect>
@@ -413,8 +413,8 @@ QTabBar::tab:selected
      <widget class="QLabel" name="label_3">
       <property name="geometry">
        <rect>
-        <x>180</x>
-        <y>500</y>
+        <x>170</x>
+        <y>520</y>
         <width>56</width>
         <height>16</height>
        </rect>
@@ -426,10 +426,10 @@ QTabBar::tab:selected
      <widget class="QLineEdit" name="txt_Prix">
       <property name="geometry">
        <rect>
-        <x>210</x>
-        <y>500</y>
+        <x>200</x>
+        <y>510</y>
         <width>111</width>
-        <height>22</height>
+        <height>31</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -525,10 +525,10 @@ QTabBar::tab:selected
      <widget class="QPushButton" name="Ajouter">
       <property name="geometry">
        <rect>
-        <x>350</x>
-        <y>500</y>
-        <width>91</width>
-        <height>23</height>
+        <x>330</x>
+        <y>510</y>
+        <width>101</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -623,14 +623,18 @@ QTabBar::tab:selected
       <property name="text">
        <string>Ajouter</string>
       </property>
+      <property name="icon">
+       <iconset resource="image.qrc">
+        <normaloff>:/resources/images/add.png</normaloff>:/resources/images/add.png</iconset>
+      </property>
      </widget>
      <widget class="QPushButton" name="Actualiser">
       <property name="geometry">
        <rect>
-        <x>1020</x>
+        <x>1010</x>
         <y>20</y>
-        <width>91</width>
-        <height>23</height>
+        <width>101</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -725,14 +729,18 @@ QTabBar::tab:selected
       <property name="text">
        <string>Actualiser</string>
       </property>
+      <property name="icon">
+       <iconset resource="image.qrc">
+        <normaloff>:/resources/images/update.png</normaloff>:/resources/images/update.png</iconset>
+      </property>
      </widget>
      <widget class="QPushButton" name="Valider">
       <property name="geometry">
        <rect>
-        <x>1020</x>
-        <y>500</y>
-        <width>91</width>
-        <height>23</height>
+        <x>1010</x>
+        <y>510</y>
+        <width>101</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -827,12 +835,16 @@ QTabBar::tab:selected
       <property name="text">
        <string>Valider</string>
       </property>
+      <property name="icon">
+       <iconset resource="image.qrc">
+        <normaloff>:/resources/images/add.png</normaloff>:/resources/images/add.png</iconset>
+      </property>
      </widget>
      <widget class="QTableView" name="tableView2">
       <property name="geometry">
        <rect>
         <x>570</x>
-        <y>50</y>
+        <y>60</y>
         <width>541</width>
         <height>441</height>
        </rect>
@@ -886,7 +898,7 @@ QHeaderView::section {
       <property name="geometry">
        <rect>
         <x>570</x>
-        <y>20</y>
+        <y>30</y>
         <width>151</width>
         <height>41</height>
        </rect>
@@ -898,10 +910,10 @@ QHeaderView::section {
      <widget class="QPushButton" name="Supprimer">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>500</y>
-        <width>91</width>
-        <height>23</height>
+        <x>450</x>
+        <y>510</y>
+        <width>101</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -996,6 +1008,116 @@ QTabBar::tab:selected
       <property name="text">
        <string>Supprimer</string>
       </property>
+      <property name="icon">
+       <iconset resource="image.qrc">
+        <normaloff>:/resources/images/delete.png</normaloff>:/resources/images/delete.png</iconset>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Trier">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>12</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+         border: 2px solid #8f8f91;
+         border-radius: 6px;
+         background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                           stop: 0 #f6f7fa, stop: 1 #dadbde);
+         min-width: 80px;
+     }
+
+     QPushButton:pressed {
+         background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                           stop: 0 #dadbde, stop: 1 #f6f7fa);
+     }
+
+     QPushButton:flat {
+         border: none; /* no border for a flat push button */
+     }
+
+     QPushButton:default {
+         border-color: navy; /* make the default button prominent */
+     }
+QPushButton::hover
+{
+	background-color: #09c1eb;
+
+}
+QPushButton::pressed
+{
+	background-color: #3d4ef2;
+
+}
+ QLineEdit,QDateTimeEdit {
+     border: 2px solid gray;
+     border-radius: 10px;
+     padding: 0 8px;
+     background: #e0ebeb	;
+     selection-background-color: darkgray;
+ }
+QComboBox {
+     border: 2px solid gray;
+     border-radius: 10px;
+     padding: 0 8px;
+     background: #e0ebeb	;
+     selection-background-color: darkgray;
+ }
+   QTabWidget::pane { /* The tab widget frame */
+         border-top: 2px solid #C2C7CB;
+     }
+
+     QTabWidget::tab-bar {
+         left: 5px; /* move to the right by 5px */
+     }
+
+     /* Style the tab using the tab sub-control. Note that
+         it reads QTabBar not QTabWidget */
+     QTabBar::tab {
+         background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                     stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                     stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+         border: 2px solid #C4C4C3;
+         border-bottom-color: #C2C7CB; /* same as the pane color */
+         border-top-left-radius: 4px;
+         border-top-right-radius: 4px;
+         min-width: 8ex;
+         padding: 2px;
+         width: 140px;
+     }
+
+     QTabBar::tab:selected, QTabBar::tab:hover {
+         background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                     stop: 0 #fafafa, stop: 0.4 #f4f4f4,
+                                     stop: 0.5 #e7e7e7, stop: 1.0 #fafafa);
+     }
+
+     QTabBar::tab:selected {
+         border-color: #9B9B9B;
+         border-bottom-color: #C2C7CB; /* same as pane color */
+     }
+
+     QTabBar::tab:!selected {
+         margin-top: 2px; /* make non-selected tabs look smaller */
+     }
+QTabBar::tab:selected
+{
+	background-color: /*qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(54, 197, 177, 255),stop:1 rgba(11, 135, 111, 255)); */#3a90a6;
+	color: #fff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>Trier par nom</string>
+      </property>
+      <property name="icon">
+       <iconset resource="image.qrc">
+        <normaloff>:/resources/images/reservation.png</normaloff>:/resources/images/reservation.png</iconset>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_2">
@@ -1005,10 +1127,10 @@ QTabBar::tab:selected
      <widget class="QTableView" name="tableView3">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>40</y>
+        <x>200</x>
+        <y>50</y>
         <width>541</width>
-        <height>431</height>
+        <height>471</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1059,10 +1181,10 @@ QHeaderView::section {
      <widget class="QPushButton" name="imprimer">
       <property name="geometry">
        <rect>
-        <x>340</x>
-        <y>480</y>
-        <width>91</width>
-        <height>23</height>
+        <x>870</x>
+        <y>120</y>
+        <width>131</width>
+        <height>51</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1157,14 +1279,18 @@ QTabBar::tab:selected
       <property name="text">
        <string>Imprimer</string>
       </property>
+      <property name="icon">
+       <iconset resource="image.qrc">
+        <normaloff>:/resources/images/stock.png</normaloff>:/resources/images/stock.png</iconset>
+      </property>
      </widget>
      <widget class="QPushButton" name="Supprimer2">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>480</y>
-        <width>91</width>
-        <height>23</height>
+        <x>870</x>
+        <y>260</y>
+        <width>131</width>
+        <height>51</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1259,11 +1385,15 @@ QTabBar::tab:selected
       <property name="text">
        <string>Supprimer</string>
       </property>
+      <property name="icon">
+       <iconset resource="image.qrc">
+        <normaloff>:/resources/images/icon8_delete_bin_96px_1.png</normaloff>:/resources/images/icon8_delete_bin_96px_1.png</iconset>
+      </property>
      </widget>
      <widget class="QLabel" name="label_6">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>190</x>
         <y>10</y>
         <width>151</width>
         <height>41</height>
@@ -1271,6 +1401,112 @@ QTabBar::tab:selected
       </property>
       <property name="text">
        <string>COMMANDE VALIDEE</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Supprimer3">
+      <property name="geometry">
+       <rect>
+        <x>870</x>
+        <y>400</y>
+        <width>131</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+         border: 2px solid #8f8f91;
+         border-radius: 6px;
+         background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                           stop: 0 #f6f7fa, stop: 1 #dadbde);
+         min-width: 80px;
+     }
+
+     QPushButton:pressed {
+         background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                           stop: 0 #dadbde, stop: 1 #f6f7fa);
+     }
+
+     QPushButton:flat {
+         border: none; /* no border for a flat push button */
+     }
+
+     QPushButton:default {
+         border-color: navy; /* make the default button prominent */
+     }
+QPushButton::hover
+{
+	background-color: #09c1eb;
+
+}
+QPushButton::pressed
+{
+	background-color: #3d4ef2;
+
+}
+ QLineEdit,QDateTimeEdit {
+     border: 2px solid gray;
+     border-radius: 10px;
+     padding: 0 8px;
+     background: #e0ebeb	;
+     selection-background-color: darkgray;
+ }
+QComboBox {
+     border: 2px solid gray;
+     border-radius: 10px;
+     padding: 0 8px;
+     background: #e0ebeb	;
+     selection-background-color: darkgray;
+ }
+   QTabWidget::pane { /* The tab widget frame */
+         border-top: 2px solid #C2C7CB;
+     }
+
+     QTabWidget::tab-bar {
+         left: 5px; /* move to the right by 5px */
+     }
+
+     /* Style the tab using the tab sub-control. Note that
+         it reads QTabBar not QTabWidget */
+     QTabBar::tab {
+         background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                     stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                     stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+         border: 2px solid #C4C4C3;
+         border-bottom-color: #C2C7CB; /* same as the pane color */
+         border-top-left-radius: 4px;
+         border-top-right-radius: 4px;
+         min-width: 8ex;
+         padding: 2px;
+         width: 140px;
+     }
+
+     QTabBar::tab:selected, QTabBar::tab:hover {
+         background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                     stop: 0 #fafafa, stop: 0.4 #f4f4f4,
+                                     stop: 0.5 #e7e7e7, stop: 1.0 #fafafa);
+     }
+
+     QTabBar::tab:selected {
+         border-color: #9B9B9B;
+         border-bottom-color: #C2C7CB; /* same as pane color */
+     }
+
+     QTabBar::tab:!selected {
+         margin-top: 2px; /* make non-selected tabs look smaller */
+     }
+QTabBar::tab:selected
+{
+	background-color: /*qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(54, 197, 177, 255),stop:1 rgba(11, 135, 111, 255)); */#3a90a6;
+	color: #fff;
+
+}</string>
+      </property>
+      <property name="text">
+       <string>Supprimer Tout</string>
+      </property>
+      <property name="icon">
+       <iconset resource="image.qrc">
+        <normaloff>:/resources/images/icon8_delete_bin_96px_1.png</normaloff>:/resources/images/icon8_delete_bin_96px_1.png</iconset>
       </property>
      </widget>
     </widget>
@@ -1288,6 +1524,8 @@ QTabBar::tab:selected
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="image.qrc"/>
+ </resources>
  <connections/>
 </ui>

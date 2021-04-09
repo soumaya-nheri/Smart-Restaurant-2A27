@@ -12,6 +12,17 @@ void Menu::on_Supprimer2_clicked()
       ui->tableView3->setModel(cat.affichercommande());
 
 }
+void Menu::on_Supprimer3_clicked()
+{
+    Commande_Impl cat ;
+    QSqlQuery qry;
+    qry.prepare("DELETE FROM COMMANDE");
+
+       qry.exec();
+      ui->tableView3->setModel(cat.affichercommande());
+
+}
+
 
 void Menu::on_Valider_clicked()
 {
