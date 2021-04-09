@@ -1,9 +1,9 @@
 QT       += core gui
-QT       += sql
+QT       += sql widgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-CONFIG += c++11
+CONFIG += c++11 console
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -19,6 +19,7 @@ SOURCES += \
     fournisseur_impl.cpp \
     main.cpp \
     mainwindow.cpp \
+    notifications.cpp \
     statistique.cpp
 
 HEADERS += \
@@ -30,6 +31,7 @@ HEADERS += \
     fournisseur.h \
     fournisseur_impl.h \
     mainwindow.h \
+    notifications.h \
     statistique.h
 
 FORMS += \
@@ -43,3 +45,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    Ressource.qrc

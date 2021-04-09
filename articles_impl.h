@@ -28,6 +28,7 @@ class articles_impl
        QSqlTableModel* afficher();
        void cleartable(QTableView * table);
        void recherche(QTableView * tabl, QString);
+       void verifier();
 
 };
 

@@ -1,5 +1,5 @@
 #include "fournisseur.h"
-
+#include "mainwindow.h"
 #include "categorie_impl.h"
 #include "ui_fournisseur.h"
 #include "fournisseur_impl.h"
@@ -57,4 +57,10 @@ void Fournisseur::on_pushButton_2_clicked()
     fournisseur_impl art ;
     art.supprimer()->removeRow(ui->tableView->currentIndex().row());
       ui->tableView->setModel(art.afficher());
+}
+
+void Fournisseur::on_pushButton_3_clicked()
+{ hide();
+    MainWindow *m = new MainWindow();
+    m->show();
 }

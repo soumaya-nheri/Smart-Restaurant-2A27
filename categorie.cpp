@@ -1,6 +1,7 @@
 #include "categorie.h"
 #include "ui_categorie.h"
 #include "categorie_impl.h"
+#include "mainwindow.h"
 #include <QMessageBox>
 
 Categorie::Categorie(QWidget *parent) :
@@ -61,3 +62,9 @@ if (ui->txt_Search->text().isEmpty())
 
 
 
+
+void Categorie::on_pushButton_clicked()
+{ hide();
+    MainWindow *m = new MainWindow();
+    m->show();
+}

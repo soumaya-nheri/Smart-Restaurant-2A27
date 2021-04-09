@@ -22,6 +22,8 @@ private slots:
 
     void on_txt_Search_textChanged(const QString &arg1);
 
+    void on_pushButton_clicked();
+
 private:
     Ui::Categorie *ui;
 };

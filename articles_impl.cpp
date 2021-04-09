@@ -1,5 +1,7 @@
 #include "articles_impl.h"
-
+#include "notifications.h"
+#include <QMessageBox>
+#include <QDebug>
 articles_impl::articles_impl()
 {
 this->nom = "";
@@ -64,4 +66,30 @@ QSqlTableModel *articles_impl::afficher()
      model->clear();
      table->setModel(model);
  }
+ void articles_impl::verifier()
+ {
+     QSqlQuery qry;
+
+  if (qry.exec("select * from ARTICLE "))
+  {
+
+      int n=0;
+      while (qry.next())
+      {
+          qDebug () <<n;
+
+
+            n= qry.value(2).toInt();
+            if(n<5)
+            {  Notifications N;
+                  N.notifications_quantite();
+            }
+
+      }
+
+  }
+
+
+ }
+
 

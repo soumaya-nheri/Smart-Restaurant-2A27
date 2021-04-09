@@ -1,6 +1,7 @@
 #include "articles.h"
 #include "ui_articles.h"
 #include "articles_impl.h"
+#include "mainwindow.h"
 #include <QMessageBox>
 articles::articles(QWidget *parent) :
     QWidget(parent),
@@ -8,8 +9,10 @@ articles::articles(QWidget *parent) :
 
 {
     ui->setupUi(this);
+
     articles_impl art;
     ui->tableView->setModel(art.afficher());
+    art.verifier();
 }
 
 articles::~articles()
@@ -19,6 +22,7 @@ articles::~articles()
 
 void articles::on_pushButton_clicked()
 {
+
     QString nom = ui->txt_Nom->text();
     int quantite = ui->spinBox->text().toInt();
 
@@ -40,7 +44,10 @@ else if (quantite<=0){
         articles_impl art ;
         art.ajouter(nom,quantite);
            ui->tableView->setModel(art.afficher());
+
+          art.verifier();
     }
+
 }
 
 void articles::on_pushButton_2_clicked()
@@ -48,4 +55,10 @@ void articles::on_pushButton_2_clicked()
     articles_impl art ;
     art.supprimer()->removeRow(ui->tableView->currentIndex().row());
       ui->tableView->setModel(art.afficher());
+}
+
+void articles::on_pushButton_3_clicked()
+{  hide();
+    MainWindow *m = new MainWindow();
+    m->show();
 }
