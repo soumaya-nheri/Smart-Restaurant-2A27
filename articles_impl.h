@@ -29,6 +29,8 @@ class articles_impl
        void cleartable(QTableView * table);
        void recherche(QTableView * tabl, QString);
        void verifier();
+       void telecharger();
+
 
 };
 

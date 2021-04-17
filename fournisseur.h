@@ -22,6 +22,10 @@ private slots:
 
     void on_pushButton_3_clicked();
 
+
+
+    void on_recherche_textChanged(const QString &arg1);
+
 private:
     Ui::Fournisseur *ui;
 };

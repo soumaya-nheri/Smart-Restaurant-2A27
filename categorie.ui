@@ -23,6 +23,50 @@
       <height>281</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">/*QTableView Top left style */
+QTableView QTableCornerButton::section {
+   /*  background: red;
+    border: 2px outset red;*/
+    color: red;
+    background-color: rgb(64, 64, 64);
+    border: 5px solid #f6f7fa;
+    border-radius:0px;
+    border-color: rgb(64, 64, 64);
+ }
+
+ QTableView {
+         Color: white; /* text color in the table */
+         Gridline-color: black; /*The inner frame color*/
+         Background-color: rgb(108, 108, 108); /* background color in the table*/
+    alternate-background-color: rgb(64, 64, 64);
+         Selection-color: white; /* The text color of the selected area*/
+         Selection-background-color: rgb(77, 77, 77); /*The background color of the selected area*/
+    border: 2px groove gray;
+    border-radius: 0px;
+    padding: 2px 4px;
+}
+
+QHeaderView {
+    color: white;
+    font: bold 10pt;
+    background-color: rgb(108, 108, 108);
+    border: 0px solid rgb(144, 144, 144);
+    border:0px solid rgb(191,191,191);
+    border-left-color: rgba(255, 255, 255, 0);
+    border-top-color: rgba(255, 255, 255, 0);
+    border-radius:0px;
+    min-height:29px;
+}
+
+QHeaderView::section {
+    color: white;
+    background-color: rgb(64, 64, 64);
+    border: 5px solid #f6f7fa;
+    border-radius:0px;
+    border-color: rgb(64, 64, 64);
+}</string>
+    </property>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
@@ -46,18 +90,200 @@
       <height>20</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+         border: 2px solid #8f8f91;
+         border-radius: 6px;
+         background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                           stop: 0 #f6f7fa, stop: 1 #dadbde);
+         min-width: 80px;
+     }
+
+     QPushButton:pressed {
+         background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                           stop: 0 #dadbde, stop: 1 #f6f7fa);
+     }
+
+     QPushButton:flat {
+         border: none; /* no border for a flat push button */
+     }
+
+     QPushButton:default {
+         border-color: navy; /* make the default button prominent */
+     }
+QPushButton::hover
+{
+	background-color: #09c1eb;
+
+}
+QPushButton::pressed
+{
+	background-color: #3d4ef2;
+
+}
+ QLineEdit,QDateTimeEdit {
+     border: 2px solid gray;
+     border-radius: 10px;
+     padding: 0 8px;
+     background: #e0ebeb	;
+     selection-background-color: darkgray;
+ }
+QComboBox {
+     border: 2px solid gray;
+     border-radius: 10px;
+     padding: 0 8px;
+     background: #e0ebeb	;
+     selection-background-color: darkgray;
+ }
+   QTabWidget::pane { /* The tab widget frame */
+         border-top: 2px solid #C2C7CB;
+     }
+
+     QTabWidget::tab-bar {
+         left: 5px; /* move to the right by 5px */
+     }
+
+     /* Style the tab using the tab sub-control. Note that
+         it reads QTabBar not QTabWidget */
+     QTabBar::tab {
+         background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                     stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                     stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+         border: 2px solid #C4C4C3;
+         border-bottom-color: #C2C7CB; /* same as the pane color */
+         border-top-left-radius: 4px;
+         border-top-right-radius: 4px;
+         min-width: 8ex;
+         padding: 2px;
+         width: 140px;
+     }
+
+     QTabBar::tab:selected, QTabBar::tab:hover {
+         background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                     stop: 0 #fafafa, stop: 0.4 #f4f4f4,
+                                     stop: 0.5 #e7e7e7, stop: 1.0 #fafafa);
+     }
+
+     QTabBar::tab:selected {
+         border-color: #9B9B9B;
+         border-bottom-color: #C2C7CB; /* same as pane color */
+     }
+
+     QTabBar::tab:!selected {
+         margin-top: 2px; /* make non-selected tabs look smaller */
+     }
+QTabBar::tab:selected
+{
+	background-color: /*qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(54, 197, 177, 255),stop:1 rgba(11, 135, 111, 255)); */#3a90a6;
+	color: #fff;
+
+}</string>
+    </property>
    </widget>
    <widget class="QPushButton" name="Ajouter">
     <property name="geometry">
      <rect>
       <x>460</x>
       <y>120</y>
-      <width>75</width>
+      <width>84</width>
       <height>23</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+         border: 2px solid #8f8f91;
+         border-radius: 6px;
+         background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                           stop: 0 #f6f7fa, stop: 1 #dadbde);
+         min-width: 80px;
+     }
+
+     QPushButton:pressed {
+         background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                           stop: 0 #dadbde, stop: 1 #f6f7fa);
+     }
+
+     QPushButton:flat {
+         border: none; /* no border for a flat push button */
+     }
+
+     QPushButton:default {
+         border-color: navy; /* make the default button prominent */
+     }
+QPushButton::hover
+{
+	background-color: #09c1eb;
+
+}
+QPushButton::pressed
+{
+	background-color: #3d4ef2;
+
+}
+ QLineEdit,QDateTimeEdit {
+     border: 2px solid gray;
+     border-radius: 10px;
+     padding: 0 8px;
+     background: #e0ebeb	;
+     selection-background-color: darkgray;
+ }
+QComboBox {
+     border: 2px solid gray;
+     border-radius: 10px;
+     padding: 0 8px;
+     background: #e0ebeb	;
+     selection-background-color: darkgray;
+ }
+   QTabWidget::pane { /* The tab widget frame */
+         border-top: 2px solid #C2C7CB;
+     }
+
+     QTabWidget::tab-bar {
+         left: 5px; /* move to the right by 5px */
+     }
+
+     /* Style the tab using the tab sub-control. Note that
+         it reads QTabBar not QTabWidget */
+     QTabBar::tab {
+         background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                     stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                     stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+         border: 2px solid #C4C4C3;
+         border-bottom-color: #C2C7CB; /* same as the pane color */
+         border-top-left-radius: 4px;
+         border-top-right-radius: 4px;
+         min-width: 8ex;
+         padding: 2px;
+         width: 140px;
+     }
+
+     QTabBar::tab:selected, QTabBar::tab:hover {
+         background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                     stop: 0 #fafafa, stop: 0.4 #f4f4f4,
+                                     stop: 0.5 #e7e7e7, stop: 1.0 #fafafa);
+     }
+
+     QTabBar::tab:selected {
+         border-color: #9B9B9B;
+         border-bottom-color: #C2C7CB; /* same as pane color */
+     }
+
+     QTabBar::tab:!selected {
+         margin-top: 2px; /* make non-selected tabs look smaller */
+     }
+QTabBar::tab:selected
+{
+	background-color: /*qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(54, 197, 177, 255),stop:1 rgba(11, 135, 111, 255)); */#3a90a6;
+	color: #fff;
+
+}</string>
+    </property>
     <property name="text">
      <string>Ajouter</string>
+    </property>
+    <property name="icon">
+     <iconset resource="Ressource.qrc">
+      <normaloff>:/new/prefix1/attachments (4)/add.png</normaloff>:/new/prefix1/attachments (4)/add.png</iconset>
     </property>
    </widget>
    <widget class="QPushButton" name="Supprimer">
@@ -65,12 +291,105 @@
      <rect>
       <x>400</x>
       <y>320</y>
-      <width>75</width>
+      <width>84</width>
       <height>23</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+         border: 2px solid #8f8f91;
+         border-radius: 6px;
+         background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                           stop: 0 #f6f7fa, stop: 1 #dadbde);
+         min-width: 80px;
+     }
+
+     QPushButton:pressed {
+         background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                           stop: 0 #dadbde, stop: 1 #f6f7fa);
+     }
+
+     QPushButton:flat {
+         border: none; /* no border for a flat push button */
+     }
+
+     QPushButton:default {
+         border-color: navy; /* make the default button prominent */
+     }
+QPushButton::hover
+{
+	background-color: #09c1eb;
+
+}
+QPushButton::pressed
+{
+	background-color: #3d4ef2;
+
+}
+ QLineEdit,QDateTimeEdit {
+     border: 2px solid gray;
+     border-radius: 10px;
+     padding: 0 8px;
+     background: #e0ebeb	;
+     selection-background-color: darkgray;
+ }
+QComboBox {
+     border: 2px solid gray;
+     border-radius: 10px;
+     padding: 0 8px;
+     background: #e0ebeb	;
+     selection-background-color: darkgray;
+ }
+   QTabWidget::pane { /* The tab widget frame */
+         border-top: 2px solid #C2C7CB;
+     }
+
+     QTabWidget::tab-bar {
+         left: 5px; /* move to the right by 5px */
+     }
+
+     /* Style the tab using the tab sub-control. Note that
+         it reads QTabBar not QTabWidget */
+     QTabBar::tab {
+         background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                     stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                     stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+         border: 2px solid #C4C4C3;
+         border-bottom-color: #C2C7CB; /* same as the pane color */
+         border-top-left-radius: 4px;
+         border-top-right-radius: 4px;
+         min-width: 8ex;
+         padding: 2px;
+         width: 140px;
+     }
+
+     QTabBar::tab:selected, QTabBar::tab:hover {
+         background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                     stop: 0 #fafafa, stop: 0.4 #f4f4f4,
+                                     stop: 0.5 #e7e7e7, stop: 1.0 #fafafa);
+     }
+
+     QTabBar::tab:selected {
+         border-color: #9B9B9B;
+         border-bottom-color: #C2C7CB; /* same as pane color */
+     }
+
+     QTabBar::tab:!selected {
+         margin-top: 2px; /* make non-selected tabs look smaller */
+     }
+QTabBar::tab:selected
+{
+	background-color: /*qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(54, 197, 177, 255),stop:1 rgba(11, 135, 111, 255)); */#3a90a6;
+	color: #fff;
+
+}</string>
+    </property>
     <property name="text">
      <string>Supprimer</string>
+    </property>
+    <property name="icon">
+     <iconset resource="Ressource.qrc">
+      <normaloff>:/new/prefix1/attachments (4)/delete.png</normaloff>:/new/prefix1/attachments (4)/delete.png</iconset>
     </property>
    </widget>
    <widget class="QLineEdit" name="txt_Search">
@@ -81,6 +400,95 @@
       <width>113</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+         border: 2px solid #8f8f91;
+         border-radius: 6px;
+         background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                           stop: 0 #f6f7fa, stop: 1 #dadbde);
+         min-width: 80px;
+     }
+
+     QPushButton:pressed {
+         background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                           stop: 0 #dadbde, stop: 1 #f6f7fa);
+     }
+
+     QPushButton:flat {
+         border: none; /* no border for a flat push button */
+     }
+
+     QPushButton:default {
+         border-color: navy; /* make the default button prominent */
+     }
+QPushButton::hover
+{
+	background-color: #09c1eb;
+
+}
+QPushButton::pressed
+{
+	background-color: #3d4ef2;
+
+}
+ QLineEdit,QDateTimeEdit {
+     border: 2px solid gray;
+     border-radius: 10px;
+     padding: 0 8px;
+     background: #e0ebeb	;
+     selection-background-color: darkgray;
+ }
+QComboBox {
+     border: 2px solid gray;
+     border-radius: 10px;
+     padding: 0 8px;
+     background: #e0ebeb	;
+     selection-background-color: darkgray;
+ }
+   QTabWidget::pane { /* The tab widget frame */
+         border-top: 2px solid #C2C7CB;
+     }
+
+     QTabWidget::tab-bar {
+         left: 5px; /* move to the right by 5px */
+     }
+
+     /* Style the tab using the tab sub-control. Note that
+         it reads QTabBar not QTabWidget */
+     QTabBar::tab {
+         background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                     stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                     stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+         border: 2px solid #C4C4C3;
+         border-bottom-color: #C2C7CB; /* same as the pane color */
+         border-top-left-radius: 4px;
+         border-top-right-radius: 4px;
+         min-width: 8ex;
+         padding: 2px;
+         width: 140px;
+     }
+
+     QTabBar::tab:selected, QTabBar::tab:hover {
+         background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                     stop: 0 #fafafa, stop: 0.4 #f4f4f4,
+                                     stop: 0.5 #e7e7e7, stop: 1.0 #fafafa);
+     }
+
+     QTabBar::tab:selected {
+         border-color: #9B9B9B;
+         border-bottom-color: #C2C7CB; /* same as pane color */
+     }
+
+     QTabBar::tab:!selected {
+         margin-top: 2px; /* make non-selected tabs look smaller */
+     }
+QTabBar::tab:selected
+{
+	background-color: /*qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(54, 197, 177, 255),stop:1 rgba(11, 135, 111, 255)); */#3a90a6;
+	color: #fff;
+
+}</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
@@ -101,12 +509,105 @@
      <rect>
       <x>600</x>
       <y>10</y>
-      <width>75</width>
+      <width>84</width>
       <height>23</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+         border: 2px solid #8f8f91;
+         border-radius: 6px;
+         background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                           stop: 0 #f6f7fa, stop: 1 #dadbde);
+         min-width: 80px;
+     }
+
+     QPushButton:pressed {
+         background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                           stop: 0 #dadbde, stop: 1 #f6f7fa);
+     }
+
+     QPushButton:flat {
+         border: none; /* no border for a flat push button */
+     }
+
+     QPushButton:default {
+         border-color: navy; /* make the default button prominent */
+     }
+QPushButton::hover
+{
+	background-color: #09c1eb;
+
+}
+QPushButton::pressed
+{
+	background-color: #3d4ef2;
+
+}
+ QLineEdit,QDateTimeEdit {
+     border: 2px solid gray;
+     border-radius: 10px;
+     padding: 0 8px;
+     background: #e0ebeb	;
+     selection-background-color: darkgray;
+ }
+QComboBox {
+     border: 2px solid gray;
+     border-radius: 10px;
+     padding: 0 8px;
+     background: #e0ebeb	;
+     selection-background-color: darkgray;
+ }
+   QTabWidget::pane { /* The tab widget frame */
+         border-top: 2px solid #C2C7CB;
+     }
+
+     QTabWidget::tab-bar {
+         left: 5px; /* move to the right by 5px */
+     }
+
+     /* Style the tab using the tab sub-control. Note that
+         it reads QTabBar not QTabWidget */
+     QTabBar::tab {
+         background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                     stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                     stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+         border: 2px solid #C4C4C3;
+         border-bottom-color: #C2C7CB; /* same as the pane color */
+         border-top-left-radius: 4px;
+         border-top-right-radius: 4px;
+         min-width: 8ex;
+         padding: 2px;
+         width: 140px;
+     }
+
+     QTabBar::tab:selected, QTabBar::tab:hover {
+         background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                     stop: 0 #fafafa, stop: 0.4 #f4f4f4,
+                                     stop: 0.5 #e7e7e7, stop: 1.0 #fafafa);
+     }
+
+     QTabBar::tab:selected {
+         border-color: #9B9B9B;
+         border-bottom-color: #C2C7CB; /* same as pane color */
+     }
+
+     QTabBar::tab:!selected {
+         margin-top: 2px; /* make non-selected tabs look smaller */
+     }
+QTabBar::tab:selected
+{
+	background-color: /*qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(54, 197, 177, 255),stop:1 rgba(11, 135, 111, 255)); */#3a90a6;
+	color: #fff;
+
+}</string>
+    </property>
     <property name="text">
      <string>Retour</string>
+    </property>
+    <property name="icon">
+     <iconset resource="Ressource.qrc">
+      <normaloff>:/new/prefix1/attachments (4)/return.png</normaloff>:/new/prefix1/attachments (4)/return.png</iconset>
     </property>
    </widget>
   </widget>
@@ -122,6 +623,8 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="Ressource.qrc"/>
+ </resources>
  <connections/>
 </ui>

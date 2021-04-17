@@ -2,6 +2,9 @@
 #include "notifications.h"
 #include <QMessageBox>
 #include <QDebug>
+#include<QPainter>
+#include<QPdfWriter>
+#include<QSystemTrayIcon>
 articles_impl::articles_impl()
 {
 this->nom = "";
@@ -91,5 +94,35 @@ QSqlTableModel *articles_impl::afficher()
 
 
  }
+
+ void  articles_impl::telecharger(){
+
+                          QPdfWriter pdf("C:\\Users\\USER\\Desktop\\qt\\article.pdf");
+                          QPainter painter(&pdf);
+                                                   int i = 4000;
+                                                       painter.setPen(Qt::blue);
+                                                       painter.setFont(QFont("Arial", 64));
+                                                       painter.drawText(1100,1200,"article");
+                                                       painter.setPen(Qt::black);
+                                                       painter.setFont(QFont("Arial", 20));
+                                                       painter.drawRect(100,100,7300,2600);
+                                                       painter.drawRect(0,3000,9600,500);
+                                                       painter.setFont(QFont("Arial", 15));
+                                                       painter.drawText(200,3300,"ID");
+                                                       painter.drawText(1300,3300,"Nom");
+                                                       painter.drawText(6000,3300,"Quantite");
+
+                                                       QSqlQuery query;
+                                                       query.prepare("select * from ARTICLE");
+                                                       query.exec();
+                                                       while (query.next())
+                                                                                {
+                                                                                    painter.drawText(200,i,query.value(0).toString());
+                                                                                    painter.drawText(1300,i,query.value(1).toString());
+                                                                                    painter.drawText(6000,i,query.value(2).toString());
+
+                                                                                    i = i + 500;
+                                                                                }
+                                                      }
 
 

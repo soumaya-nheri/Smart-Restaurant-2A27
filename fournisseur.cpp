@@ -52,6 +52,7 @@ else if (tel<8){
     }
 }
 
+
 void Fournisseur::on_pushButton_2_clicked()
 {
     fournisseur_impl art ;
@@ -60,7 +61,22 @@ void Fournisseur::on_pushButton_2_clicked()
 }
 
 void Fournisseur::on_pushButton_3_clicked()
-{ hide();
+{hide();
     MainWindow *m = new MainWindow();
     m->show();
+}
+
+
+
+void Fournisseur::on_recherche_textChanged(const QString &arg1)
+{
+    fournisseur_impl c;
+
+    c.cleartable(ui->tableView);
+QString nom = ui->recherche->text();
+c.recherche(ui->tableView,nom);
+if (ui->recherche->text().isEmpty())
+{
+    ui->tableView->setModel(c.afficher());
+}
 }

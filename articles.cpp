@@ -62,3 +62,14 @@ void articles::on_pushButton_3_clicked()
     MainWindow *m = new MainWindow();
     m->show();
 }
+
+void articles::on_imprimer_clicked()
+{    articles_impl art ;
+  art.telecharger();
+
+    QMessageBox::information(nullptr,QObject::tr("OK"),
+               QObject::tr("Téléchargement terminé"), QMessageBox::Cancel);
+
+
+
+}

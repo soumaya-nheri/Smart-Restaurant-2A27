@@ -64,7 +64,7 @@ if (ui->txt_Search->text().isEmpty())
 
 
 void Categorie::on_pushButton_clicked()
-{ hide();
+{hide();
     MainWindow *m = new MainWindow();
     m->show();
 }

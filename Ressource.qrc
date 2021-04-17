@@ -1,5 +1,17 @@
 <RCC>
     <qresource prefix="/new/prefix1">
         <file>download.png</file>
+        <file>../attachments (4)/add.png</file>
+        <file>../attachments (4)/cancel.png</file>
+        <file>../attachments (4)/delete.png</file>
+        <file>../attachments (4)/fournisseur.png</file>
+        <file>../attachments (4)/icon8_delete_bin_96px_1.png</file>
+        <file>../attachments (4)/Notification.jpg</file>
+        <file>../attachments (4)/reservation.png</file>
+        <file>../attachments (4)/reset.png</file>
+        <file>../attachments (4)/return.png</file>
+        <file>../attachments (4)/stock.png</file>
+        <file>../attachments (4)/table.png</file>
+        <file>../attachments (4)/update.png</file>
     </qresource>
 </RCC>

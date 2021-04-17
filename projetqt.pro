@@ -3,7 +3,7 @@ QT       += sql widgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-CONFIG += c++11 console
+CONFIG += c++11
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -19,8 +19,7 @@ SOURCES += \
     fournisseur_impl.cpp \
     main.cpp \
     mainwindow.cpp \
-    notifications.cpp \
-    statistique.cpp
+    notifications.cpp
 
 HEADERS += \
     articles.h \
@@ -31,15 +30,13 @@ HEADERS += \
     fournisseur.h \
     fournisseur_impl.h \
     mainwindow.h \
-    notifications.h \
-    statistique.h
+    notifications.h
 
 FORMS += \
     articles.ui \
     categorie.ui \
     fournisseur.ui \
-    mainwindow.ui \
-    statistique.ui
+    mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

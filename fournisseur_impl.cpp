@@ -47,12 +47,12 @@ QSqlTableModel *fournisseur_impl::afficher()
 }
 
 
- void fournisseur_impl :: recherche(QTableView * table ,QString nom )
+ void fournisseur_impl :: recherche(QTableView * table ,QString nom)
  {
      QSqlQueryModel *model= new QSqlQueryModel();
 
      QSqlQuery *query=new QSqlQuery;
-     query->prepare("select * from FOURNISSEUR where NOM_F like '%"+nom+"%' ;");
+     query->prepare("select * from FOURNISSEUR where NOM_F like '%"+nom+"%'or ID like  '%"+nom+"%'or CATEGORIE like '%"+nom+"%';");
 
 
      query->exec();
