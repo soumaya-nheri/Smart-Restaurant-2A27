@@ -74,6 +74,11 @@ void Menu::on_imprimer_clicked()
 
 
 }
+void Menu::on_statistique_clicked()
+{
+    s=new stat_commande(this);
+    s->show();
+}
 
 
 

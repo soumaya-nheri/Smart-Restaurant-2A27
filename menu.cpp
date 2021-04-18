@@ -101,3 +101,4 @@ void Menu::on_Trier_clicked()
 
 
 }
+

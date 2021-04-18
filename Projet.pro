@@ -1,6 +1,6 @@
 QT       += core gui
 QT       += sql
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport
 
 CONFIG += c++11
 
@@ -22,7 +22,9 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     menu.cpp \
-    menu_impl.cpp
+    menu_impl.cpp \
+    qcustomplot.cpp \
+    stat_commande.cpp
 
 HEADERS += \
     commande.h \
@@ -30,11 +32,14 @@ HEADERS += \
     connection.h \
     mainwindow.h \
     menu.h \
-    menu_impl.h
+    menu_impl.h \
+    qcustomplot.h \
+    stat_commande.h
 
 FORMS += \
     mainwindow.ui \
-    menu.ui
+    menu.ui \
+    stat_commande.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

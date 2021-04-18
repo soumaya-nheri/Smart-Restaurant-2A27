@@ -1,6 +1,6 @@
 #ifndef MENU_H
 #define MENU_H
-
+#include "stat_commande.h"
 #include <QMainWindow>
 
 namespace Ui {
@@ -25,9 +25,11 @@ private slots:
     void on_Actualiser_clicked();
     void on_imprimer_clicked();
     void on_Trier_clicked();
+    void on_statistique_clicked();
 
 private:
     Ui::Menu *ui;
+    stat_commande *s;
 };
 
 #endif // MENU_H

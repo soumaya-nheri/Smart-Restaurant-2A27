@@ -1,35 +1,33 @@
 #include "menu_impl.h"
-
 #include <QSqlQuery>
 #include <QSqlTableModel>
 #include <QDate>
 #include <QTableView>
 Menu_Impl::Menu_Impl()
-{
- this->nom = "";
+    {
+    this->nom = "";
     this->prix = "0";
-}
+    }
 
 Menu_Impl::Menu_Impl(QString nom,QString prix )
-{
+    {
     this->nom = nom;
     this->prix =prix;
 
-}
+    }
 
 
 
-   bool Menu_Impl::ajouter(QString nom,QString prix)
+bool Menu_Impl::ajouter(QString nom,QString prix)
    {
-       QSqlQuery qry;
-                   qry.prepare("INSERT INTO MENU ( NOM,PRIX) "
+    QSqlQuery qry;
+    qry.prepare("INSERT INTO MENU ( NOM,PRIX) "
                                        "VALUES (:NOM,:PRIX)");
-
-           qry.bindValue(":NOM",nom);
-           qry.bindValue(":PRIX",prix);
-           return qry.exec();
+    qry.bindValue(":NOM",nom);
+    qry.bindValue(":PRIX",prix);
+    return qry.exec();
    }
-   QSqlTableModel *Menu_Impl::afficher()
+QSqlTableModel *Menu_Impl::afficher()
    {
       QSqlTableModel *mmodel = new QSqlTableModel();
        mmodel->setTable("MENU");
@@ -40,7 +38,7 @@ Menu_Impl::Menu_Impl(QString nom,QString prix )
        return mmodel;
 
    }
-    QSqlTableModel *Menu_Impl::supprimer ()
+QSqlTableModel *Menu_Impl::supprimer ()
    {
        QSqlTableModel *mmodel = new QSqlTableModel();
         mmodel->setTable("MENU");
@@ -50,7 +48,7 @@ Menu_Impl::Menu_Impl(QString nom,QString prix )
    }
 
 
-    void Menu_Impl :: recherche(QTableView * table ,QString rech )
+void Menu_Impl :: recherche(QTableView * table ,QString rech )
     {
         QSqlQueryModel *model= new QSqlQueryModel();
 
@@ -62,7 +60,7 @@ Menu_Impl::Menu_Impl(QString nom,QString prix )
         table->show();
 
     }
-    void Menu_Impl::cleartable(QTableView * table)
+void Menu_Impl::cleartable(QTableView * table)
     {
         QSqlQueryModel *model= new QSqlQueryModel();
         model->clear();
