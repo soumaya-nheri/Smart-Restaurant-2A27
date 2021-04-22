@@ -4,7 +4,9 @@
 #include"absence.h"
 #include <QMessageBox>
 #include <QIntValidator>
-
+#include<QPrinter>
+#include<QPrintDialog>
+#include<QFileSystemModel>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -18,7 +20,8 @@ MainWindow::MainWindow(QWidget *parent) :
    ui->comboBox_supp->setModel(P.afficher_CIN());
    ui->comboBox_nom->setModel(P.afficher_NOM());
    ui->comboBox_id3->setModel(A.afficher_ID());
-
+   mysystem = new QSystemTrayIcon(this);
+   mysystem->setVisible(true);
 }
 
 MainWindow::~MainWindow()
@@ -47,15 +50,20 @@ if(test)
 { QMessageBox::information(nullptr,QObject::tr("OK"),
             QObject::tr("Ajout effectué"), QMessageBox::Cancel);
     ui->tab_personnel->setModel(P.afficher());
+    ui->comboBox_supp->setModel(P.afficher_CIN());
+    ui->comboBox_nom->setModel(P.afficher_NOM());
+    ui->le_id->setText("");
+    ui->le_tel->setText("");
+    ui->le_nom->setText("");
+    ui->le_prenom->setText("");
+    ui->le_mdp->setText("");
+    mysystem->show();
+    mysystem->showMessage(tr("notification"),tr("Ajout effectué avec succés"));
 }
 else
     QMessageBox::critical(nullptr,QObject::tr("Not OK"),
                           QObject::tr("Ajout non effectué"), QMessageBox::Cancel);
 }
-ui->comboBox_supp->setModel(P.afficher_CIN());
-ui->comboBox_nom->setModel(P.afficher_NOM());
-
-
 
 }
 
@@ -90,6 +98,8 @@ void MainWindow::on_supprimer_pb_clicked()
                                         QMessageBox::Cancel);
         ui->comboBox_supp->setModel(P.afficher_CIN());
         ui->comboBox_nom->setModel(P.afficher_NOM());
+        mysystem->show();
+        mysystem->showMessage(tr("notification"),tr("suppression effectuée avec succés"));
 
 }
 
@@ -102,8 +112,9 @@ void MainWindow::on_Ajouter_absence_clicked()
                QObject::tr("Ajout effectué"), QMessageBox::Cancel);
        ui->tab_absence->setModel(A.afficher());
        ui->comboBox_id3->setModel(A.afficher_ID());
-        //ui->comboBox_nom2->setModel(P.afficher_NOM());
-         //ui->comboBox_4->setModel(co.afficheroncomboc());
+       //ui->id_absence->setText("");
+       mysystem->show();
+       mysystem->showMessage(tr("notification"),tr("Ajout effectué avec succés"));
    }
    else
        QMessageBox::critical(nullptr,QObject::tr("Not OK"),
@@ -120,6 +131,8 @@ void MainWindow::on_Supprimer_absence_clicked()
                                      QObject::tr("suppression succful .\n"),
                     QMessageBox::Cancel);
               ui->comboBox_id3->setModel(A.afficher_ID());
+              mysystem->show();
+              mysystem->showMessage(tr("notification"),tr("suppression effectuée avec succés"));
         }
 
         else
@@ -140,4 +153,28 @@ void MainWindow::on_pushButton_2_clicked()
 
 }
 
+void MainWindow::on_pushButton_clicked()
+{
 
+    QPrinter printer;
+     printer.setPrinterName("imprimer");
+     QPrintDialog dialog(&printer, this);
+     if (dialog.exec() == QDialog::Rejected) return;
+     ui->tab_personnel->render(&printer);
+
+}
+
+void MainWindow::on_triernom_clicked()
+{
+    ui->tab_absence->setModel(A.triernom());
+}
+
+void MainWindow::on_triermotif_clicked()
+{
+    ui->tab_absence->setModel(A.triermotif());
+}
+
+void MainWindow::on_trierdate_clicked()
+{
+    ui->tab_absence->setModel(A.trierdate());
+}

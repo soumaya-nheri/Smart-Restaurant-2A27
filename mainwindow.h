@@ -39,10 +39,17 @@ private slots:
 
     void on_Supprimer_absence_clicked();
 
+    void on_triernom_clicked();
+
+    void on_triermotif_clicked();
+
+    void on_trierdate_clicked();
+
 private:
     Ui::MainWindow *ui;
     Personnel P;
     Absence A;
+    QSystemTrayIcon *mysystem;
 };
 
 #endif // MAINWINDOW_H

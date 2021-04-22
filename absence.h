@@ -27,6 +27,9 @@ public:
     QSqlQueryModel * afficher_ID();
     bool supprimerAB(int);
     void telechargerPDF();
+    QSqlQueryModel * triernom();
+    QSqlQueryModel * triermotif();
+    QSqlQueryModel * trierdate();
 };
 
 #endif // ABSENCE_H

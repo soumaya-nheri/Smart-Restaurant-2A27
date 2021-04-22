@@ -60,20 +60,6 @@ bool Absence :: supprimerAB(int id)
 
 }
 
-
-/*bool Absence::modifierAB(QString nom,QString motif, QString daate)
-{
-
-   QSqlQuery query;
-
-   query.prepare("UPDATE absence SET nom=: nom, daate= :daate, motif=:motif where id= :id ");
-   //query.bindValue(":id", id);
-   query.bindValue(":nom", nom);
-   query.bindValue(":motif", motif);
-   query.bindValue(":daate",daate);
-         return    query.exec();
-}
-*/
 QSqlQueryModel * Absence ::afficher_ID()
 {
 
@@ -116,3 +102,35 @@ void  Absence::telechargerPDF(){
                             i = i + 500;
                          }}
 
+QSqlQueryModel * Absence::triernom()
+{
+    QSqlQueryModel * model=new QSqlQueryModel();
+    model->setQuery("SELECT * FROM absence ORDER BY NOM");
+    model->setHeaderData(0,Qt::Horizontal,QObject::tr("ID"));
+    model->setHeaderData(0,Qt::Horizontal,QObject::tr("NOM"));
+    model->setHeaderData(0,Qt::Horizontal,QObject::tr("MOTIF"));
+    model->setHeaderData(0,Qt::Horizontal,QObject::tr("DATE"));
+    return model;
+}
+
+QSqlQueryModel * Absence::triermotif()
+{
+    QSqlQueryModel * model=new QSqlQueryModel();
+    model->setQuery("SELECT * FROM absence ORDER BY MOTIF");
+    model->setHeaderData(0,Qt::Horizontal,QObject::tr("ID"));
+    model->setHeaderData(0,Qt::Horizontal,QObject::tr("NOM"));
+    model->setHeaderData(0,Qt::Horizontal,QObject::tr("MOTIF"));
+    model->setHeaderData(0,Qt::Horizontal,QObject::tr("DATE"));
+    return model;
+}
+
+QSqlQueryModel * Absence::trierdate()
+{
+    QSqlQueryModel * model=new QSqlQueryModel();
+    model->setQuery("SELECT * FROM absence ORDER BY DAATE");
+    model->setHeaderData(0,Qt::Horizontal,QObject::tr("ID"));
+    model->setHeaderData(0,Qt::Horizontal,QObject::tr("NOM"));
+    model->setHeaderData(0,Qt::Horizontal,QObject::tr("MOTIF"));
+    model->setHeaderData(0,Qt::Horizontal,QObject::tr("DATE"));
+    return model;
+}
