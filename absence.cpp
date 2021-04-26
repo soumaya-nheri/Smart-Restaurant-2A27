@@ -106,10 +106,10 @@ QSqlQueryModel * Absence::triernom()
 {
     QSqlQueryModel * model=new QSqlQueryModel();
     model->setQuery("SELECT * FROM absence ORDER BY NOM");
-    model->setHeaderData(0,Qt::Horizontal,QObject::tr("ID"));
+    model->setHeaderData(3,Qt::Horizontal,QObject::tr("ID"));
     model->setHeaderData(0,Qt::Horizontal,QObject::tr("NOM"));
-    model->setHeaderData(0,Qt::Horizontal,QObject::tr("MOTIF"));
-    model->setHeaderData(0,Qt::Horizontal,QObject::tr("DATE"));
+    model->setHeaderData(1,Qt::Horizontal,QObject::tr("MOTIF"));
+    model->setHeaderData(2,Qt::Horizontal,QObject::tr("DATE"));
     return model;
 }
 
@@ -117,10 +117,10 @@ QSqlQueryModel * Absence::triermotif()
 {
     QSqlQueryModel * model=new QSqlQueryModel();
     model->setQuery("SELECT * FROM absence ORDER BY MOTIF");
-    model->setHeaderData(0,Qt::Horizontal,QObject::tr("ID"));
+    model->setHeaderData(3,Qt::Horizontal,QObject::tr("ID"));
     model->setHeaderData(0,Qt::Horizontal,QObject::tr("NOM"));
-    model->setHeaderData(0,Qt::Horizontal,QObject::tr("MOTIF"));
-    model->setHeaderData(0,Qt::Horizontal,QObject::tr("DATE"));
+    model->setHeaderData(1,Qt::Horizontal,QObject::tr("MOTIF"));
+    model->setHeaderData(2,Qt::Horizontal,QObject::tr("DATE"));
     return model;
 }
 
@@ -128,9 +128,9 @@ QSqlQueryModel * Absence::trierdate()
 {
     QSqlQueryModel * model=new QSqlQueryModel();
     model->setQuery("SELECT * FROM absence ORDER BY DAATE");
-    model->setHeaderData(0,Qt::Horizontal,QObject::tr("ID"));
+    model->setHeaderData(3,Qt::Horizontal,QObject::tr("ID"));
     model->setHeaderData(0,Qt::Horizontal,QObject::tr("NOM"));
-    model->setHeaderData(0,Qt::Horizontal,QObject::tr("MOTIF"));
-    model->setHeaderData(0,Qt::Horizontal,QObject::tr("DATE"));
+    model->setHeaderData(1,Qt::Horizontal,QObject::tr("MOTIF"));
+    model->setHeaderData(2,Qt::Horizontal,QObject::tr("DATE"));
     return model;
 }

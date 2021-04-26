@@ -12,18 +12,21 @@ CONFIG += c++11
 SOURCES += \
     absence.cpp \
     connection.cpp \
+    gestion_personnel.cpp \
+    login.cpp \
     main.cpp \
-    mainwindow.cpp \
     personnel.cpp
 
 HEADERS += \
     absence.h \
     connection.h \
-    mainwindow.h \
+    gestion_personnel.h \
+    login.h \
     personnel.h
 
 FORMS += \
-    mainwindow.ui
+    gestion_personnel.ui \
+    login.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

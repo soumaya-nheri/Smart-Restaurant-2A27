@@ -1,21 +1,21 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#ifndef GESTION_PERSONNEL_H
+#define GESTION_PERSONNEL_H
 
-#include <QMainWindow>
-#include <personnel.h>
-#include <absence.h>
+#include <QDialog>
+#include "absence.h"
+#include "personnel.h"
+
 namespace Ui {
-class MainWindow;
+class gestion_personnel;
 }
 
-class MainWindow : public QMainWindow
+class gestion_personnel : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
-
+    explicit gestion_personnel(QWidget *parent = nullptr);
+    ~gestion_personnel();
 private slots:
     void on_pb_ajouter_clicked();
 
@@ -46,10 +46,10 @@ private slots:
     void on_trierdate_clicked();
 
 private:
-    Ui::MainWindow *ui;
+    Ui::gestion_personnel *ui;
     Personnel P;
     Absence A;
     QSystemTrayIcon *mysystem;
 };
 
-#endif // MAINWINDOW_H
+#endif // GESTION_PERSONNEL_H

@@ -1,5 +1,5 @@
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
+#include "gestion_personnel.h"
+#include "ui_gestion_personnel.h"
 #include"personnel.h"
 #include"absence.h"
 #include <QMessageBox>
@@ -7,10 +7,11 @@
 #include<QPrinter>
 #include<QPrintDialog>
 #include<QFileSystemModel>
+#include "login.h"
 
-MainWindow::MainWindow(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::MainWindow)
+gestion_personnel::gestion_personnel(QWidget *parent) :
+    QDialog(parent),
+    ui(new Ui::gestion_personnel)
 {
     ui->setupUi(this);
     ui->le_id->setValidator( new QIntValidator(0, 99999999, this));
@@ -24,12 +25,12 @@ MainWindow::MainWindow(QWidget *parent) :
    mysystem->setVisible(true);
 }
 
-MainWindow::~MainWindow()
+gestion_personnel::~gestion_personnel()
 {
     delete ui;
 }
 
-void MainWindow::on_pb_ajouter_clicked()
+void gestion_personnel::on_pb_ajouter_clicked()
 {
     QString cin=ui->le_id->text();
     QString tel=ui->le_tel->text();
@@ -68,7 +69,7 @@ else
 }
 
 
-void MainWindow::on_lineEdit_textChanged(const QString &arg1)
+void gestion_personnel::on_lineEdit_textChanged(const QString &arg1)
 {
     Personnel P;
 
@@ -81,7 +82,7 @@ if (ui->lineEdit->text().isEmpty())
 }
 }
 
-void MainWindow::on_supprimer_pb_clicked()
+void gestion_personnel::on_supprimer_pb_clicked()
 {
 
         bool test=P.supprimer(ui->comboBox_supp->currentText());
@@ -103,7 +104,7 @@ void MainWindow::on_supprimer_pb_clicked()
 
 }
 
-void MainWindow::on_Ajouter_absence_clicked()
+void gestion_personnel::on_Ajouter_absence_clicked()
 {
     Absence A(ui->id_absence->text().toInt(),ui->comboBox_nom->currentText(),ui->comboBox_motif->currentText(),ui->date->text());
    bool test= A.ajouterAB();
@@ -122,7 +123,7 @@ void MainWindow::on_Ajouter_absence_clicked()
    }
 
 
-void MainWindow::on_Supprimer_absence_clicked()
+void gestion_personnel::on_Supprimer_absence_clicked()
 {
     bool test=A.supprimerAB(ui->comboBox_id3->currentText().toInt());
     if(test)
@@ -142,7 +143,7 @@ void MainWindow::on_Supprimer_absence_clicked()
 
 }
 
-void MainWindow::on_pushButton_2_clicked()
+void gestion_personnel::on_pushButton_2_clicked()
 {
    A.telechargerPDF();
 
@@ -153,7 +154,7 @@ void MainWindow::on_pushButton_2_clicked()
 
 }
 
-void MainWindow::on_pushButton_clicked()
+void gestion_personnel::on_pushButton_clicked()
 {
 
     QPrinter printer;
@@ -164,17 +165,17 @@ void MainWindow::on_pushButton_clicked()
 
 }
 
-void MainWindow::on_triernom_clicked()
+void gestion_personnel::on_triernom_clicked()
 {
     ui->tab_absence->setModel(A.triernom());
 }
 
-void MainWindow::on_triermotif_clicked()
+void gestion_personnel::on_triermotif_clicked()
 {
     ui->tab_absence->setModel(A.triermotif());
 }
 
-void MainWindow::on_trierdate_clicked()
+void gestion_personnel::on_trierdate_clicked()
 {
     ui->tab_absence->setModel(A.trierdate());
 }
