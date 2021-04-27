@@ -12,6 +12,12 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "table.h"
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
+#include "gestion_reservation.h"
+#include "ui_gestion_reservation.h"
+#include "reservation.h"
+#include "table.h"
 Gestion_table::Gestion_table(QWidget *parent) :
 QWidget(parent),
 ui(new Ui::Gestion_table)

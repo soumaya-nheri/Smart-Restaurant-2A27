@@ -945,7 +945,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
 }</string>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="Ajouter">
     <attribute name="title">
@@ -1230,6 +1230,32 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
      </property>
      <property name="text">
       <string>tout les tables</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="retour_2">
+     <property name="geometry">
+      <rect>
+       <x>580</x>
+       <y>30</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Retour</string>
+     </property>
+     <property name="icon">
+      <iconset resource="images.qrc">
+       <normaloff>:/images/return.png</normaloff>:/images/return.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
      </property>
     </widget>
    </widget>
