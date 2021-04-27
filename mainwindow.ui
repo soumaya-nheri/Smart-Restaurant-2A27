@@ -564,8 +564,8 @@ QPushButton
      <string/>
     </property>
     <property name="icon">
-     <iconset>
-      <normaloff>:/new/images/images/Image4.png</normaloff>:/new/images/images/Image4.png</iconset>
+     <iconset resource="images.qrc">
+      <normaloff>:/images/Image4.png</normaloff>:/images/Image4.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -598,8 +598,8 @@ QPushButton
      <string/>
     </property>
     <property name="icon">
-     <iconset>
-      <normaloff>:/new/images/images/ESPRIT.png</normaloff>:/new/images/images/ESPRIT.png</iconset>
+     <iconset resource="images.qrc">
+      <normaloff>:/images/ESPRIT.png</normaloff>:/images/ESPRIT.png</iconset>
     </property>
     <property name="iconSize">
      <size>

@@ -253,3 +253,19 @@ else {
 else
 {QMessageBox ::information(this,"","erreur de modification 2 ") ;}
 }
+
+void Gestion_reservation::on_retour_2_clicked()
+{
+    MainWindow *w = new MainWindow;
+    hide();
+    w->show();
+
+}
+
+void Gestion_reservation::on_retour_3_clicked()
+{
+    MainWindow *w = new MainWindow;
+    hide();
+    w->show();
+
+}

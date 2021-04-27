@@ -945,7 +945,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
 }</string>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="Ajouter">
     <attribute name="title">
@@ -1004,8 +1004,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     <widget class="QPushButton" name="reset_2">
      <property name="geometry">
       <rect>
-       <x>310</x>
-       <y>240</y>
+       <x>440</x>
+       <y>220</y>
        <width>100</width>
        <height>23</height>
       </rect>
@@ -1037,8 +1037,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     <widget class="QPushButton" name="ajouter">
      <property name="geometry">
       <rect>
-       <x>200</x>
-       <y>240</y>
+       <x>320</x>
+       <y>220</y>
        <width>100</width>
        <height>23</height>
       </rect>
@@ -1174,6 +1174,32 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
       <string/>
      </property>
     </widget>
+    <widget class="QPushButton" name="retour_3">
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>20</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Retour</string>
+     </property>
+     <property name="icon">
+      <iconset resource="images.qrc">
+       <normaloff>:/images/return.png</normaloff>:/images/return.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="Affichage">
     <attribute name="title">
@@ -1252,6 +1278,32 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
       <string>rechercher</string>
      </property>
     </widget>
+    <widget class="QPushButton" name="retour_2">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>370</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Retour</string>
+     </property>
+     <property name="icon">
+      <iconset resource="images.qrc">
+       <normaloff>:/images/return.png</normaloff>:/images/return.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="Modifier">
     <attribute name="title">
@@ -1260,8 +1312,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     <widget class="QPushButton" name="modifier">
      <property name="geometry">
       <rect>
-       <x>190</x>
-       <y>230</y>
+       <x>330</x>
+       <y>200</y>
        <width>100</width>
        <height>23</height>
       </rect>
@@ -1286,8 +1338,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     <widget class="QPushButton" name="reset_3">
      <property name="geometry">
       <rect>
-       <x>300</x>
-       <y>230</y>
+       <x>450</x>
+       <y>200</y>
        <width>100</width>
        <height>23</height>
       </rect>
@@ -1538,6 +1590,32 @@ QHeaderView::section {
       <string/>
      </property>
     </widget>
+    <widget class="QPushButton" name="retour">
+     <property name="geometry">
+      <rect>
+       <x>580</x>
+       <y>10</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Retour</string>
+     </property>
+     <property name="icon">
+      <iconset resource="images.qrc">
+       <normaloff>:/images/return.png</normaloff>:/images/return.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="stat">
     <attribute name="title">
@@ -1554,32 +1632,6 @@ QHeaderView::section {
      </property>
     </widget>
    </widget>
-  </widget>
-  <widget class="QPushButton" name="retour">
-   <property name="geometry">
-    <rect>
-     <x>250</x>
-     <y>450</y>
-     <width>231</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"/>
-   </property>
-   <property name="text">
-    <string>Retour</string>
-   </property>
-   <property name="icon">
-    <iconset resource="images.qrc">
-     <normaloff>:/images/return.png</normaloff>:/images/return.png</iconset>
-   </property>
-   <property name="iconSize">
-    <size>
-     <width>30</width>
-     <height>30</height>
-    </size>
-   </property>
   </widget>
  </widget>
  <customwidgets>

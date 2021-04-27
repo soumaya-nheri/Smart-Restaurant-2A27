@@ -25,6 +25,11 @@ public slots:
     void on_recherche_textChanged(const QString &arg1);
     void on_retour_clicked();
 
+private slots:
+    void on_retour_2_clicked();
+
+    void on_retour_3_clicked();
+
 private:
     Ui::Gestion_reservation *ui;
     QSystemTrayIcon *notifyicon;
