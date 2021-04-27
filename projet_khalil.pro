@@ -10,19 +10,19 @@ CONFIG += c++11
 
 SOURCES += \
     connection.cpp \
-    gestion_livraison.cpp \
     livraison.cpp \
     livreur.cpp \
-    main.cpp
+    main.cpp \
+    mainwindow.cpp
 
 HEADERS += \
     connection.h \
-    gestion_livraison.h \
     livraison.h \
-    livreur.h
+    livreur.h \
+    mainwindow.h
 
 FORMS += \
-    gestion_livraison.ui
+    mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

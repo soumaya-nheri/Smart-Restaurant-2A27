@@ -1,21 +1,20 @@
-#ifndef mainwindow_H
-#define mainwindow_H
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
 #include <livreur.h>
 #include <livraison.h>
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class mainwindow; }
+namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
-
 
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    mainwindow(QWidget *parent = nullptr);
-    ~mainwindow();
+    MainWindow(QWidget *parent = nullptr);
+    ~MainWindow();
 
 private slots:
     void on_pushButton_clicked();
@@ -38,8 +37,8 @@ private slots:
     void on_pushButton_7_clicked();
 
 private:
-    Ui::mainwindow *ui;
+    Ui::MainWindow *ui;
     livreur L ;
     livraison liv;
 };
-#endif // mainwindow_H
+#endif // MAINWINDOW_H

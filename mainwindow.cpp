@@ -1,12 +1,12 @@
-#include "gestion_livraison.h"
-#include "ui_gestion_livraison.h"
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
 #include <livreur.h>
 #include <livraison.h>
 #include <QMessageBox>
 
-gestion_livraison::gestion_livraison(QWidget *parent)
-    : Qgestion_livraison(parent)
-    , ui(new Ui::gestion_livraison)
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent)
+    , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
     ui->tab_livreur->setModel(L.afficher());
@@ -14,13 +14,13 @@ gestion_livraison::gestion_livraison(QWidget *parent)
 
 }
 
-gestion_livraison::~gestion_livraison()
+MainWindow::~MainWindow()
 {
     delete ui;
 }
 
 
-void gestion_livraison::on_pushButton_clicked()
+void MainWindow::on_pushButton_clicked()
 {
     QString cin=ui->cin->text();
     QString nom=ui->le_nom->text();
@@ -47,7 +47,7 @@ void gestion_livraison::on_pushButton_clicked()
 }
 }
 
-void gestion_livraison::on_pushButton_4_clicked()
+void MainWindow::on_pushButton_4_clicked()
 {
     livreur l;
             QString x=ui->suppline->text();
@@ -64,7 +64,7 @@ void gestion_livraison::on_pushButton_4_clicked()
                 msgBox.exec();}
 }
 
-void gestion_livraison::on_pushButton_3_clicked()
+void MainWindow::on_pushButton_3_clicked()
 {
     QString cin=ui->cin_modifier->text();
     QString disponibilite= ui->disponibilite_modifier->text();
@@ -84,7 +84,7 @@ void gestion_livraison::on_pushButton_3_clicked()
             msgBox.exec();}
 }
 
-void gestion_livraison::on_lineEdit_recherche_textChanged(const QString &arg1)
+void MainWindow::on_lineEdit_recherche_textChanged(const QString &arg1)
 {
     livreur l;
 
@@ -97,7 +97,7 @@ void gestion_livraison::on_lineEdit_recherche_textChanged(const QString &arg1)
     }
 }
 
-void gestion_livraison::on_pushButton_5_clicked()
+void MainWindow::on_pushButton_5_clicked()
 {QString commande=ui->numcommande->text();
     QString nom=ui->nomclient->text();
     QString tel=ui->tel->text();
@@ -127,7 +127,7 @@ void gestion_livraison::on_pushButton_5_clicked()
 
 }
 
-void gestion_livraison::on_pushButton_6_clicked()
+void MainWindow::on_pushButton_6_clicked()
 {QString commande=ui->numcommande1->text();
     QString region= ui->region1->text();
     QString nom= ui->nomclient1->text();
@@ -152,7 +152,7 @@ void gestion_livraison::on_pushButton_6_clicked()
 
 
 
-void gestion_livraison::on_pushButton_7_clicked()
+void MainWindow::on_pushButton_7_clicked()
 {
     livraison liv;
             QString x=ui->lineEdit_7->text();

@@ -882,19 +882,6 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
         <string>Modifier</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_8">
-       <property name="geometry">
-        <rect>
-         <x>230</x>
-         <y>310</y>
-         <width>41</width>
-         <height>61</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>&gt;</string>
-       </property>
-      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_2">
