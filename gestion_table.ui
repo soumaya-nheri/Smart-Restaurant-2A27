@@ -487,7 +487,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     <string notr="true"/>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="Ajouter">
     <attribute name="title">
@@ -533,7 +533,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     <widget class="QLineEdit" name="nbre_personnes">
      <property name="geometry">
       <rect>
-       <x>420</x>
+       <x>440</x>
        <y>110</y>
        <width>111</width>
        <height>20</height>
@@ -569,14 +569,14 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     <widget class="QLabel" name="label_5">
      <property name="geometry">
       <rect>
-       <x>50</x>
+       <x>30</x>
        <y>110</y>
        <width>91</width>
        <height>16</height>
       </rect>
      </property>
      <property name="text">
-      <string>NUMERO TABLE</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; color:#ffffff;&quot;&gt;NUMERO TABLE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QPushButton" name="ajouter">
@@ -610,12 +610,12 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
       <rect>
        <x>300</x>
        <y>110</y>
-       <width>111</width>
+       <width>131</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>NOMBRE DES PLACES</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; color:#ffffff;&quot;&gt;NOMBRE DES PLACES&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QLabel" name="mesagenombre">
@@ -870,12 +870,12 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
       <rect>
        <x>290</x>
        <y>100</y>
-       <width>111</width>
+       <width>141</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>NOMBRE DES PLACES</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; color:#ffffff;&quot;&gt;NOMBRE DES PLACES&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_6">
@@ -888,13 +888,13 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
       </rect>
      </property>
      <property name="text">
-      <string>NUMERO TABLE</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; color:#ffffff;&quot;&gt;NUMERO TABLE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="NUM_TABLE2">
      <property name="geometry">
       <rect>
-       <x>130</x>
+       <x>140</x>
        <y>100</y>
        <width>111</width>
        <height>20</height>
@@ -907,7 +907,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     <widget class="QLineEdit" name="nbre_personnes2">
      <property name="geometry">
       <rect>
-       <x>410</x>
+       <x>450</x>
        <y>100</y>
        <width>111</width>
        <height>20</height>
