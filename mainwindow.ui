@@ -479,9 +479,9 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     <property name="geometry">
      <rect>
       <x>150</x>
-      <y>80</y>
-      <width>411</width>
-      <height>111</height>
+      <y>160</y>
+      <width>211</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -492,12 +492,12 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     </property>
     <property name="icon">
      <iconset resource="images.qrc">
-      <normaloff>:/images/table.png</normaloff>:/images/table.png</iconset>
+      <normaloff>:/images/restaurant-table.png</normaloff>:/images/restaurant-table.png</iconset>
     </property>
     <property name="iconSize">
      <size>
-      <width>80</width>
-      <height>80</height>
+      <width>60</width>
+      <height>60</height>
      </size>
     </property>
    </widget>
@@ -505,9 +505,9 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     <property name="geometry">
      <rect>
       <x>150</x>
-      <y>230</y>
-      <width>411</width>
-      <height>111</height>
+      <y>250</y>
+      <width>211</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -518,13 +518,26 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     </property>
     <property name="icon">
      <iconset resource="images.qrc">
-      <normaloff>:/images/reservation.png</normaloff>:/images/reservation.png</iconset>
+      <normaloff>:/images/restaurant-reservation-2-923477.png</normaloff>:/images/restaurant-reservation-2-923477.png</iconset>
     </property>
     <property name="iconSize">
      <size>
-      <width>80</width>
-      <height>80</height>
+      <width>60</width>
+      <height>60</height>
      </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>100</y>
+      <width>151</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; font-style:italic; color:#aa00ff;&quot;&gt;Acceuil &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
   </widget>
