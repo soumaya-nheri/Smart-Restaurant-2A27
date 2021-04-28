@@ -30,6 +30,16 @@ private slots:
 
     void on_retour_3_clicked();
 
+    void on_pushButton_6_clicked();
+
+    void on_pushButton_5_clicked();
+
+    void on_pushButton_4_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_retour_4_clicked();
+
 private:
     Ui::Gestion_reservation *ui;
     QSystemTrayIcon *notifyicon;

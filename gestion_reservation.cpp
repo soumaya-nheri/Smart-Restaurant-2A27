@@ -13,6 +13,13 @@
 #include "ui_gestion_reservation.h"
 #include "reservation.h"
 #include "table.h"
+#include <QMessageBox>
+#include <QIntValidator>
+#include<QPrinter>
+#include<QPrintDialog>
+#include<QFileSystemModel>
+
+
 Gestion_reservation::Gestion_reservation(QWidget *parent) :
 QWidget(parent),
 ui(new Ui::Gestion_reservation)
@@ -268,4 +275,48 @@ void Gestion_reservation::on_retour_3_clicked()
     hide();
     w->show();
 
+}
+
+void Gestion_reservation::on_pushButton_6_clicked()
+{
+    QPrinter printer;
+     printer.setPrinterName("imprimer");
+     QPrintDialog dialog(&printer, this);
+     if (dialog.exec() == QDialog::Rejected) return;
+     ui->tabWidget->render(&printer);
+}
+
+void Gestion_reservation::on_pushButton_5_clicked()
+{
+    QPrinter printer;
+     printer.setPrinterName("imprimer");
+     QPrintDialog dialog(&printer, this);
+     if (dialog.exec() == QDialog::Rejected) return;
+     ui->tabWidget->render(&printer);
+}
+
+void Gestion_reservation::on_pushButton_4_clicked()
+{
+    QPrinter printer;
+     printer.setPrinterName("imprimer");
+     QPrintDialog dialog(&printer, this);
+     if (dialog.exec() == QDialog::Rejected) return;
+     ui->tabWidget->render(&printer);
+}
+
+void Gestion_reservation::on_pushButton_3_clicked()
+{
+    QPrinter printer;
+     printer.setPrinterName("imprimer");
+     QPrintDialog dialog(&printer, this);
+     if (dialog.exec() == QDialog::Rejected) return;
+     ui->tabWidget->render(&printer);
+}
+
+void Gestion_reservation::on_retour_4_clicked()
+{
+
+    MainWindow *w = new MainWindow;
+    hide();
+    w->show();
 }

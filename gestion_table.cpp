@@ -188,3 +188,50 @@ hide();
 w->show();
 
 }
+
+void Gestion_table::on_pushButton_clicked()
+{
+
+    QPrinter printer;
+     printer.setPrinterName("imprimer");
+     QPrintDialog dialog(&printer, this);
+     if (dialog.exec() == QDialog::Rejected) return;
+     ui->tabWidget->render(&printer);
+}
+
+void Gestion_table::on_pushButton_2_clicked()
+{
+
+    QPrinter printer;
+     printer.setPrinterName("imprimer");
+     QPrintDialog dialog(&printer, this);
+     if (dialog.exec() == QDialog::Rejected) return;
+     ui->tabWidget->render(&printer);
+}
+
+void Gestion_table::on_pushButton_3_clicked()
+{
+
+    QPrinter printer;
+     printer.setPrinterName("imprimer");
+     QPrintDialog dialog(&printer, this);
+     if (dialog.exec() == QDialog::Rejected) return;
+     ui->tabWidget->render(&printer);
+}
+
+void Gestion_table::on_retour_2_clicked()
+{
+
+    MainWindow *w = new MainWindow;
+    hide();
+    w->show();
+
+}
+
+void Gestion_table::on_retour_3_clicked()
+{
+
+    MainWindow *w = new MainWindow;
+    hide();
+    w->show();
+}

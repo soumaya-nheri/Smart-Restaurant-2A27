@@ -945,7 +945,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
 }</string>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="Ajouter">
     <attribute name="title">
@@ -1009,8 +1009,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
       <rect>
        <x>450</x>
        <y>170</y>
-       <width>100</width>
-       <height>23</height>
+       <width>111</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -1043,7 +1043,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <x>330</x>
        <y>170</y>
        <width>100</width>
-       <height>23</height>
+       <height>31</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -1128,6 +1128,19 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
       </size>
      </property>
     </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>210</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Imprimer</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="Affichage">
     <attribute name="title">
@@ -1170,8 +1183,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     <widget class="QPushButton" name="supprimer">
      <property name="geometry">
       <rect>
-       <x>490</x>
-       <y>260</y>
+       <x>270</x>
+       <y>330</y>
        <width>111</width>
        <height>31</height>
       </rect>
@@ -1258,6 +1271,19 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
       </size>
      </property>
     </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>370</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Imprimer</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="Modifier">
     <attribute name="title">
@@ -1266,10 +1292,10 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     <widget class="QPushButton" name="modifier">
      <property name="geometry">
       <rect>
-       <x>350</x>
+       <x>339</x>
        <y>160</y>
-       <width>100</width>
-       <height>23</height>
+       <width>111</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -1294,8 +1320,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
       <rect>
        <x>470</x>
        <y>160</y>
-       <width>100</width>
-       <height>23</height>
+       <width>111</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -1402,6 +1428,45 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
      </property>
      <property name="text">
       <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>200</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Imprimer</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="retour_3">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>20</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Retour</string>
+     </property>
+     <property name="icon">
+      <iconset resource="images.qrc">
+       <normaloff>:/images/return.png</normaloff>:/images/return.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
      </property>
     </widget>
    </widget>
