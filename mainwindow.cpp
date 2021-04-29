@@ -168,3 +168,9 @@ void MainWindow::on_pushButton_7_clicked()
                { msgBox.setText("Echec de suppression");
                 msgBox.exec();}
 }
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    QMessageBox::information(this, "Alerte", "Message envoyé au livreur");
+
+}

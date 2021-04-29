@@ -2,6 +2,8 @@
 #include <QApplication>
 #include <QMessageBox>
 #include "connection.h"
+#include "alerte.h"
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -23,4 +25,11 @@ int main(int argc, char *argv[])
 
 
     return a.exec();
+
+    QApplication app(argc, argv);
+
+       alerte fenetre;
+       fenetre.show();
+
+       return app.exec();
 }
