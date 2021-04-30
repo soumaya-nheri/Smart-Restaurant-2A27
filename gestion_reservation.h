@@ -4,6 +4,8 @@
 #include <QWidget>
 #include "QSystemTrayIcon"
 
+
+
 namespace Ui {
 class Gestion_reservation;
 }
@@ -24,6 +26,8 @@ public slots:
     void on_reset_3_clicked();
     void on_recherche_textChanged(const QString &arg1);
     void on_retour_clicked();
+    void myfunction();
+
 
 private slots:
     void on_retour_2_clicked();
@@ -40,9 +44,13 @@ private slots:
 
     void on_retour_4_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::Gestion_reservation *ui;
     QSystemTrayIcon *notifyicon;
+    QTimer *timer;
+
 };
 
 #endif // GESTION_RESERVATION_H

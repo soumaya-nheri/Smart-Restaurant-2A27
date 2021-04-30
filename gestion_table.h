@@ -25,6 +25,8 @@ public slots:
     void on_radioButton_2_clicked();
     void on_radioButton_3_clicked();
     void on_retour_clicked();
+    void myfunction();
+
 private slots:
     void on_pushButton_clicked();
 
@@ -40,6 +42,8 @@ private slots:
 
 private:
     Ui::Gestion_table *ui;
+    QTimer *timer;
+
 };
 
 #endif // GESTION_TABLE_H

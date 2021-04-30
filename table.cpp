@@ -1,5 +1,4 @@
 #include "table.h"
-#include "ui_gestion_table.h"
 #include <QPrinter>
 #include <QFileDialog>
 #include <QTextDocument>
@@ -10,6 +9,8 @@
 #include "ui_gestion_reservation.h"
 #include "reservation.h"
 #include "table.h"
+#include "ui_gestion_table.h"
+
 
 #include <QFont>
 table::table()

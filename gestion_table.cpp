@@ -9,6 +9,8 @@
 #include <QSqlQueryModel>
 #include <QtCore/qglobal.h>
 #include <string>
+#include<QDebug>
+#include<QDateTime>
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "table.h"
@@ -22,6 +24,9 @@ Gestion_table::Gestion_table(QWidget *parent) :
 QWidget(parent),
 ui(new Ui::Gestion_table)
 {
+    timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()),this,SLOT(myfunction()));
+    timer->start(1000);
 ui->setupUi(this);
 table t;
 t.afficher(ui);
@@ -234,4 +239,14 @@ void Gestion_table::on_retour_3_clicked()
     MainWindow *w = new MainWindow;
     hide();
     w->show();
+}
+void Gestion_table::myfunction()
+{
+QTime time = QTime::currentTime();
+QString time_text = time.toString("hh : mm : ss");
+if ((time.second() % 2) == 0){
+    time_text[3] = ' ';
+    time_text[8] = ' ';
+}
+ui->label_time->setText(time_text);
 }

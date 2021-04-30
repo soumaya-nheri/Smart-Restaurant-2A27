@@ -18,12 +18,16 @@
 #include<QPrinter>
 #include<QPrintDialog>
 #include<QFileSystemModel>
-
+#include<QDebug>
+#include<QDateTime>
 
 Gestion_reservation::Gestion_reservation(QWidget *parent) :
 QWidget(parent),
 ui(new Ui::Gestion_reservation)
 {
+    timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()),this,SLOT(myfunction()));
+    timer->start(1000);
 ui->setupUi(this);
 reservation R;
 R.tables(ui);
@@ -320,3 +324,15 @@ void Gestion_reservation::on_retour_4_clicked()
     hide();
     w->show();
 }
+void Gestion_reservation::myfunction()
+{
+QTime time = QTime::currentTime();
+QString time_text = time.toString("hh : mm : ss");
+if ((time.second() % 2) == 0){
+    time_text[3] = ' ';
+    time_text[8] = ' ';
+}
+ui->label_time->setText(time_text);
+
+}
+
