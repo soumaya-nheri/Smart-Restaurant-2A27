@@ -67,6 +67,7 @@ HEADERS += \
     table.h
 
 FORMS += \
+    article2.ui \
     articles.ui \
     categorie.ui \
     fournisseur.ui \
@@ -85,4 +86,13 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    Ressources.qrc
+    Ressources.qrc \
+    Ressources.qrc \
+    Ressources.qrc \
+    images.qrc \
+    images.qrc
+
+DISTFILES += \
+    article.pdf \
+    download.png \
+    projet2A.pro.user
