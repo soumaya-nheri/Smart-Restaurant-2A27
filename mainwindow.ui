@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>articles</class>
- <widget class="QWidget" name="articles">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>757</width>
-    <height>454</height>
+    <width>715</width>
+    <height>459</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Smart Restaurant</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QToolTip
@@ -474,238 +474,321 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     border: 1px solid #444;
 }</string>
   </property>
-  <widget class="QTableView" name="tableView">
-   <property name="geometry">
-    <rect>
-     <x>350</x>
-     <y>60</y>
-     <width>301</width>
-     <height>271</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"/>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="txt_Nom">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>100</y>
-     <width>113</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>100</y>
-     <width>47</width>
-     <height>13</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Nom&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>130</y>
-     <width>47</width>
-     <height>13</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Quantité&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_2">
-   <property name="geometry">
-    <rect>
-     <x>250</x>
-     <y>310</y>
-     <width>94</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"/>
-   </property>
-   <property name="text">
-    <string>Supprimer</string>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>:/new/images/images/delete.png</normaloff>:/new/images/images/delete.png</iconset>
-   </property>
-  </widget>
-  <widget class="QSpinBox" name="spinBox">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>130</y>
-     <width>81</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton {
-         border: 2px solid #8f8f91;
-         border-radius: 6px;
-         background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                           stop: 0 #f6f7fa, stop: 1 #dadbde);
-         min-width: 80px;
-     }
-
-     QPushButton:pressed {
-         background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                           stop: 0 #dadbde, stop: 1 #f6f7fa);
-     }
-
-     QPushButton:flat {
-         border: none; /* no border for a flat push button */
-     }
-
-     QPushButton:default {
-         border-color: navy; /* make the default button prominent */
-     }
-QPushButton::hover
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="gestio_tables">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>220</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white;</string>
+    </property>
+    <property name="text">
+     <string>Gestion des tables</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>:/new/images/images/restaurant-table.png</normaloff>:/new/images/images/restaurant-table.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>220</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white;</string>
+    </property>
+    <property name="text">
+     <string>Gestion des reservation</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>:/new/images/images/restaurant-reservation-2-923477.png</normaloff>:/new/images/images/restaurant-reservation-2-923477.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="menu">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>220</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white;</string>
+    </property>
+    <property name="text">
+     <string>Gestion Menu              </string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>:/new/images/images/450210.png</normaloff>:/new/images/images/450210.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>38</width>
+      <height>38</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="gestion_personnel">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>170</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white;</string>
+    </property>
+    <property name="text">
+     <string>Gestion personnel        </string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>:/new/images/images/unnamed.png</normaloff>:/new/images/images/unnamed.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="gestion_livraison">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>270</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white;</string>
+    </property>
+    <property name="text">
+     <string>Gestion livraison           </string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>:/new/images/images/2830175.png</normaloff>:/new/images/images/2830175.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="gestion_article">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>320</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white;</string>
+    </property>
+    <property name="text">
+     <string>Gestion article              </string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>:/new/images/images/1375136.png</normaloff>:/new/images/images/1375136.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="gestion_categorie">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>320</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white;</string>
+    </property>
+    <property name="text">
+     <string>Gestion categorie          </string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>:/new/images/images/kissclipart-circle-clipart-number-brand-a48dff2275e177b8.png</normaloff>:/new/images/images/kissclipart-circle-clipart-number-brand-a48dff2275e177b8.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="gestion_fournisseur">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>320</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white;</string>
+    </property>
+    <property name="text">
+     <string>Gestion fournisseur      </string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>:/new/images/images/1561391-200.png</normaloff>:/new/images/images/1561391-200.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>0</y>
+      <width>251</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton
 {
-	background-color: #09c1eb;
-
-}
-QPushButton::pressed
-{
-	background-color: #3d4ef2;
-
-}
- QLineEdit,QDateTimeEdit {
-     border: 2px solid gray;
-     border-radius: 10px;
-     padding: 0 8px;
-     background: #e0ebeb	;
-     selection-background-color: darkgray;
- }
-QComboBox {
-     border: 2px solid gray;
-     border-radius: 10px;
-     padding: 0 8px;
-     background: #e0ebeb	;
-     selection-background-color: darkgray;
- }
-   QTabWidget::pane { /* The tab widget frame */
-         border-top: 2px solid #C2C7CB;
-     }
-
-     QTabWidget::tab-bar {
-         left: 5px; /* move to the right by 5px */
-     }
-
-     /* Style the tab using the tab sub-control. Note that
-         it reads QTabBar not QTabWidget */
-     QTabBar::tab {
-         background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                     stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
-                                     stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
-         border: 2px solid #C4C4C3;
-         border-bottom-color: #C2C7CB; /* same as the pane color */
-         border-top-left-radius: 4px;
-         border-top-right-radius: 4px;
-         min-width: 8ex;
-         padding: 2px;
-         width: 140px;
-     }
-
-     QTabBar::tab:selected, QTabBar::tab:hover {
-         background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                     stop: 0 #fafafa, stop: 0.4 #f4f4f4,
-                                     stop: 0.5 #e7e7e7, stop: 1.0 #fafafa);
-     }
-
-     QTabBar::tab:selected {
-         border-color: #9B9B9B;
-         border-bottom-color: #C2C7CB; /* same as pane color */
-     }
-
-     QTabBar::tab:!selected {
-         margin-top: 2px; /* make non-selected tabs look smaller */
-     }
-QTabBar::tab:selected
-{
-	background-color: /*qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(54, 197, 177, 255),stop:1 rgba(11, 135, 111, 255)); */#3a90a6;
-	color: #fff;
-
+ 
+    background-color: brown;
+    
+    border-color: brown;
+   
 }</string>
-   </property>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>:/new/images/images/ESPRIT.png</normaloff>:/new/images/images/ESPRIT.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>140</width>
+      <height>140</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>100</y>
+      <width>191</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; font-style:italic; color:#aaaa7f;&quot;&gt;ACCUEIL&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::RichText</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>111</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton
+{
+ 
+    background-color: brown;
+    
+    border-color: brown;
+   
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>:/new/images/images/Image4.png</normaloff>:/new/images/images/Image4.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>80</width>
+      <height>80</height>
+     </size>
+    </property>
+   </widget>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>170</y>
-     <width>94</width>
-     <height>23</height>
+     <x>0</x>
+     <y>0</y>
+     <width>715</width>
+     <height>26</height>
     </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"/>
-   </property>
-   <property name="text">
-    <string>Ajouter</string>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>:/new/images/images/add.png</normaloff>:/new/images/images/add.png</iconset>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
-   <property name="geometry">
-    <rect>
-     <x>580</x>
-     <y>10</y>
-     <width>94</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"/>
-   </property>
-   <property name="text">
-    <string>Retour</string>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>:/new/images/images/return.png</normaloff>:/new/images/images/return.png</iconset>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="imprimer">
-   <property name="geometry">
-    <rect>
-     <x>250</x>
-     <y>260</y>
-     <width>94</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"/>
-   </property>
-   <property name="text">
-    <string>Imprimer</string>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>:/new/prefix1/attachments (4)/reservation.png</normaloff>:/new/prefix1/attachments (4)/reservation.png</iconset>
-   </property>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
   </widget>
  </widget>
+ <layoutdefault spacing="6" margin="11"/>
  <resources/>
  <connections/>
 </ui>

@@ -26,9 +26,7 @@ private slots:
     void on_imprimer_clicked();
     void on_Trier_clicked();
     void on_statistique_clicked();
-
     void on_Retour_clicked();
-
     void on_Retour_2_clicked();
 
 private:
