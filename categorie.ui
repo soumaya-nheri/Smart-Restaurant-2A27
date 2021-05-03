@@ -26,12 +26,12 @@
 QWidget
 {
     color: #b1b1b1;
-       background-color: #ff7979 ;
+    background-color: brown;
 }
 
 QWidget:item:hover
 {
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #ff7979);
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #ca0619);
     color: #000000;
 }
 
@@ -524,7 +524,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
      <string>Ajouter</string>
     </property>
     <property name="icon">
-     <iconset>
+     <iconset resource="Ressources.qrc">
       <normaloff>:/new/images/images/add.png</normaloff>:/new/images/images/add.png</iconset>
     </property>
    </widget>
@@ -544,7 +544,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
      <string>Supprimer</string>
     </property>
     <property name="icon">
-     <iconset>
+     <iconset resource="Ressources.qrc">
       <normaloff>:/new/images/images/delete.png</normaloff>:/new/images/images/delete.png</iconset>
     </property>
    </widget>
@@ -584,7 +584,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
      <string>Retour</string>
     </property>
     <property name="icon">
-     <iconset>
+     <iconset resource="Ressources.qrc">
       <normaloff>:/new/images/images/return.png</normaloff>:/new/images/images/return.png</iconset>
     </property>
    </widget>
@@ -595,12 +595,14 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
      <x>0</x>
      <y>0</y>
      <width>689</width>
-     <height>26</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="Ressources.qrc"/>
+ </resources>
  <connections/>
 </ui>

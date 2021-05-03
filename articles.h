@@ -3,7 +3,7 @@
 
 #include <QWidget>
 
-namespace Ui {
+/*namespace Ui {
 class articles;
 
 }
@@ -17,16 +17,14 @@ public:
     ~articles();
 
 private slots:
-    void on_pushButton_clicked();
-
-    void on_pushButton_2_clicked();
-
-    void on_pushButton_3_clicked();
-    void on_imprimer_clicked();
+    void on_pushButton_article_clicked();
+    void on_pushButton_2_article_clicked();
+    void on_pushButton_3_article_clicked();
+    void on_imprimer_article_clicked();
 
 
 private:
     Ui::articles *ui;
 };
-
+*/
 #endif // ARTICLES_H

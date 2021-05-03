@@ -4,6 +4,8 @@
 #include <QFileDialog>
 #include <QTextDocument>
 #include <QTextDocument>
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
 
 #include <QFont>
 table::table()

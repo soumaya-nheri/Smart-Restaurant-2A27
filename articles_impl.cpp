@@ -5,6 +5,8 @@
 #include<QPainter>
 #include<QPdfWriter>
 #include<QSystemTrayIcon>
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
 articles_impl::articles_impl()
 {
 this->nom = "";

@@ -1,5 +1,7 @@
 #include "stat_commande.h"
 #include "ui_stat_commande.h"
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
 
 stat_commande::stat_commande(QWidget *parent) :
     QDialog(parent),

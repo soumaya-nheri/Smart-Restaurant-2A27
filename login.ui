@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>454</width>
+    <width>483</width>
     <height>522</height>
    </rect>
   </property>
@@ -26,12 +26,12 @@
 QWidget
 {
     color: #b1b1b1;
-       background-color: #ff7979 ;
+       background-color: brown ;
 }
 
 QWidget:item:hover
 {
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #ff7979);
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #ca0619);
     color: #000000;
 }
 
@@ -493,7 +493,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
      <rect>
       <x>70</x>
       <y>300</y>
-      <width>291</width>
+      <width>351</width>
       <height>41</height>
      </rect>
     </property>
@@ -507,10 +507,10 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
    <widget class="QLabel" name="ANIMATION">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>70</y>
-      <width>131</width>
-      <height>41</height>
+      <x>150</x>
+      <y>60</y>
+      <width>151</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
@@ -562,8 +562,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>454</width>
-     <height>26</height>
+     <width>483</width>
+     <height>22</height>
     </rect>
    </property>
   </widget>

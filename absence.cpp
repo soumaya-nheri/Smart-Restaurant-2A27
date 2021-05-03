@@ -1,6 +1,8 @@
 #include "absence.h"
 #include <QSqlTableModel>
 #include <QDate>
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
 
 
 Absence::Absence(int id,QString nom,QString motif,QString daate )
@@ -73,7 +75,7 @@ QSqlQueryModel * Absence ::afficher_ID()
 
 void  Absence::telechargerPDF(){
 
-                     QPdfWriter pdf("C:\\Users\\Ahmed\\OneDrive\\Bureau\\projet2A\\liste_d'absences.pdf");
+                     QPdfWriter pdf("C:\\Users\\Ahmed\\OneDrive\\Bureau\\PROJET C++\\gestion personnel\\liste_d'absences.pdf");
                      QPainter painter(&pdf);
                     int i = 4000;
                          painter.setPen(Qt::blue);

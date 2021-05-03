@@ -1,5 +1,4 @@
 #include "login.h"
-#include "ui_login.h"
 #include "gestion_personnel.h"
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
@@ -8,7 +7,7 @@
 #include "reservation.h"
 #include "table.h"
 
-Login::Login(QWidget *parent)
+/*Login::Login(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::Login)
 {
@@ -20,9 +19,8 @@ Login::~Login()
 {
     delete ui;
 }
-
-
-void Login::on_pushButton_clicked()
+*/
+void MainWindow::on_pushButton_2_login_clicked()
 {
     QString username =ui-> lineEdit_username->text();
 
@@ -31,23 +29,26 @@ void Login::on_pushButton_clicked()
 
     if (qry.exec("select * from personnel where NOM='"+username+ "'and MOT_DE_PASSE='"+mdp+"'"))
     {
-int count=0;
-while(qry.next()){
+    int count=0;
+    while(qry.next())
+     {
     count ++;
-                 }
-if (count==1 or (username=="admin" && mdp=="admin") ){
-    this->hide();
-            MainWindow *w = new MainWindow;
-            hide();
-            w->show();
+      }
+    if (count==1 or (username=="admin" && mdp=="admin") )
+         {
+          ui->stackedWidget->setCurrentIndex(0);
+          ui->lineEdit_username->setText("");
+          ui->lineEdit_mdp->setText("");
+          ui->test->setText("Bonjour "+username+"");
          }
 
 
-       if (count<1) {
+     if (count<1)
+       {
         ui->label_connecting->setText("Nom d'utilisateur ou Mot de passe incorrect");
         ui->lineEdit_username->setText("");
         ui->lineEdit_mdp->setText("");
-}
+       }
 }
 }
 

@@ -4,8 +4,9 @@
 #include <QFileDialog>
 #include <QTextDocument>
 #include <QTextDocument>
-
 #include <QFont>
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
 reservation::reservation()
 {
 

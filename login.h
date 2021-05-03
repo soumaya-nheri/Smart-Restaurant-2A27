@@ -5,7 +5,7 @@
 #include<QPropertyAnimation>
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class Login; }
+/*namespace Ui { class Login; }
 QT_END_NAMESPACE
 
 class Login : public QMainWindow
@@ -17,10 +17,10 @@ public:
     ~Login();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_pushButton_2_login_clicked();
 
 private:
     Ui::Login *ui;
     QPropertyAnimation *animation;
-};
+};*/
 #endif // LOGIN_H

@@ -67,17 +67,9 @@ HEADERS += \
     table.h
 
 FORMS += \
-    article2.ui \
-    articles.ui \
-    categorie.ui \
-    fournisseur.ui \
-    gestion_livraison.ui \
-    gestion_personnel.ui \
     gestion_reservation.ui \
     gestion_table.ui \
-    login.ui \
     mainwindow.ui \
-    menu.ui \
     stat_commande.ui
 
 # Default rules for deployment.
@@ -86,13 +78,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    Ressources.qrc \
-    Ressources.qrc \
-    Ressources.qrc \
-    images.qrc \
-    images.qrc
-
-DISTFILES += \
-    article.pdf \
-    download.png \
-    projet2A.pro.user
+    Ressources.qrc

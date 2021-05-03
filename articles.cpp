@@ -1,9 +1,9 @@
 #include "articles.h"
-#include "ui_articles.h"
 #include "articles_impl.h"
-#include "mainwindow.h"
 #include <QMessageBox>
-articles::articles(QWidget *parent) :
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
+/*articles::articles(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::articles)
 
@@ -19,12 +19,12 @@ articles::~articles()
 {
     delete ui;
 }
-
-void articles::on_pushButton_clicked()
+*/
+void MainWindow::on_pushButton_article_clicked()
 {
 
-    QString nom = ui->txt_Nom->text();
-    int quantite = ui->spinBox->text().toInt();
+    QString nom = ui->txt_Nom_article->text();
+    int quantite = ui->spinBox_article->text().toInt();
 
 
     if(nom == "")
@@ -43,27 +43,26 @@ else if (quantite<=0){
     {
         articles_impl art ;
         art.ajouter(nom,quantite);
-           ui->tableView->setModel(art.afficher());
+           ui->tableView_article->setModel(art.afficher());
 
           art.verifier();
     }
 
 }
 
-void articles::on_pushButton_2_clicked()
+void MainWindow::on_pushButton_2_article_clicked()
 {
     articles_impl art ;
-    art.supprimer()->removeRow(ui->tableView->currentIndex().row());
-      ui->tableView->setModel(art.afficher());
+    art.supprimer()->removeRow(ui->tableView_article->currentIndex().row());
+      ui->tableView_article->setModel(art.afficher());
 }
 
-void articles::on_pushButton_3_clicked()
-{  hide();
-    MainWindow *m = new MainWindow();
-    m->show();
+void MainWindow::on_pushButton_3_article_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
 }
 
-void articles::on_imprimer_clicked()
+void MainWindow::on_imprimer_article_clicked()
 {    articles_impl art ;
   art.telecharger();
 

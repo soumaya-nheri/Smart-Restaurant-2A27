@@ -1,6 +1,8 @@
 #include "notifications.h"
 #include <QSystemTrayIcon>
 #include<QString>
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
 Notifications::Notifications()
 {
 

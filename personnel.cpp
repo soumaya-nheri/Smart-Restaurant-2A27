@@ -5,6 +5,8 @@
 #include <QTableView>
 #include <QSqlTableModel>
 #include <QDate>
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
 
 Personnel::Personnel()
 {

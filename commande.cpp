@@ -1,30 +1,32 @@
 #include "menu.h"
-#include "ui_menu.h"
 #include "menu_impl.h"
 #include "commande_impl.h"
 #include <QMessageBox>
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
+#include "stat_commande.h"
 
 
-void Menu::on_Supprimer2_clicked()
+void MainWindow::on_Supprimer2_commande_clicked()
 {
     Commande_Impl cat ;
-    cat.supprimer()->removeRow(ui->tableView3->currentIndex().row());
-      ui->tableView3->setModel(cat.affichercommande());
+    cat.supprimer()->removeRow(ui->tableView3_commande->currentIndex().row());
+      ui->tableView3_commande->setModel(cat.affichercommande());
 
 }
-void Menu::on_Supprimer3_clicked()
+void MainWindow::on_Supprimer3_commande_clicked()
 {
     Commande_Impl cat ;
     QSqlQuery qry;
     qry.prepare("DELETE FROM COMMANDE");
 
        qry.exec();
-      ui->tableView3->setModel(cat.affichercommande());
+      ui->tableView3_commande->setModel(cat.affichercommande());
 
 }
 
 
-void Menu::on_Valider_clicked()
+void MainWindow::on_Valider_menu_clicked()
 {
     QString nom,prix,plats,prixtotale;
     Commande_Impl com ;
@@ -64,7 +66,7 @@ void Menu::on_Valider_clicked()
 
 }
 
-void Menu::on_imprimer_clicked()
+void MainWindow::on_imprimer_commande_clicked()
 {    Commande_Impl cat ;
   cat.telecharger();
 
@@ -74,7 +76,7 @@ void Menu::on_imprimer_clicked()
 
 
 }
-void Menu::on_statistique_clicked()
+void MainWindow::on_statistique_commande_clicked()
 {
     s=new stat_commande(this);
     s->show();

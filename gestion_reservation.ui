@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>733</width>
-    <height>503</height>
+    <width>1034</width>
+    <height>620</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -479,8 +479,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     <rect>
      <x>-10</x>
      <y>0</y>
-     <width>741</width>
-     <height>511</height>
+     <width>1051</width>
+     <height>621</height>
     </rect>
    </property>
    <property name="styleSheet">

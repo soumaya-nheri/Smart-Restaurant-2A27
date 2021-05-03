@@ -5,7 +5,7 @@
 #include "absence.h"
 #include "personnel.h"
 
-namespace Ui {
+/*namespace Ui {
 class gestion_personnel;
 }
 
@@ -54,6 +54,6 @@ private:
     Personnel P;
     Absence A;
     QSystemTrayIcon *mysystem;
-};
+};*/
 
 #endif // GESTION_PERSONNEL_H

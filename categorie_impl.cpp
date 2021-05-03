@@ -1,5 +1,6 @@
 #include "categorie_impl.h"
-
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
 #include <QSqlQuery>
 #include <QSqlTableModel>
 #include <QDate>

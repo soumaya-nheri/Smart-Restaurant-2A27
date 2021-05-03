@@ -1,18 +1,16 @@
 #include "menu.h"
 #include "commande.h"
-#include "ui_menu.h"
 #include "menu_impl.h"
 #include "commande_impl.h"
 #include <QMessageBox>
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "gestion_reservation.h"
-#include "ui_gestion_reservation.h"
 #include "reservation.h"
 #include "table.h"
 
 #include<QIntValidator>
-Menu::Menu(QWidget *parent) :
+/*Menu::Menu(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Menu)
 {
@@ -31,11 +29,11 @@ Menu::~Menu()
 {
     delete ui;
 }
-
-void Menu::on_Ajouter_clicked()
+*/
+void MainWindow::on_Ajouter_menu_clicked()
 { float prixcheck;
-    QString nom = ui->txt_Nom->text();
-    QString prix = ui->txt_Prix->text();
+    QString nom = ui->txt_Nom_menu->text();
+    QString prix = ui->txt_Prix_menu->text();
 
     if(nom == "")
     {
@@ -53,46 +51,46 @@ void Menu::on_Ajouter_clicked()
     {
         Menu_Impl cat ;
         cat.ajouter(nom,prix);
-           ui->tableView->setModel(cat.afficher());
+           ui->tableView_menu->setModel(cat.afficher());
     }
 
 
 }
 
-void Menu::on_Supprimer_clicked()
+void MainWindow::on_Supprimer_menu_clicked()
 {
     Menu_Impl cat ;
-    cat.supprimer()->removeRow(ui->tableView->currentIndex().row());
-      ui->tableView->setModel(cat.afficher());
+    cat.supprimer()->removeRow(ui->tableView_menu->currentIndex().row());
+      ui->tableView_menu->setModel(cat.afficher());
 
 }
 
-void Menu::on_txt_Search_textChanged(const QString &arg1)
+void MainWindow::on_txt_Search_menu_textChanged(const QString &arg1)
 {
     Menu_Impl c;
 
-    c.cleartable(ui->tableView);
-QString nom = ui->txt_Search->text();
-c.recherche(ui->tableView,nom);
-if (ui->txt_Search->text().isEmpty())
+    c.cleartable(ui->tableView_menu);
+QString nom = ui->txt_Search_menu->text();
+c.recherche(ui->tableView_menu,nom);
+if (ui->txt_Search_menu->text().isEmpty())
 {
-    ui->tableView->setModel(c.afficher());
+    ui->tableView_menu->setModel(c.afficher());
 }
 }
-void Menu::on_Actualiser_clicked()
+void MainWindow::on_Actualiser_menu_clicked()
 {
     Commande_Impl com ;
     Menu_Impl men;
-   com.cleartable(ui->tableView2);
-    com.platsstatut(ui->tableView2);
-    com.cleartable(ui->tableView3);
-     ui->tableView3->setModel(com.affichercommande());
-    men.cleartable(ui->tableView);
-      ui->tableView->setModel(men.afficher());
+   com.cleartable(ui->tableView2_menu);
+    com.platsstatut(ui->tableView2_menu);
+    com.cleartable(ui->tableView3_commande);
+     ui->tableView3_commande->setModel(com.affichercommande());
+    men.cleartable(ui->tableView_menu);
+      ui->tableView_menu->setModel(men.afficher());
 }
 
 
-void Menu::on_Trier_clicked()
+void MainWindow::on_Trier_menu_clicked()
 {
     Menu_Impl men;
     QSqlQueryModel *model= new QSqlQueryModel();
@@ -101,25 +99,24 @@ void Menu::on_Trier_clicked()
     query->prepare("select * from MENU ORDER BY NOM ASC ;");
     query->exec();
     model->setQuery(*query);
-     men.cleartable(ui->tableView);
-    ui->tableView->setModel(model);
-    ui->tableView->show();
+     men.cleartable(ui->tableView_menu);
+    ui->tableView_menu->setModel(model);
+    ui->tableView_menu->show();
 
 
 }
 
 
-void Menu::on_Retour_clicked()
+void MainWindow::on_Retour_menu_clicked()
 {
-    MainWindow *w = new MainWindow;
+    /*MainWindow *w = new MainWindow;
     hide();
-    w->show();
+    w->show();*/
+    ui->stackedWidget->setCurrentIndex(0);
 }
 
-void Menu::on_Retour_2_clicked()
+void MainWindow::on_Retour_2_commande_clicked()
 {
 
-    MainWindow *w = new MainWindow;
-    hide();
-    w->show();
+ui->stackedWidget->setCurrentIndex(0);
 }

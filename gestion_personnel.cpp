@@ -1,5 +1,4 @@
 #include "gestion_personnel.h"
-#include "ui_gestion_personnel.h"
 #include"personnel.h"
 #include"absence.h"
 #include <QMessageBox>
@@ -10,7 +9,7 @@
 #include "login.h"
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-gestion_personnel::gestion_personnel(QWidget *parent) :
+/*gestion_personnel::gestion_personnel(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::gestion_personnel)
 {
@@ -197,3 +196,4 @@ void gestion_personnel::on_Retour_2_clicked()
     w->show();
 
 }
+*/
