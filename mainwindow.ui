@@ -540,11 +540,11 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        </size>
       </property>
      </widget>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="accueil">
       <property name="geometry">
        <rect>
         <x>470</x>
-        <y>40</y>
+        <y>-50</y>
         <width>191</width>
         <height>51</height>
        </rect>
@@ -3685,7 +3685,7 @@ QHeaderView::section {
       <property name="geometry">
        <rect>
         <x>450</x>
-        <y>90</y>
+        <y>-90</y>
         <width>271</width>
         <height>121</height>
        </rect>
@@ -3713,7 +3713,7 @@ QHeaderView::section {
      <widget class="QPushButton" name="pushButton_2">
       <property name="geometry">
        <rect>
-        <x>800</x>
+        <x>1050</x>
         <y>40</y>
         <width>351</width>
         <height>151</height>
@@ -3747,7 +3747,7 @@ QPushButton
      <widget class="QPushButton" name="pushButton_10">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>-220</x>
         <y>20</y>
         <width>381</width>
         <height>251</height>

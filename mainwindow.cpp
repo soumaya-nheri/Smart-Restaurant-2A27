@@ -58,6 +58,24 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->comboBox_id3->setModel(A.afficher_ID());
     mysystem = new QSystemTrayIcon(this);
     mysystem->setVisible(true);
+    //animation
+    animation=new QPropertyAnimation(ui->ANIMATION,"geometry");
+    animation->setDuration(2500);
+    animation->setStartValue(ui->ANIMATION->geometry());
+    animation->setEndValue(QRect(450,90,271,121));
+    animation->start();
+
+    animation=new QPropertyAnimation(ui->pushButton_10,"geometry");
+    animation->setDuration(2500);
+    animation->setStartValue(ui->pushButton_10->geometry());
+    animation->setEndValue(QRect(10,20,381,251));
+    animation->start();
+
+    animation=new QPropertyAnimation(ui->pushButton_2,"geometry");
+    animation->setDuration(2500);
+    animation->setStartValue(ui->pushButton_2->geometry());
+    animation->setEndValue(QRect(800,40,351,151));
+    animation->start();
 }
 
 MainWindow::~MainWindow()
@@ -128,6 +146,23 @@ void MainWindow::on_gestion_categorie_clicked()
 void MainWindow::on_pushButton_4_clicked()
 {
     ui->stackedWidget->setCurrentIndex(8);
+    animation=new QPropertyAnimation(ui->ANIMATION,"geometry");
+    animation->setDuration(2500);
+    animation->setStartValue(ui->ANIMATION->geometry());
+    animation->setEndValue(QRect(450,90,271,121));
+    animation->start();
+
+    animation=new QPropertyAnimation(ui->pushButton_10,"geometry");
+    animation->setDuration(2500);
+    animation->setStartValue(ui->pushButton_10->geometry());
+    animation->setEndValue(QRect(10,20,381,251));
+    animation->start();
+
+    animation=new QPropertyAnimation(ui->pushButton_2,"geometry");
+    animation->setDuration(2500);
+    animation->setStartValue(ui->pushButton_2->geometry());
+    animation->setEndValue(QRect(800,40,351,151));
+    animation->start();
 }
 void MainWindow::on_pb_ajouter_clicked()
 {

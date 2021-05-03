@@ -40,6 +40,12 @@ void MainWindow::on_pushButton_2_login_clicked()
           ui->lineEdit_username->setText("");
           ui->lineEdit_mdp->setText("");
           ui->test->setText("Bonjour "+username+"");
+          //animation
+          animation=new QPropertyAnimation(ui->accueil,"geometry");
+          animation->setDuration(2500);
+          animation->setStartValue(ui->accueil->geometry());
+          animation->setEndValue(QRect(470,40,191,51));
+          animation->start();
          }
 
 
