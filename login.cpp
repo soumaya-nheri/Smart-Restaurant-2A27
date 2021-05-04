@@ -3,7 +3,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "gestion_reservation.h"
-#include "ui_gestion_reservation.h"
 #include "reservation.h"
 #include "table.h"
 

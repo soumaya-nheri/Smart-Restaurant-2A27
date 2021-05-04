@@ -67,8 +67,6 @@ HEADERS += \
     table.h
 
 FORMS += \
-    gestion_reservation.ui \
-    gestion_table.ui \
     mainwindow.ui \
     stat_commande.ui
 

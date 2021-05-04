@@ -10,25 +10,24 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "gestion_reservation.h"
-#include "ui_gestion_reservation.h"
 #include "reservation.h"
 #include "table.h"
 #include<QPrinter>
 #include<QPrintDialog>
 #include<QDebug>
 #include<QDateTime>
-Gestion_reservation::Gestion_reservation(QWidget *parent) :
+/*Gestion_reservation::Gestion_reservation(QWidget *parent) :
 QWidget(parent),
 ui(new Ui::Gestion_reservation)
 {
     timer = new QTimer(this);
-    connect(timer, SIGNAL(timeout()),this,SLOT(myfunction()));
+    connect(timer, SIGNAL(timeout()),this,SLOT(myfunction_resrvation()));
     timer->start(1000);
 ui->setupUi(this);
 reservation R;
-R.tables(ui);
-R.afficher(ui);
-R.GRAPH(ui);
+//R.tables(ui);
+//R.afficher(ui);
+//R.GRAPH(ui);
 if(R.NOMBRE_TABLES()==0)
 {ui->ajouter->setDisabled(true);
 ui->table_msg->setText("pas de tables disponibles");
@@ -49,8 +48,8 @@ Gestion_reservation::~Gestion_reservation()
 {
 delete ui;
 }
-
-void Gestion_reservation::on_ajouter_clicked()
+*/
+void MainWindow::on_ajouter_reservation_clicked()
 {
 reservation R;
 table T ;
@@ -115,7 +114,7 @@ ui->nombre_places_msg->setStyleSheet("QLineEdit { color: green;}");
 notifyicon->show();
 notifyicon->showMessage("Success ","Votre reservation a été bien ajouté ",QSystemTrayIcon::Information,2000);
 R.afficher(ui);
-ui->tabWidget->setCurrentIndex(1);
+ui->tabWidget_5->setCurrentIndex(1);
 }
 else {
 {QMessageBox ::critical(this,"","erreur d'ajout") ;
@@ -131,7 +130,7 @@ else
 
 
 
-void Gestion_reservation::on_supprimer_clicked()
+void MainWindow::on_supprimer_reservation_clicked()
 {
 reservation R;
 if(R.Supprimer(ui))
@@ -143,40 +142,37 @@ R.afficher(ui);
 }
 }
 
-void Gestion_reservation::on_tableView_doubleClicked()
+void MainWindow::on_tableView_reservation_doubleClicked()
 {
 
-ui->ID->setText(ui->tableView->model()->data(ui->tableView->model()->index(ui->tableView->selectionModel()->currentIndex().row(),0)).toString());
-ui->nom_2->setText(ui->tableView->model()->data(ui->tableView->model()->index(ui->tableView->selectionModel()->currentIndex().row(),1)).toString());
-ui->tables2->setCurrentText(ui->tableView->model()->data(ui->tableView->model()->index(ui->tableView->selectionModel()->currentIndex().row(),3)).toString());
-ui->telephone2->setText(ui->tableView->model()->data(ui->tableView->model()->index(ui->tableView->selectionModel()->currentIndex().row(),2)).toString());
-ui->nombre2->setText(ui->tableView->model()->data(ui->tableView->model()->index(ui->tableView->selectionModel()->currentIndex().row(),4)).toString());
-ui->tabWidget->setCurrentIndex(2);
-ui->modifier->setDisabled(false);
+ui->ID->setText(ui->tableView_reservation->model()->data(ui->tableView_reservation->model()->index(ui->tableView_reservation->selectionModel()->currentIndex().row(),0)).toString());
+ui->nom_2->setText(ui->tableView_reservation->model()->data(ui->tableView_reservation->model()->index(ui->tableView_reservation->selectionModel()->currentIndex().row(),1)).toString());
+ui->tables2_reservation->setCurrentText(ui->tableView_reservation->model()->data(ui->tableView_reservation->model()->index(ui->tableView_reservation->selectionModel()->currentIndex().row(),3)).toString());
+ui->telephone2->setText(ui->tableView_reservation->model()->data(ui->tableView_reservation->model()->index(ui->tableView_reservation->selectionModel()->currentIndex().row(),2)).toString());
+ui->nombre2->setText(ui->tableView_reservation->model()->data(ui->tableView_reservation->model()->index(ui->tableView_reservation->selectionModel()->currentIndex().row(),4)).toString());
+ui->tabWidget_5->setCurrentIndex(2);
+ui->modifier_reservation->setDisabled(false);
 }
 
-void Gestion_reservation::on_reset_3_clicked()
+void MainWindow::on_reset_3_reservation_clicked()
 {ui->ID->clear();
 ui->nom_2->clear();
-ui->tables2->clear();
+ui->tables2_reservation->clear();
 ui->nombre2->clear();
-ui->tabWidget->setCurrentIndex(1);
-ui->modifier->setDisabled(true);
+ui->tabWidget_5->setCurrentIndex(1);
+ui->modifier_reservation->setDisabled(true);
 }
-void Gestion_reservation::on_recherche_textChanged(const QString &arg1)
+void MainWindow::on_recherche_reservation_textChanged(const QString &arg1)
 {
 QString result ;
 reservation R;
 R.Recherche(ui);
 }
-void Gestion_reservation::on_retour_clicked()
+void MainWindow::on_retour_reservation_clicked()
 {
-MainWindow *w = new MainWindow;
-hide();
-w->show();
-
+    ui->stackedWidget->setCurrentIndex(0);
 }
-void Gestion_reservation::on_modifier_clicked()
+void MainWindow::on_modifier_reservation_clicked()
 {
 reservation R;
 table T ;
@@ -186,7 +182,7 @@ QString msg_nom ="nom  invalide";
 QString msg_nombre ="nombre invalide";
 QString msg_tel ="numero telephone invalide";
 QString msg_vide="";
-QString table= ui->tables2->currentText();
+QString table= ui->tables2_reservation->currentText();
 QString nom= ui->nom_2->text();
 int ID= ui->ID->text().toInt();
 QString tel = ui->telephone2->text();
@@ -242,13 +238,13 @@ ui->telephone2->setStyleSheet("QLineEdit { color: green;}");
 {QMessageBox ::information(this,""," reservation modifié  ") ;}
 
 R.afficher(ui);
-ui->tabWidget->setCurrentIndex(1);
+ui->tabWidget_5->setCurrentIndex(1);
 ui->ID->clear();
 ui->nom_2->clear();
-ui->tables2->clear();
+ui->tables2_reservation->clear();
 ui->nombre2->clear();
 ui->telephone2->clear();
-ui->modifier->setDisabled(true);
+ui->modifier_reservation->setDisabled(true);
 }
 else {
 {QMessageBox ::critical(this,"","erreur de modification 1") ;
@@ -261,38 +257,31 @@ else
 {QMessageBox ::information(this,"","erreur de modification 2 ") ;}
 }
 
-void Gestion_reservation::on_retour_2_clicked()
+void MainWindow::on_retour_2_reservation_clicked()
 {
-    MainWindow *w = new MainWindow;
-    hide();
-    w->show();
-
+    ui->stackedWidget->setCurrentIndex(0);
 }
 
-void Gestion_reservation::on_retour_3_clicked()
+void MainWindow::on_retour_3_reservation_clicked()
 {
-    MainWindow *w = new MainWindow;
-    hide();
-    w->show();
+    ui->stackedWidget->setCurrentIndex(0);
 }
 
-void Gestion_reservation::on_retour_4_clicked()
+void MainWindow::on_retour_4_reservation_clicked()
 {
 
-    MainWindow *w = new MainWindow;
-    hide();
-    w->show();
+    ui->stackedWidget->setCurrentIndex(0);
 }
 
-void Gestion_reservation::on_pushButton_clicked()
+void MainWindow::on_pushButton_reservation_clicked()
 {
     QPrinter printer;
          printer.setPrinterName("imprimer");
          QPrintDialog dialog(&printer, this);
          if (dialog.exec() == QDialog::Rejected) return;
-         ui->tabWidget->render(&printer);
+         ui->tabWidget_5->render(&printer);
 }
-void Gestion_reservation::myfunction()
+void MainWindow::myfunction_reservation()
 {
 QTime time = QTime::currentTime();
 QString time_text = time.toString("hh : mm : ss");

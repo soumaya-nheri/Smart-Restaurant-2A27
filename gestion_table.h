@@ -3,7 +3,7 @@
 
 #include <QWidget>
 
-namespace Ui {
+/*namespace Ui {
 class Gestion_table;
 }
 
@@ -41,5 +41,5 @@ private:
 
 
 };
-
+*/
 #endif // GESTION_TABLE_H

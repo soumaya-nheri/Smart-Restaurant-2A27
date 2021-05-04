@@ -1,5 +1,4 @@
 #include "table.h"
-#include "ui_gestion_table.h"
 #include <QPrinter>
 #include <QFileDialog>
 #include <QTextDocument>
@@ -34,7 +33,7 @@ bool table::ajouter()
     query.exec();
 }
 
-void table::afficher(Ui::Gestion_table *ui)
+void table::afficher(Ui::MainWindow *ui)
 {
     QSqlQuery query;
     QSqlQueryModel *modal=new QSqlQueryModel();
@@ -45,7 +44,7 @@ void table::afficher(Ui::Gestion_table *ui)
 }
 
 
-bool table::modifier(Ui::Gestion_table *ui)
+bool table::modifier(Ui::MainWindow *ui)
 {
     QSqlQuery query;
     QString NUM_TABLE=ui->NUM_TABLE2->text();
@@ -55,7 +54,7 @@ bool table::modifier(Ui::Gestion_table *ui)
     return query.exec();
 }
 
-bool table::Supprimer(Ui::Gestion_table *ui)
+bool table::Supprimer(Ui::MainWindow *ui)
 {
     QSqlQuery  query;
     QString NUM_TABLE=ui->tableView->model()->data(ui->tableView->model()->index(ui->tableView->selectionModel()->currentIndex().row(),0)).toString();
@@ -69,7 +68,7 @@ bool table::Supprimer(Ui::Gestion_table *ui)
 
 
 
-void table::afficher_vide(Ui::Gestion_table *ui)
+void table::afficher_vide(Ui::MainWindow *ui)
 {
     QSqlQuery query;
     QSqlQueryModel *modal=new QSqlQueryModel();
@@ -78,7 +77,7 @@ void table::afficher_vide(Ui::Gestion_table *ui)
     modal->setQuery(query);
     ui->tableView->setModel(modal);
 }
-void table::afficher_reserve(Ui::Gestion_table *ui)
+void table::afficher_reserve(Ui::MainWindow *ui)
 {
     QSqlQuery query;
     QSqlQueryModel *modal=new QSqlQueryModel();

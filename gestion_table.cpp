@@ -1,5 +1,4 @@
 #include "gestion_table.h"
-#include "ui_gestion_table.h"
 #include <QMessageBox>
 #include <QtCharts/QChartView>
 #include <QtCharts/QPieSeries>
@@ -19,13 +18,13 @@
 #include<QPrinter>
 #include<QPrintDialog>
 
-Gestion_table::Gestion_table(QWidget *parent) :
+/*Gestion_table::Gestion_table(QWidget *parent) :
 QWidget(parent),
 ui(new Ui::Gestion_table)
 {
 ui->setupUi(this);
 table t;
-t.afficher(ui);
+//t.afficher(ui);
 ui->NUM_TABLE2->setDisabled(true);
 ui->modifier->setDisabled(true);
 ui->tabWidget->setCurrentIndex(1);
@@ -38,8 +37,8 @@ timer->start(1000);
 Gestion_table::~Gestion_table()
 {
 delete ui;
-}
-void Gestion_table::on_ajouter_clicked()
+}*/
+void MainWindow::on_ajouter_table_clicked()
 {
 QString msg ="nombre des places doit etre sup à 0 ";
 QString msg2 ="num de table ne doit etre vide";
@@ -81,7 +80,7 @@ if (t.ajouter())
 {
 {QMessageBox ::information(this,""," table ajoutée  ") ;}
 t.afficher(ui);
-ui->tabWidget->setCurrentIndex(1);
+ui->tabWidget_4->setCurrentIndex(1);
 }
 else {
 {QMessageBox ::critical(this,"","erreur d'ajout") ;
@@ -93,7 +92,7 @@ else
 {QMessageBox ::information(this,"","erreur , verifié les informations  ") ;}
 }
 
-void Gestion_table::on_supprimer_clicked()
+void MainWindow::on_supprimer_table_clicked()
 {
 table t ;
 if(t.Supprimer(ui))
@@ -103,23 +102,23 @@ t.afficher(ui);
 }
 }
 
-void Gestion_table::on_tableView_doubleClicked()
+void MainWindow::on_tableView_doubleClicked()
 {
 
 ui->NUM_TABLE2->setText(ui->tableView->model()->data(ui->tableView->model()->index(ui->tableView->selectionModel()->currentIndex().row(),0)).toString());
 ui->nbre_personnes2->setText(ui->tableView->model()->data(ui->tableView->model()->index(ui->tableView->selectionModel()->currentIndex().row(),1)).toString());
-ui->tabWidget->setCurrentIndex(2);
-ui->modifier->setDisabled(false);
+ui->tabWidget_4->setCurrentIndex(2);
+ui->modifier_table->setDisabled(false);
 }
 
-void Gestion_table::on_reset_3_clicked()
+void MainWindow::on_reset_3_table_clicked()
 {ui->NUM_TABLE->clear();
 ui->nbre_personnes->clear();
-ui->tabWidget->setCurrentIndex(1);
-ui->modifier->setDisabled(true);
+ui->tabWidget_4->setCurrentIndex(1);
+ui->modifier_table->setDisabled(true);
 }
 
-void Gestion_table::on_modifier_clicked()
+void MainWindow::on_modifier_table_clicked()
 {
 QString msg ="nombre des places doit etre sup à 0 ";
 QString msg_vide="";
@@ -153,10 +152,10 @@ ui->nbre_personnes2->setStyleSheet("QLineEdit { color: green;}");
 {QMessageBox ::information(this,""," table modifiée  ") ;}
 
 t.afficher(ui);
-ui->tabWidget->setCurrentIndex(1);
+ui->tabWidget_4->setCurrentIndex(1);
 ui->NUM_TABLE2->clear();
 ui->nbre_personnes2->clear();
-ui->modifier->setDisabled(true);
+ui->modifier_table->setDisabled(true);
 }
 else {
 {QMessageBox ::critical(this,"","erreur de modification") ;
@@ -169,56 +168,48 @@ else
 {QMessageBox ::information(this,"","erreur de modification  ") ;}
 }
 
-void Gestion_table::on_radioButton_clicked()
+void MainWindow::on_radioButton_table_clicked()
 {
 table t;
 t.afficher_vide(ui);
 }
 
-void Gestion_table::on_radioButton_2_clicked()
+void MainWindow::on_radioButton_2_table_clicked()
 {
 table t;
 t.afficher_reserve(ui);
 }
-void Gestion_table::on_radioButton_3_clicked()
+void MainWindow::on_radioButton_3_table_clicked()
 {
 table t;
 t.afficher(ui);
 }
 
-void Gestion_table::on_retour_clicked()
+void MainWindow::on_retour_table_clicked()
 {
-MainWindow *w = new MainWindow;
-hide();
-w->show();
-
+ui->stackedWidget->setCurrentIndex(0);
 }
 
-void Gestion_table::on_retour_2_clicked()
+void MainWindow::on_retour_2_table_clicked()
 {
-    MainWindow *w = new MainWindow;
-    hide();
-    w->show();
-
+ui->stackedWidget->setCurrentIndex(0);
 }
 
-void Gestion_table::on_retour_3_clicked()
+void MainWindow::on_retour_3_table_clicked()
 {
-    MainWindow *w = new MainWindow;
-    hide();
-    w->show();
+ui->stackedWidget->setCurrentIndex(0);
 }
 
-void Gestion_table::on_pushButton_clicked()
+void MainWindow::on_pushButton_table_clicked()
 {
     QPrinter printer;
          printer.setPrinterName("imprimer");
          QPrintDialog dialog(&printer, this);
          if (dialog.exec() == QDialog::Rejected) return;
-         ui->tabWidget->render(&printer);
+         ui->tabWidget_4->render(&printer);
 }
 
-void Gestion_table::myfunction()
+void MainWindow::myfunction()
 {
 QTime time = QTime::currentTime();
 QString time_text = time.toString("hh : mm : ss");

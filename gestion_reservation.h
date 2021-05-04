@@ -4,7 +4,7 @@
 #include <QWidget>
 #include "QSystemTrayIcon"
 
-namespace Ui {
+/*namespace Ui {
 class Gestion_reservation;
 }
 
@@ -45,5 +45,5 @@ private:
     QTimer *timer;
 
 };
-
+*/
 #endif // GESTION_RESERVATION_H

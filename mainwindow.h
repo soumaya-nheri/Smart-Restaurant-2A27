@@ -94,7 +94,34 @@ private slots:
     void on_Retour_5_clicked();
     void on_Retour_6_clicked();
 
+    void on_ajouter_table_clicked();
+    void on_supprimer_table_clicked();
+    void on_tableView_doubleClicked();
+    void on_reset_3_table_clicked();
+    void on_modifier_table_clicked();
+    void on_radioButton_table_clicked();
+    void on_radioButton_2_table_clicked();
+    void on_radioButton_3_table_clicked();
+    void on_retour_table_clicked();
+    void myfunction();
+    void on_ajouter_reservation_clicked();
+    void on_modifier_reservation_clicked();
+    void on_supprimer_reservation_clicked();
+    void on_tableView_reservation_doubleClicked();
+    void on_reset_3_reservation_clicked();
+    void on_recherche_reservation_textChanged(const QString &arg1);
+    void on_retour_reservation_clicked();
+    void myfunction_reservation();
 
+private slots:
+    void on_retour_2_table_clicked();
+    void on_retour_3_table_clicked();
+    void on_pushButton_table_clicked();
+    void on_retour_2_reservation_clicked();
+    void on_retour_3_reservation_clicked();
+    void on_retour_4_reservation_clicked();
+    void on_pushButton_reservation_clicked();
+    void on_label_linkActivated(const QString &link);
 
 
 
@@ -108,6 +135,8 @@ private:
     livreur L ;
     livraison liv;
     QPropertyAnimation *animation;
+    QTimer *timer;
+    QSystemTrayIcon *notifyicon;
 
 };
 

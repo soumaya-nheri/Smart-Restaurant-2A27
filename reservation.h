@@ -5,6 +5,8 @@
 #include <QSqlQuery>
 #include <QSqlQueryModel>
 #include <QtCore/qglobal.h>
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
 
 class reservation
 {
@@ -14,14 +16,14 @@ public:
      reservation(int ID, QString NOM_CLIENT, QString NUM_TEL, QString TABLE_NUM, int NOMBRE_PERSONNES);
     reservation(QString NOM_CLIENT, QString NUM_TEL, QString TABLE_NUM, int NOMBRE_PERSONNES);
     bool ajouter();
-    void afficher(Ui::Gestion_reservation *ui);
-    bool Supprimer(Ui::Gestion_reservation *ui);
-    bool modifier(Ui::Gestion_reservation *ui);
-    void tables(Ui::Gestion_reservation *ui);
-    void Recherche(Ui::Gestion_reservation *ui);
+    void afficher(Ui::MainWindow *ui);
+    bool Supprimer(Ui::MainWindow *ui);
+    bool modifier(Ui::MainWindow *ui);
+    void tables(Ui::MainWindow *ui);
+    void Recherche(Ui::MainWindow *ui);
     int NOMBRE_TABLES();
     int NOMBRE_RESERVATION();
-    void GRAPH(Ui::Gestion_reservation *ui);
+    void GRAPH(Ui::MainWindow *ui);
     int getID();
     void setID(int &value);
     QString getNOM_CLIENT();

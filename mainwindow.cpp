@@ -26,6 +26,27 @@
 #include<QPrintDialog>
 #include<QFileSystemModel>
 
+#include "gestion_table.h"
+
+
+#include <QtCharts/QChartView>
+#include <QtCharts/QPieSeries>
+#include <QtCharts/QPieSlice>
+#include <QString>
+#include<QDebug>
+#include<QDateTime>
+#include<QTime>
+#include<qtimer.h>
+#include <QSqlQuery>
+#include <QSqlQueryModel>
+#include <QtCore/qglobal.h>
+#include <string>
+#include "table.h"
+#include "gestion_reservation.h"
+
+#include "reservation.h"
+
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -76,7 +97,42 @@ MainWindow::MainWindow(QWidget *parent) :
     animation->setStartValue(ui->pushButton_2->geometry());
     animation->setEndValue(QRect(800,40,351,151));
     animation->start();
-}
+
+    //table
+    table t;
+    t.afficher(ui);
+    ui->NUM_TABLE2->setDisabled(true);
+    ui->modifier_table->setDisabled(true);
+    ui->tabWidget_4->setCurrentIndex(1);
+
+    timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()),this,SLOT(myfunction()));
+    timer->start(1000);
+
+    //reservation
+    timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()),this,SLOT(myfunction_reservation()));
+    timer->start(1000);
+    //ui->setupUi(this);
+    reservation R;
+    R.tables(ui);
+    R.afficher(ui);
+    R.GRAPH(ui);
+    if(R.NOMBRE_TABLES()==0)
+    {ui->ajouter_reservation->setDisabled(true);
+    ui->table_msg->setText("pas de tables disponibles");
+    }
+    else
+    {
+    ui->ajouter_reservation->setDisabled(false);
+    ui->table_msg->setText("");
+    }
+    notifyicon=new QSystemTrayIcon(this);
+    notifyicon->setIcon(QIcon(":/images/Notification.jpg"));
+    notifyicon->setVisible(true);
+    ui->modifier_reservation->setDisabled(true);
+    ui->tabWidget_5->setCurrentIndex(1);
+    }
 
 MainWindow::~MainWindow()
 {
@@ -85,18 +141,16 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_gestio_tables_clicked()
 {
-    Gestion_table *w = new Gestion_table;
-   hide();
-   w->show();
+
+       ui->stackedWidget->setCurrentIndex(9);
 }
 
 
 
 void MainWindow::on_pushButton_acceuil_clicked()
 {
-    Gestion_reservation *w = new Gestion_reservation;
-   hide();
-   w->show();
+
+    ui->stackedWidget->setCurrentIndex(5);
 }
 
 void MainWindow::on_menu_clicked()

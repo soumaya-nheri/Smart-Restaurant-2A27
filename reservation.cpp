@@ -1,5 +1,4 @@
 #include "reservation.h"
-#include "ui_gestion_reservation.h"
 #include <QPrinter>
 #include <QFileDialog>
 #include <QTextDocument>
@@ -41,25 +40,25 @@ query.bindValue(":NOMBRE_PERSONNES",getNOMBRE_PERSONNES());
 query.exec();
 }
 
-void reservation::afficher(Ui::Gestion_reservation *ui)
+void reservation::afficher(Ui::MainWindow *ui)
 {
 QSqlQuery query;
 QSqlQueryModel *modal=new QSqlQueryModel();
 query.prepare("select * from reservation");
 query.exec();
 modal->setQuery(query);
-ui->tableView->setModel(modal);
+ui->tableView_reservation->setModel(modal);
 }
 
-bool reservation::Supprimer(Ui::Gestion_reservation *ui)
+bool reservation::Supprimer(Ui::MainWindow *ui)
 {
 QSqlQuery  query;
-QString ID=ui->tableView->model()->data(ui->tableView->model()->index(ui->tableView->selectionModel()->currentIndex().row(),0)).toString();
+QString ID=ui->tableView_reservation->model()->data(ui->tableView_reservation->model()->index(ui->tableView_reservation->selectionModel()->currentIndex().row(),0)).toString();
 query.prepare("DELETE FROM reservation WHERE ID ='"+ID+"'");
 return query.exec();
 }
 
-bool reservation::modifier(Ui::Gestion_reservation *ui)
+bool reservation::modifier(Ui::MainWindow *ui)
 {
 QSqlQuery query;
 QString ID=ui->ID->text();
@@ -73,7 +72,7 @@ query.bindValue(":TABLE_NUM",getTABLE_NUM());
 return query.exec();
 
 }
-void reservation::tables(Ui::Gestion_reservation *ui)
+void reservation::tables(Ui::MainWindow *ui)
 {
 QSqlQuery q;
 QSqlQueryModel *modal=new QSqlQueryModel();
@@ -81,11 +80,11 @@ q.prepare("select NUM_TABLE from tables");
 q.exec();
 modal->setQuery(q);
 ui->tables->setModel(modal);
-ui->tables2->setModel(modal);
+ui->tables2_reservation->setModel(modal);
 }
 
 
-void reservation::Recherche(Ui::Gestion_reservation *ui)
+void reservation::Recherche(Ui::MainWindow *ui)
 {
 QSqlQuery q;
 QSqlQueryModel *modal=new QSqlQueryModel();
@@ -94,7 +93,7 @@ q.prepare("select * from reservation where (ID LIKE '%"+reference+"%' or NOM_CLI
 
 if ( q.exec() )
 { modal->setQuery(q);
-ui->tableView->setModel(modal);}
+ui->tableView_reservation->setModel(modal);}
 else
 {
 qWarning( "can't get value" ); }
@@ -127,7 +126,7 @@ else
 qWarning( "can't get value" ); }
 return nb ;
 }
-void reservation::GRAPH(Ui::Gestion_reservation *ui)
+void reservation::GRAPH(Ui::MainWindow *ui)
 {
 
 int reserv=NOMBRE_RESERVATION();
