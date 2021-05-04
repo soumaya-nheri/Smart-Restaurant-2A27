@@ -200,7 +200,7 @@ void MainWindow::on_retour_3_table_clicked()
 ui->stackedWidget->setCurrentIndex(0);
 }
 
-void MainWindow::on_pushButton_table_clicked()
+void MainWindow::on_pushButton_13_table_clicked()
 {
     QPrinter printer;
          printer.setPrinterName("imprimer");

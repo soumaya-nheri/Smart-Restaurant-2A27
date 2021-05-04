@@ -273,7 +273,7 @@ void MainWindow::on_retour_4_reservation_clicked()
     ui->stackedWidget->setCurrentIndex(0);
 }
 
-void MainWindow::on_pushButton_reservation_clicked()
+void MainWindow::on_pushButton_13_reservation_clicked()
 {
     QPrinter printer;
          printer.setPrinterName("imprimer");
@@ -289,6 +289,6 @@ if ((time.second() % 2) == 0){
     time_text[3] = ' ';
     time_text[8] = ' ';
 }
-ui->label->setText(time_text);
+ui->label_29->setText(time_text);
 
 }
