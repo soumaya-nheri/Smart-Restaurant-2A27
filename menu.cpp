@@ -3,6 +3,7 @@
 #include "menu_impl.h"
 #include "commande_impl.h"
 #include <QMessageBox>
+#include <QMediaPlayer>
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "gestion_reservation.h"
@@ -52,6 +53,9 @@ void MainWindow::on_Ajouter_menu_clicked()
         Menu_Impl cat ;
         cat.ajouter(nom,prix);
            ui->tableView_menu->setModel(cat.afficher());
+           QMediaPlayer * music = new QMediaPlayer();
+           music->setMedia(QUrl("qrc:/sounds/ajout.mp3"));
+           music->play();
     }
 
 
@@ -62,6 +66,9 @@ void MainWindow::on_Supprimer_menu_clicked()
     Menu_Impl cat ;
     cat.supprimer()->removeRow(ui->tableView_menu->currentIndex().row());
       ui->tableView_menu->setModel(cat.afficher());
+      QMediaPlayer * music = new QMediaPlayer();
+      music->setMedia(QUrl("qrc:/sounds/supprime.mp3"));
+      music->play();
 
 }
 

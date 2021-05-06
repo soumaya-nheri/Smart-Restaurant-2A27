@@ -1,5 +1,7 @@
 QT       += core gui sql
 QT       += core gui printsupport
+QT       += core gui \
+                      multimedia
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -35,7 +37,9 @@ SOURCES += \
     personnel.cpp \
     qcustomplot.cpp \
     reservation.cpp \
+    stat_article.cpp \
     stat_commande.cpp \
+    statistique.cpp \
     table.cpp
 
 HEADERS += \
@@ -63,11 +67,22 @@ HEADERS += \
     personnel.h \
     qcustomplot.h \
     reservation.h \
+    stat_article.h \
     stat_commande.h \
+    statistique.h \
     table.h
 
 FORMS += \
+    article2.ui \
+    articles.ui \
+    categorie.ui \
+    fournisseur.ui \
+    gestion_livraison.ui \
+    gestion_personnel.ui \
+    login.ui \
     mainwindow.ui \
+    menu.ui \
+    stat_article.ui \
     stat_commande.ui
 
 # Default rules for deployment.
@@ -76,4 +91,22 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    Ressources.qrc
+    Ressources.qrc \
+    Ressources.qrc \
+    images.qrc \
+    rec.qrc \
+    rec.qrc \
+    res.qrc
+
+DISTFILES += \
+    ajout.mp3 \
+    article.pdf \
+    db.sql \
+    download.png \
+    images/pngtree-hamburger-background-with-meat-cheese-and-salad-flat-style-cartoon-illustration-image_307739.jpg \
+    modifie.mp3 \
+    projet2A.pro.user \
+    projet2A.pro.user.0433cd8 \
+    projet2A.pro.user.4e63e6f \
+    projet2A.pro.user.94a3065 \
+    supprime.mp3

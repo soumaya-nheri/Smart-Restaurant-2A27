@@ -16,6 +16,7 @@
 #include<QPrintDialog>
 #include<QDebug>
 #include<QDateTime>
+#include<QMediaPlayer>
 /*Gestion_reservation::Gestion_reservation(QWidget *parent) :
 QWidget(parent),
 ui(new Ui::Gestion_reservation)
@@ -115,6 +116,9 @@ notifyicon->show();
 notifyicon->showMessage("Success ","Votre reservation a été bien ajouté ",QSystemTrayIcon::Information,2000);
 R.afficher(ui);
 ui->tabWidget_5->setCurrentIndex(1);
+QMediaPlayer * music = new QMediaPlayer();
+music->setMedia(QUrl("qrc:/sounds/ajout.mp3"));
+music->play();
 }
 else {
 {QMessageBox ::critical(this,"","erreur d'ajout") ;
@@ -136,6 +140,9 @@ reservation R;
 if(R.Supprimer(ui))
 {
 QMessageBox ::information(this,"","Reservation Supprimé")  ;
+QMediaPlayer * music = new QMediaPlayer();
+music->setMedia(QUrl("qrc:/sounds/supprime.mp3"));
+music->play();
 
 R.afficher(ui);
 
@@ -245,6 +252,9 @@ ui->tables2_reservation->clear();
 ui->nombre2->clear();
 ui->telephone2->clear();
 ui->modifier_reservation->setDisabled(true);
+QMediaPlayer * music = new QMediaPlayer();
+music->setMedia(QUrl("qrc:/sounds/modifie.mp3"));
+music->play();
 }
 else {
 {QMessageBox ::critical(this,"","erreur de modification 1") ;

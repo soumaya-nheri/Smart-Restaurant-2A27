@@ -3,7 +3,7 @@
 #include "fournisseur_impl.h"
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-
+#include <QMediaPlayer>
 #include <QMessageBox>
 /*Fournisseur::Fournisseur(QWidget *parent) :
     QWidget(parent),
@@ -49,6 +49,9 @@ else if (tel<8){
         fournisseur_impl art ;
         art.ajouter(nom_f,categorie,tel);
            ui->tableView_fournisseur->setModel(art.afficher());
+           QMediaPlayer * music = new QMediaPlayer();
+           music->setMedia(QUrl("qrc:/sounds/ajout.mp3"));
+           music->play();
     }
 }
 
@@ -58,6 +61,9 @@ void MainWindow::on_pushButton_2_fournisseur_clicked()
     fournisseur_impl art ;
     art.supprimer()->removeRow(ui->tableView_fournisseur->currentIndex().row());
       ui->tableView_fournisseur->setModel(art.afficher());
+      QMediaPlayer * music = new QMediaPlayer();
+      music->setMedia(QUrl("qrc:/sounds/supprime.mp3"));
+      music->play();
 }
 
 void MainWindow::on_pushButton_3_fournisseur_clicked()

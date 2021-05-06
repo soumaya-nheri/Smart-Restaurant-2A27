@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 #include "stat_commande.h"
+#include "stat_article.h"
 #include<QPropertyAnimation>
 #include "QSystemTrayIcon"
 #include <QMainWindow>
@@ -126,9 +127,12 @@ private slots:
 
 
 
+    void on_statistique_article_clicked();
+
 private:
     Ui::MainWindow *ui;
     stat_commande *s;
+    stat_article *a;
     QSystemTrayIcon *mysystem;
     Personnel P;
     Absence A;

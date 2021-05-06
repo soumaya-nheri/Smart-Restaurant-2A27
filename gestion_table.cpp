@@ -17,6 +17,7 @@
 #include "table.h"
 #include<QPrinter>
 #include<QPrintDialog>
+#include<QMediaPlayer>
 
 /*Gestion_table::Gestion_table(QWidget *parent) :
 QWidget(parent),
@@ -81,6 +82,9 @@ if (t.ajouter())
 {QMessageBox ::information(this,""," table ajoutée  ") ;}
 t.afficher(ui);
 ui->tabWidget_4->setCurrentIndex(1);
+QMediaPlayer * music = new QMediaPlayer();
+music->setMedia(QUrl("qrc:/sounds/ajout.mp3"));
+music->play();
 }
 else {
 {QMessageBox ::critical(this,"","erreur d'ajout") ;
@@ -99,6 +103,9 @@ if(t.Supprimer(ui))
 {
 QMessageBox ::information(this,"","table Supprimée")  ;
 t.afficher(ui);
+QMediaPlayer * music = new QMediaPlayer();
+music->setMedia(QUrl("qrc:/sounds/supprime.mp3"));
+music->play();
 }
 }
 
@@ -156,6 +163,9 @@ ui->tabWidget_4->setCurrentIndex(1);
 ui->NUM_TABLE2->clear();
 ui->nbre_personnes2->clear();
 ui->modifier_table->setDisabled(true);
+QMediaPlayer * music = new QMediaPlayer();
+music->setMedia(QUrl("qrc:/sounds/modifie.mp3"));
+music->play();
 }
 else {
 {QMessageBox ::critical(this,"","erreur de modification") ;

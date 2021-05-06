@@ -2,6 +2,7 @@
 #include "menu_impl.h"
 #include "commande_impl.h"
 #include <QMessageBox>
+#include <QMediaPlayer>
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "stat_commande.h"
@@ -12,6 +13,9 @@ void MainWindow::on_Supprimer2_commande_clicked()
     Commande_Impl cat ;
     cat.supprimer()->removeRow(ui->tableView3_commande->currentIndex().row());
       ui->tableView3_commande->setModel(cat.affichercommande());
+      QMediaPlayer * music = new QMediaPlayer();
+      music->setMedia(QUrl("qrc:/sounds/supprime.mp3"));
+      music->play();
 
 }
 void MainWindow::on_Supprimer3_commande_clicked()
@@ -22,6 +26,9 @@ void MainWindow::on_Supprimer3_commande_clicked()
 
        qry.exec();
       ui->tableView3_commande->setModel(cat.affichercommande());
+      QMediaPlayer * music = new QMediaPlayer();
+      music->setMedia(QUrl("qrc:/sounds/supprime.mp3"));
+      music->play();
 
 }
 
@@ -36,6 +43,9 @@ void MainWindow::on_Valider_menu_clicked()
     query->exec();
     query->prepare("update MENU SET QUANTITE = 0 ;");
     query->exec();
+    QMediaPlayer * music = new QMediaPlayer();
+    music->setMedia(QUrl("qrc:/sounds/ajout.mp3"));
+    music->play();
 
    // query->prepare("insert into COMMANDE (PLATS,PRIXTOTALE) select NOM,PRIX from MENU where QUANTITE > 0;");
    /*   query->bindValue(":NOM",nom);

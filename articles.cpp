@@ -1,6 +1,7 @@
 #include "articles.h"
 #include "articles_impl.h"
 #include <QMessageBox>
+#include <QMediaPlayer>
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 /*articles::articles(QWidget *parent) :
@@ -46,6 +47,9 @@ else if (quantite<=0){
            ui->tableView_article->setModel(art.afficher());
 
           art.verifier();
+          QMediaPlayer * music = new QMediaPlayer();
+          music->setMedia(QUrl("qrc:/sounds/ajout.mp3"));
+          music->play();
     }
 
 }
@@ -55,6 +59,9 @@ void MainWindow::on_pushButton_2_article_clicked()
     articles_impl art ;
     art.supprimer()->removeRow(ui->tableView_article->currentIndex().row());
       ui->tableView_article->setModel(art.afficher());
+      QMediaPlayer * music = new QMediaPlayer();
+      music->setMedia(QUrl("qrc:/sounds/supprime.mp3"));
+      music->play();
 }
 
 void MainWindow::on_pushButton_3_article_clicked()
@@ -72,3 +79,9 @@ void MainWindow::on_imprimer_article_clicked()
 
 
 }
+void MainWindow::on_statistique_article_clicked()
+{
+    a=new stat_article(this);
+    a->show();
+}
+

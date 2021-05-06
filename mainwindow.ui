@@ -25,8 +25,8 @@
 
 QWidget
 {
-    color: #b1b1b1;
-       background-color: brown ;
+  color:white;
+background-color:#1e272e;
 }
 
 QWidget:item:hover
@@ -110,7 +110,7 @@ QLineEdit
 QPushButton
 {
     color: #b1b1b1;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #565656, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);
+    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #3742fa, stop: 0.1 #341f97, stop: 0.5 #341f97, stop: 0.9 #3742fa, stop: 1 #3742fa);
     border-width: 1px;
     border-color: #1e1e1e;
     border-style: solid;
@@ -123,7 +123,7 @@ QPushButton
 
 QPushButton:pressed
 {
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
+     background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #341f97, stop: 0.1 #341f97, stop: 0.5 #5f27cd, stop: 0.9 #5f27cd, stop: 1 #5f27cd);
 }
 
 QComboBox
@@ -138,6 +138,7 @@ QComboBox
 QComboBox:hover,QPushButton:hover
 {
     border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
+background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #5f27cd, stop: 0.1 #525252, stop: 0.5 #5f27cd, stop: 0.9 #5f27cd, stop: 1 #5f27cd);
 }
 
 
@@ -472,7 +473,10 @@ QCheckBox::indicator:checked
 QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
 {
     border: 1px solid #444;
-}</string>
+}
+
+
+</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QStackedWidget" name="stackedWidget">
@@ -573,7 +577,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
       <property name="geometry">
        <rect>
         <x>790</x>
-        <y>460</y>
+        <y>450</y>
         <width>221</width>
         <height>81</height>
        </rect>
@@ -676,20 +680,19 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
      <widget class="QPushButton" name="pushButton">
       <property name="geometry">
        <rect>
-        <x>820</x>
-        <y>80</y>
+        <x>810</x>
+        <y>90</y>
         <width>281</width>
         <height>111</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">
-QPushButton
+       <string notr="true">QPushButton
 {
  
-    background-color: brown;
+    background-color: #1e272e;
     
-    border-color: brown;
+    border-color: #1e272e;
    
 }</string>
       </property>
@@ -702,8 +705,8 @@ QPushButton
       </property>
       <property name="iconSize">
        <size>
-        <width>140</width>
-        <height>140</height>
+        <width>160</width>
+        <height>160</height>
        </size>
       </property>
      </widget>
@@ -711,7 +714,7 @@ QPushButton
       <property name="geometry">
        <rect>
         <x>790</x>
-        <y>220</y>
+        <y>250</y>
         <width>221</width>
         <height>81</height>
        </rect>
@@ -762,20 +765,19 @@ QPushButton
      <widget class="QPushButton" name="pushButton_3">
       <property name="geometry">
        <rect>
-        <x>-10</x>
-        <y>-10</y>
-        <width>381</width>
-        <height>251</height>
+        <x>30</x>
+        <y>20</y>
+        <width>371</width>
+        <height>201</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">
-QPushButton
+       <string notr="true">QPushButton
 {
  
-    background-color: brown;
+    background-color: #1e272e;
     
-    border-color: brown;
+    border-color: #1e272e;
    
 }</string>
       </property>
@@ -788,8 +790,8 @@ QPushButton
       </property>
       <property name="iconSize">
        <size>
-        <width>80</width>
-        <height>80</height>
+        <width>140</width>
+        <height>140</height>
        </size>
       </property>
      </widget>
@@ -821,466 +823,7 @@ QPushButton
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">QToolTip
-{
-     border: 1px solid black;
-     background-color: #ffa02f;
-     padding: 1px;
-     border-radius: 3px;
-     opacity: 100;
-}
-
-QWidget
-{
-    color: #b1b1b1;
-       background-color: brown ;
-}
-
-QWidget:item:hover
-{
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #ca0619);
-    color: #000000;
-}
-
-QWidget:item:selected
-{
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
-}
-
-QMenuBar::item
-{
-    background: transparent;
-}
-
-QMenuBar::item:selected
-{
-    background: transparent;
-    border: 1px solid #ffaa00;
-}
-
-QMenuBar::item:pressed
-{
-    background: #444;
-    border: 1px solid #000;
-    background-color: QLinearGradient(
-        x1:0, y1:0,
-        x2:0, y2:1,
-        stop:1 #212121,
-        stop:0.4 #343434/*,
-        stop:0.2 #343434,
-        stop:0.1 #ffaa00*/
-    );
-    margin-bottom:-1px;
-    padding-bottom:1px;
-}
-
-QMenu
-{
-    border: 1px solid #000;
-}
-
-QMenu::item
-{
-    padding: 2px 20px 2px 20px;
-}
-
-QMenu::item:selected
-{
-    color: #000000;
-}
-
-QWidget:disabled
-{
-    color: #404040;
-    background-color: #323232;
-}
-
-QAbstractItemView
-{
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #4d4d4d, stop: 0.1 #646464, stop: 1 #5d5d5d);
-}
-
-QWidget:focus
-{
-    /*border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);*/
-}
-
-QLineEdit
-{
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #4d4d4d, stop: 0 #646464, stop: 1 #5d5d5d);
-    padding: 1px;
-    border-style: solid;
-    border: 1px solid #1e1e1e;
-    border-radius: 5;
-}
-
-QPushButton
-{
-    color: #b1b1b1;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #565656, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);
-    border-width: 1px;
-    border-color: #1e1e1e;
-    border-style: solid;
-    border-radius: 6;
-    padding: 3px;
-    font-size: 12px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-QPushButton:pressed
-{
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
-}
-
-QComboBox
-{
-    selection-background-color: #ffaa00;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #565656, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);
-    border-style: solid;
-    border: 1px solid #1e1e1e;
-    border-radius: 5;
-}
-
-QComboBox:hover,QPushButton:hover
-{
-    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
-}
-
-
-QComboBox:on
-{
-    padding-top: 3px;
-    padding-left: 4px;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
-    selection-background-color: #ffaa00;
-}
-
-QComboBox QAbstractItemView
-{
-    border: 2px solid darkgray;
-    selection-background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
-}
-
-QComboBox::drop-down
-{
-     subcontrol-origin: padding;
-     subcontrol-position: top right;
-     width: 15px;
-
-     border-left-width: 0px;
-     border-left-color: darkgray;
-     border-left-style: solid; /* just a single line */
-     border-top-right-radius: 3px; /* same radius as the QComboBox */
-     border-bottom-right-radius: 3px;
- }
-
-QComboBox::down-arrow
-{
-     image: url(:/down_arrow.png);
-}
-
-QGroupBox:focus
-{
-border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
-}
-
-QTextEdit:focus
-{
-    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
-}
-
-QScrollBar:horizontal {
-     border: 1px solid #222222;
-     background: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0.0 #121212, stop: 0.2 #282828, stop: 1 #484848);
-     height: 7px;
-     margin: 0px 16px 0 16px;
-}
-
-QScrollBar::handle:horizontal
-{
-      background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #ffa02f, stop: 0.5 #d7801a, stop: 1 #ffa02f);
-      min-height: 20px;
-      border-radius: 2px;
-}
-
-QScrollBar::add-line:horizontal {
-      border: 1px solid #1b1b19;
-      border-radius: 2px;
-      background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #ffa02f, stop: 1 #d7801a);
-      width: 14px;
-      subcontrol-position: right;
-      subcontrol-origin: margin;
-}
-
-QScrollBar::sub-line:horizontal {
-      border: 1px solid #1b1b19;
-      border-radius: 2px;
-      background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #ffa02f, stop: 1 #d7801a);
-      width: 14px;
-     subcontrol-position: left;
-     subcontrol-origin: margin;
-}
-
-QScrollBar::right-arrow:horizontal, QScrollBar::left-arrow:horizontal
-{
-      border: 1px solid black;
-      width: 1px;
-      height: 1px;
-      background: white;
-}
-
-QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
-{
-      background: none;
-}
-
-QScrollBar:vertical
-{
-      background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0, stop: 0.0 #121212, stop: 0.2 #282828, stop: 1 #484848);
-      width: 7px;
-      margin: 16px 0 16px 0;
-      border: 1px solid #222222;
-}
-
-QScrollBar::handle:vertical
-{
-      background: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 0.5 #d7801a, stop: 1 #ffa02f);
-      min-height: 20px;
-      border-radius: 2px;
-}
-
-QScrollBar::add-line:vertical
-{
-      border: 1px solid #1b1b19;
-      border-radius: 2px;
-      background: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
-      height: 14px;
-      subcontrol-position: bottom;
-      subcontrol-origin: margin;
-}
-
-QScrollBar::sub-line:vertical
-{
-      border: 1px solid #1b1b19;
-      border-radius: 2px;
-      background: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #d7801a, stop: 1 #ffa02f);
-      height: 14px;
-      subcontrol-position: top;
-      subcontrol-origin: margin;
-}
-
-QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical
-{
-      border: 1px solid black;
-      width: 1px;
-      height: 1px;
-      background: white;
-}
-
-
-QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical
-{
-      background: none;
-}
-
-QTextEdit
-{
-    background-color: #242424;
-}
-
-QPlainTextEdit
-{
-    background-color: #242424;
-}
-
-QHeaderView::section
-{
-    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:0 #616161, stop: 0.5 #505050, stop: 0.6 #434343, stop:1 #656565);
-    color: white;
-    padding-left: 4px;
-    border: 1px solid #6c6c6c;
-}
-
-QCheckBox:disabled
-{
-color: #414141;
-}
-
-QDockWidget::title
-{
-    text-align: center;
-    spacing: 3px; /* spacing between items in the tool bar */
-    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:0 #323232, stop: 0.5 #242424, stop:1 #323232);
-}
-
-QDockWidget::close-button, QDockWidget::float-button
-{
-    text-align: center;
-    spacing: 1px; /* spacing between items in the tool bar */
-    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:0 #323232, stop: 0.5 #242424, stop:1 #323232);
-}
-
-QDockWidget::close-button:hover, QDockWidget::float-button:hover
-{
-    background: #242424;
-}
-
-QDockWidget::close-button:pressed, QDockWidget::float-button:pressed
-{
-    padding: 1px -1px -1px 1px;
-}
-
-QMainWindow::separator
-{
-    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:0 #161616, stop: 0.5 #151515, stop: 0.6 #212121, stop:1 #343434);
-    color: white;
-    padding-left: 4px;
-    border: 1px solid #4c4c4c;
-    spacing: 3px; /* spacing between items in the tool bar */
-}
-
-QMainWindow::separator:hover
-{
-
-    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:0 #d7801a, stop:0.5 #b56c17 stop:1 #ffa02f);
-    color: white;
-    padding-left: 4px;
-    border: 1px solid #6c6c6c;
-    spacing: 3px; /* spacing between items in the tool bar */
-}
-
-QToolBar::handle
-{
-     spacing: 3px; /* spacing between items in the tool bar */
-     background: url(:/images/handle.png);
-}
-
-QMenu::separator
-{
-    height: 2px;
-    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:0 #161616, stop: 0.5 #151515, stop: 0.6 #212121, stop:1 #343434);
-    color: white;
-    padding-left: 4px;
-    margin-left: 10px;
-    margin-right: 5px;
-}
-
-QProgressBar
-{
-    border: 2px solid grey;
-    border-radius: 5px;
-    text-align: center;
-}
-
-QProgressBar::chunk
-{
-    background-color: #d7801a;
-    width: 2.15px;
-    margin: 0.5px;
-}
-
-QTabBar::tab {
-    color: #b1b1b1;
-    border: 1px solid #444;
-    border-bottom-style: none;
-    background-color: #323232;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 3px;
-    padding-bottom: 2px;
-    margin-right: -1px;
-}
-
-QTabWidget::pane {
-    border: 1px solid #444;
-    top: 1px;
-}
-
-QTabBar::tab:last
-{
-    margin-right: 0; /* the last selected tab has nothing to overlap with on the right */
-    border-top-right-radius: 3px;
-}
-
-QTabBar::tab:first:!selected
-{
- margin-left: 0px; /* the last selected tab has nothing to overlap with on the right */
-
-
-    border-top-left-radius: 3px;
-}
-
-QTabBar::tab:!selected
-{
-    color: #b1b1b1;
-    border-bottom-style: solid;
-    margin-top: 3px;
-    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:1 #212121, stop:.4 #343434);
-}
-
-QTabBar::tab:selected
-{
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    margin-bottom: 0px;
-}
-
-QTabBar::tab:!selected:hover
-{
-    /*border-top: 2px solid #ffaa00;
-    padding-bottom: 3px;*/
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:1 #212121, stop:0.4 #343434, stop:0.2 #343434, stop:0.1 #ffaa00);
-}
-
-QRadioButton::indicator:checked, QRadioButton::indicator:unchecked{
-    color: #b1b1b1;
-    background-color: #323232;
-    border: 1px solid #b1b1b1;
-    border-radius: 6px;
-}
-
-QRadioButton::indicator:checked
-{
-    background-color: qradialgradient(
-        cx: 0.5, cy: 0.5,
-        fx: 0.5, fy: 0.5,
-        radius: 1.0,
-        stop: 0.25 #ffaa00,
-        stop: 0.3 #323232
-    );
-}
-
-QCheckBox::indicator{
-    color: #b1b1b1;
-    background-color: #323232;
-    border: 1px solid #b1b1b1;
-    width: 9px;
-    height: 9px;
-}
-
-QRadioButton::indicator
-{
-    border-radius: 6px;
-}
-
-QRadioButton::indicator:hover, QCheckBox::indicator:hover
-{
-    border: 1px solid #ffaa00;
-}
-
-QCheckBox::indicator:checked
-{
-    image:url(:/images/checkbox.png);
-}
-
-QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
-{
-    border: 1px solid #444;
-}
-color:white;</string>
+       <string notr="true"/>
       </property>
       <property name="currentIndex">
        <number>0</number>
@@ -1293,9 +836,9 @@ color:white;</string>
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>60</y>
+          <y>130</y>
           <width>531</width>
-          <height>471</height>
+          <height>401</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -1305,8 +848,8 @@ color:white;</string>
        <widget class="QLabel" name="label_4_menu">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>10</y>
+          <x>20</x>
+          <y>80</y>
           <width>101</width>
           <height>41</height>
          </rect>
@@ -1318,23 +861,23 @@ color:white;</string>
        <widget class="QLabel" name="label_2_menu">
         <property name="geometry">
          <rect>
-          <x>300</x>
-          <y>20</y>
-          <width>71</width>
-          <height>16</height>
+          <x>270</x>
+          <y>90</y>
+          <width>101</width>
+          <height>31</height>
          </rect>
         </property>
         <property name="text">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Recherche :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:9pt; color:#ffffff;&quot;&gt;Recherche :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="txt_Search_menu">
         <property name="geometry">
          <rect>
-          <x>380</x>
-          <y>20</y>
-          <width>171</width>
-          <height>20</height>
+          <x>360</x>
+          <y>89</y>
+          <width>181</width>
+          <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -1344,8 +887,8 @@ color:white;</string>
        <widget class="QPushButton" name="Actualiser_menu">
         <property name="geometry">
          <rect>
-          <x>880</x>
-          <y>10</y>
+          <x>1020</x>
+          <y>70</y>
           <width>111</width>
           <height>41</height>
          </rect>
@@ -1365,9 +908,9 @@ color:white;</string>
         <property name="geometry">
          <rect>
           <x>610</x>
-          <y>60</y>
+          <y>130</y>
           <width>521</width>
-          <height>471</height>
+          <height>401</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -1377,8 +920,8 @@ color:white;</string>
        <widget class="QLabel" name="label_6_menu">
         <property name="geometry">
          <rect>
-          <x>570</x>
-          <y>10</y>
+          <x>620</x>
+          <y>80</y>
           <width>151</width>
           <height>41</height>
          </rect>
@@ -1390,8 +933,8 @@ color:white;</string>
        <widget class="QPushButton" name="Trier_menu">
         <property name="geometry">
          <rect>
-          <x>110</x>
-          <y>12</y>
+          <x>130</x>
+          <y>90</y>
           <width>131</width>
           <height>31</height>
          </rect>
@@ -1430,7 +973,7 @@ color:white;</string>
        <widget class="QLabel" name="label_5_menu">
         <property name="geometry">
          <rect>
-          <x>170</x>
+          <x>180</x>
           <y>560</y>
           <width>61</width>
           <height>21</height>
@@ -1443,9 +986,9 @@ color:white;</string>
        <widget class="QPushButton" name="Supprimer_menu">
         <property name="geometry">
          <rect>
-          <x>440</x>
+          <x>450</x>
           <y>550</y>
-          <width>101</width>
+          <width>91</width>
           <height>41</height>
          </rect>
         </property>
@@ -1476,7 +1019,7 @@ color:white;</string>
        <widget class="QLineEdit" name="txt_Prix_menu">
         <property name="geometry">
          <rect>
-          <x>200</x>
+          <x>220</x>
           <y>550</y>
           <width>111</width>
           <height>41</height>
@@ -1489,9 +1032,9 @@ color:white;</string>
        <widget class="QPushButton" name="Ajouter_menu">
         <property name="geometry">
          <rect>
-          <x>330</x>
+          <x>340</x>
           <y>550</y>
-          <width>101</width>
+          <width>91</width>
           <height>41</height>
          </rect>
         </property>
@@ -1529,7 +1072,7 @@ color:white;</string>
        <widget class="QLineEdit" name="txt_Nom_menu">
         <property name="geometry">
          <rect>
-          <x>40</x>
+          <x>50</x>
           <y>550</y>
           <width>121</width>
           <height>41</height>
@@ -1537,6 +1080,39 @@ color:white;</string>
         </property>
         <property name="styleSheet">
          <string notr="true"/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_25">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>121</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+ 
+    background-color: #1e272e;
+    
+    border-color: #1e272e;
+   
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="Ressources.qrc">
+          <normaloff>:/new/images/images/Image4.png</normaloff>:/new/images/images/Image4.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>80</width>
+          <height>80</height>
+         </size>
         </property>
        </widget>
       </widget>
@@ -1670,6 +1246,39 @@ color:white;</string>
           <normaloff>:/new/images/images/return.png</normaloff>:/new/images/images/return.png</iconset>
         </property>
        </widget>
+       <widget class="QPushButton" name="pushButton_24">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>121</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+ 
+    background-color: #1e272e;
+    
+    border-color: #1e272e;
+   
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="Ressources.qrc">
+          <normaloff>:/new/images/images/Image4.png</normaloff>:/new/images/images/Image4.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>80</width>
+          <height>80</height>
+         </size>
+        </property>
+       </widget>
       </widget>
      </widget>
     </widget>
@@ -1677,9 +1286,9 @@ color:white;</string>
      <widget class="QPushButton" name="pushButton_3_article">
       <property name="geometry">
        <rect>
-        <x>1000</x>
+        <x>1010</x>
         <y>20</y>
-        <width>121</width>
+        <width>111</width>
         <height>51</height>
        </rect>
       </property>
@@ -1697,10 +1306,10 @@ color:white;</string>
      <widget class="QPushButton" name="pushButton_article">
       <property name="geometry">
        <rect>
-        <x>320</x>
+        <x>310</x>
         <y>250</y>
-        <width>94</width>
-        <height>23</height>
+        <width>101</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1730,10 +1339,10 @@ color:white;</string>
      <widget class="QPushButton" name="imprimer_article">
       <property name="geometry">
        <rect>
-        <x>470</x>
-        <y>340</y>
-        <width>94</width>
-        <height>23</height>
+        <x>400</x>
+        <y>390</y>
+        <width>101</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1763,10 +1372,10 @@ color:white;</string>
      <widget class="QPushButton" name="pushButton_2_article">
       <property name="geometry">
        <rect>
-        <x>470</x>
-        <y>390</y>
-        <width>94</width>
-        <height>23</height>
+        <x>400</x>
+        <y>460</y>
+        <width>101</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1798,7 +1407,7 @@ color:white;</string>
        <rect>
         <x>310</x>
         <y>210</y>
-        <width>81</width>
+        <width>101</width>
         <height>22</height>
        </rect>
       </property>
@@ -1897,12 +1506,65 @@ QTabBar::tab:selected
        <rect>
         <x>570</x>
         <y>140</y>
-        <width>301</width>
-        <height>271</height>
+        <width>431</width>
+        <height>381</height>
        </rect>
       </property>
       <property name="styleSheet">
        <string notr="true"/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="statistique_article">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>320</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>statistique</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>:/new/prefix1/attachments (4)/reservation.png</normaloff>:/new/prefix1/attachments (4)/reservation.png</iconset>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_13">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>121</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+ 
+    background-color: #1e272e;
+    
+    border-color: #1e272e;
+   
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="Ressources.qrc">
+        <normaloff>:/new/images/images/Image4.png</normaloff>:/new/images/images/Image4.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
       </property>
      </widget>
     </widget>
@@ -1911,19 +1573,19 @@ QTabBar::tab:selected
       <property name="geometry">
        <rect>
         <x>870</x>
-        <y>260</y>
+        <y>250</y>
         <width>141</width>
-        <height>21</height>
+        <height>31</height>
        </rect>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_2_fournisseur">
       <property name="geometry">
        <rect>
-        <x>770</x>
-        <y>470</y>
-        <width>94</width>
-        <height>21</height>
+        <x>700</x>
+        <y>440</y>
+        <width>111</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="text">
@@ -1939,8 +1601,8 @@ QTabBar::tab:selected
        <rect>
         <x>890</x>
         <y>390</y>
-        <width>94</width>
-        <height>21</height>
+        <width>101</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="text">
@@ -1955,9 +1617,9 @@ QTabBar::tab:selected
       <property name="geometry">
        <rect>
         <x>870</x>
-        <y>340</y>
+        <y>350</y>
         <width>141</width>
-        <height>21</height>
+        <height>31</height>
        </rect>
       </property>
      </widget>
@@ -1965,7 +1627,7 @@ QTabBar::tab:selected
       <property name="geometry">
        <rect>
         <x>790</x>
-        <y>340</y>
+        <y>360</y>
         <width>71</width>
         <height>16</height>
        </rect>
@@ -1977,28 +1639,28 @@ QTabBar::tab:selected
      <widget class="QLineEdit" name="recherche_fournisseur">
       <property name="geometry">
        <rect>
-        <x>760</x>
-        <y>220</y>
-        <width>113</width>
-        <height>20</height>
+        <x>870</x>
+        <y>200</y>
+        <width>141</width>
+        <height>31</height>
        </rect>
       </property>
      </widget>
      <widget class="QTableView" name="tableView_fournisseur">
       <property name="geometry">
        <rect>
-        <x>400</x>
-        <y>220</y>
-        <width>351</width>
-        <height>271</height>
+        <x>200</x>
+        <y>110</y>
+        <width>481</width>
+        <height>371</height>
        </rect>
       </property>
      </widget>
      <widget class="QLabel" name="label_fournisseur">
       <property name="geometry">
        <rect>
-        <x>810</x>
-        <y>260</y>
+        <x>800</x>
+        <y>250</y>
         <width>47</width>
         <height>13</height>
        </rect>
@@ -2026,7 +1688,7 @@ QTabBar::tab:selected
         <x>870</x>
         <y>300</y>
         <width>141</width>
-        <height>21</height>
+        <height>31</height>
        </rect>
       </property>
      </widget>
@@ -2060,6 +1722,39 @@ QTabBar::tab:selected
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;TEL&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="pushButton_14">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>121</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+ 
+    background-color: #1e272e;
+    
+    border-color: #1e272e;
+   
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="Ressources.qrc">
+        <normaloff>:/new/images/images/Image4.png</normaloff>:/new/images/images/Image4.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="categorie">
      <widget class="QLabel" name="label_categorie">
@@ -2079,9 +1774,9 @@ QTabBar::tab:selected
       <property name="geometry">
        <rect>
         <x>710</x>
-        <y>240</y>
-        <width>94</width>
-        <height>23</height>
+        <y>270</y>
+        <width>101</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="text">
@@ -2095,10 +1790,10 @@ QTabBar::tab:selected
      <widget class="QPushButton" name="Supprimer_categorie">
       <property name="geometry">
        <rect>
-        <x>650</x>
-        <y>440</y>
-        <width>94</width>
-        <height>23</height>
+        <x>700</x>
+        <y>380</y>
+        <width>111</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -2115,8 +1810,8 @@ QTabBar::tab:selected
      <widget class="QLabel" name="label_2_categorie">
       <property name="geometry">
        <rect>
-        <x>450</x>
-        <y>150</y>
+        <x>190</x>
+        <y>50</y>
         <width>71</width>
         <height>16</height>
        </rect>
@@ -2147,8 +1842,8 @@ QTabBar::tab:selected
        <rect>
         <x>700</x>
         <y>200</y>
-        <width>113</width>
-        <height>20</height>
+        <width>111</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -2158,21 +1853,54 @@ QTabBar::tab:selected
      <widget class="QTableView" name="tableView_categorie">
       <property name="geometry">
        <rect>
-        <x>260</x>
-        <y>190</y>
-        <width>381</width>
-        <height>281</height>
+        <x>180</x>
+        <y>90</y>
+        <width>451</width>
+        <height>331</height>
        </rect>
       </property>
      </widget>
      <widget class="QLineEdit" name="txt_Search_categorie">
       <property name="geometry">
        <rect>
-        <x>520</x>
-        <y>150</y>
-        <width>113</width>
-        <height>20</height>
+        <x>300</x>
+        <y>50</y>
+        <width>121</width>
+        <height>31</height>
        </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_15">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>121</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+ 
+    background-color: #1e272e;
+    
+    border-color: #1e272e;
+   
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="Ressources.qrc">
+        <normaloff>:/new/images/images/Image4.png</normaloff>:/new/images/images/Image4.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
       </property>
      </widget>
     </widget>
@@ -2187,468 +1915,10 @@ QTabBar::tab:selected
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">QToolTip
-{
-     border: 1px solid black;
-     background-color: #ffa02f;
-     padding: 1px;
-     border-radius: 3px;
-     opacity: 100;
-}
-
-QWidget
-{
-    color: #b1b1b1;
-       background-color:brown;
-}
-
-QWidget:item:hover
-{
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #ca0619);
-    color: #000000;
-}
-
-QWidget:item:selected
-{
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
-}
-
-QMenuBar::item
-{
-    background: transparent;
-}
-
-QMenuBar::item:selected
-{
-    background: transparent;
-    border: 1px solid #ffaa00;
-}
-
-QMenuBar::item:pressed
-{
-    background: #444;
-    border: 1px solid #000;
-    background-color: QLinearGradient(
-        x1:0, y1:0,
-        x2:0, y2:1,
-        stop:1 #212121,
-        stop:0.4 #343434/*,
-        stop:0.2 #343434,
-        stop:0.1 #ffaa00*/
-    );
-    margin-bottom:-1px;
-    padding-bottom:1px;
-}
-
-QMenu
-{
-    border: 1px solid #000;
-}
-
-QMenu::item
-{
-    padding: 2px 20px 2px 20px;
-}
-
-QMenu::item:selected
-{
-    color: #000000;
-}
-
-QWidget:disabled
-{
-    color: #404040;
-    background-color: #323232;
-}
-
-QAbstractItemView
-{
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #4d4d4d, stop: 0.1 #646464, stop: 1 #5d5d5d);
-}
-
-QWidget:focus
-{
-    /*border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);*/
-}
-
-QLineEdit
-{
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #4d4d4d, stop: 0 #646464, stop: 1 #5d5d5d);
-    padding: 1px;
-    border-style: solid;
-    border: 1px solid #1e1e1e;
-    border-radius: 5;
-}
-
-QPushButton
-{
-    color: #b1b1b1;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #565656, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);
-    border-width: 1px;
-    border-color: #1e1e1e;
-    border-style: solid;
-    border-radius: 6;
-    padding: 3px;
-    font-size: 12px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-QPushButton:pressed
-{
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
-}
-
-QComboBox
-{
-    selection-background-color: #ffaa00;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #565656, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);
-    border-style: solid;
-    border: 1px solid #1e1e1e;
-    border-radius: 5;
-}
-
-QComboBox:hover,QPushButton:hover
-{
-    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
-}
-
-
-QComboBox:on
-{
-    padding-top: 3px;
-    padding-left: 4px;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
-    selection-background-color: #ffaa00;
-}
-
-QComboBox QAbstractItemView
-{
-    border: 2px solid darkgray;
-    selection-background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
-}
-
-QComboBox::drop-down
-{
-     subcontrol-origin: padding;
-     subcontrol-position: top right;
-     width: 15px;
-
-     border-left-width: 0px;
-     border-left-color: darkgray;
-     border-left-style: solid; /* just a single line */
-     border-top-right-radius: 3px; /* same radius as the QComboBox */
-     border-bottom-right-radius: 3px;
- }
-
-QComboBox::down-arrow
-{
-     image: url(:/down_arrow.png);
-}
-
-QGroupBox:focus
-{
-border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
-}
-
-QTextEdit:focus
-{
-    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
-}
-
-QScrollBar:horizontal {
-     border: 1px solid #222222;
-     background: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0.0 #121212, stop: 0.2 #282828, stop: 1 #484848);
-     height: 7px;
-     margin: 0px 16px 0 16px;
-}
-
-QScrollBar::handle:horizontal
-{
-      background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #ffa02f, stop: 0.5 #d7801a, stop: 1 #ffa02f);
-      min-height: 20px;
-      border-radius: 2px;
-}
-
-QScrollBar::add-line:horizontal {
-      border: 1px solid #1b1b19;
-      border-radius: 2px;
-      background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #ffa02f, stop: 1 #d7801a);
-      width: 14px;
-      subcontrol-position: right;
-      subcontrol-origin: margin;
-}
-
-QScrollBar::sub-line:horizontal {
-      border: 1px solid #1b1b19;
-      border-radius: 2px;
-      background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #ffa02f, stop: 1 #d7801a);
-      width: 14px;
-     subcontrol-position: left;
-     subcontrol-origin: margin;
-}
-
-QScrollBar::right-arrow:horizontal, QScrollBar::left-arrow:horizontal
-{
-      border: 1px solid black;
-      width: 1px;
-      height: 1px;
-      background: white;
-}
-
-QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
-{
-      background: none;
-}
-
-QScrollBar:vertical
-{
-      background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0, stop: 0.0 #121212, stop: 0.2 #282828, stop: 1 #484848);
-      width: 7px;
-      margin: 16px 0 16px 0;
-      border: 1px solid #222222;
-}
-
-QScrollBar::handle:vertical
-{
-      background: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 0.5 #d7801a, stop: 1 #ffa02f);
-      min-height: 20px;
-      border-radius: 2px;
-}
-
-QScrollBar::add-line:vertical
-{
-      border: 1px solid #1b1b19;
-      border-radius: 2px;
-      background: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
-      height: 14px;
-      subcontrol-position: bottom;
-      subcontrol-origin: margin;
-}
-
-QScrollBar::sub-line:vertical
-{
-      border: 1px solid #1b1b19;
-      border-radius: 2px;
-      background: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #d7801a, stop: 1 #ffa02f);
-      height: 14px;
-      subcontrol-position: top;
-      subcontrol-origin: margin;
-}
-
-QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical
-{
-      border: 1px solid black;
-      width: 1px;
-      height: 1px;
-      background: white;
-}
-
-
-QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical
-{
-      background: none;
-}
-
-QTextEdit
-{
-    background-color: #242424;
-}
-
-QPlainTextEdit
-{
-    background-color: #242424;
-}
-
-QHeaderView::section
-{
-    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:0 #616161, stop: 0.5 #505050, stop: 0.6 #434343, stop:1 #656565);
-    color: white;
-    padding-left: 4px;
-    border: 1px solid #6c6c6c;
-}
-
-QCheckBox:disabled
-{
-color: #414141;
-}
-
-QDockWidget::title
-{
-    text-align: center;
-    spacing: 3px; /* spacing between items in the tool bar */
-    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:0 #323232, stop: 0.5 #242424, stop:1 #323232);
-}
-
-QDockWidget::close-button, QDockWidget::float-button
-{
-    text-align: center;
-    spacing: 1px; /* spacing between items in the tool bar */
-    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:0 #323232, stop: 0.5 #242424, stop:1 #323232);
-}
-
-QDockWidget::close-button:hover, QDockWidget::float-button:hover
-{
-    background: #242424;
-}
-
-QDockWidget::close-button:pressed, QDockWidget::float-button:pressed
-{
-    padding: 1px -1px -1px 1px;
-}
-
-QMainWindow::separator
-{
-    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:0 #161616, stop: 0.5 #151515, stop: 0.6 #212121, stop:1 #343434);
-    color: white;
-    padding-left: 4px;
-    border: 1px solid #4c4c4c;
-    spacing: 3px; /* spacing between items in the tool bar */
-}
-
-QMainWindow::separator:hover
-{
-
-    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:0 #d7801a, stop:0.5 #b56c17 stop:1 #ffa02f);
-    color: white;
-    padding-left: 4px;
-    border: 1px solid #6c6c6c;
-    spacing: 3px; /* spacing between items in the tool bar */
-}
-
-QToolBar::handle
-{
-     spacing: 3px; /* spacing between items in the tool bar */
-     background: url(:/images/handle.png);
-}
-
-QMenu::separator
-{
-    height: 2px;
-    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:0 #161616, stop: 0.5 #151515, stop: 0.6 #212121, stop:1 #343434);
-    color: white;
-    padding-left: 4px;
-    margin-left: 10px;
-    margin-right: 5px;
-}
-
-QProgressBar
-{
-    border: 2px solid grey;
-    border-radius: 5px;
-    text-align: center;
-}
-
-QProgressBar::chunk
-{
-    background-color: #d7801a;
-    width: 2.15px;
-    margin: 0.5px;
-}
-
-QTabBar::tab {
-    color: #b1b1b1;
-    border: 1px solid #444;
-    border-bottom-style: none;
-    background-color: #323232;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 3px;
-    padding-bottom: 2px;
-    margin-right: -1px;
-}
-
-QTabWidget::pane {
-    border: 1px solid #444;
-    top: 1px;
-}
-
-QTabBar::tab:last
-{
-    margin-right: 0; /* the last selected tab has nothing to overlap with on the right */
-    border-top-right-radius: 3px;
-}
-
-QTabBar::tab:first:!selected
-{
- margin-left: 0px; /* the last selected tab has nothing to overlap with on the right */
-
-
-    border-top-left-radius: 3px;
-}
-
-QTabBar::tab:!selected
-{
-    color: #b1b1b1;
-    border-bottom-style: solid;
-    margin-top: 3px;
-    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:1 #212121, stop:.4 #343434);
-}
-
-QTabBar::tab:selected
-{
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    margin-bottom: 0px;
-}
-
-QTabBar::tab:!selected:hover
-{
-    /*border-top: 2px solid #ffaa00;
-    padding-bottom: 3px;*/
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:1 #212121, stop:0.4 #343434, stop:0.2 #343434, stop:0.1 #ffaa00);
-}
-
-QRadioButton::indicator:checked, QRadioButton::indicator:unchecked{
-    color: #b1b1b1;
-    background-color: #323232;
-    border: 1px solid #b1b1b1;
-    border-radius: 6px;
-}
-
-QRadioButton::indicator:checked
-{
-    background-color: qradialgradient(
-        cx: 0.5, cy: 0.5,
-        fx: 0.5, fy: 0.5,
-        radius: 1.0,
-        stop: 0.25 #ffaa00,
-        stop: 0.3 #323232
-    );
-}
-
-QCheckBox::indicator{
-    color: #b1b1b1;
-    background-color: #323232;
-    border: 1px solid #b1b1b1;
-    width: 9px;
-    height: 9px;
-}
-
-QRadioButton::indicator
-{
-    border-radius: 6px;
-}
-
-QRadioButton::indicator:hover, QCheckBox::indicator:hover
-{
-    border: 1px solid #ffaa00;
-}
-
-QCheckBox::indicator:checked
-{
-    image:url(:/images/checkbox.png);
-}
-
-QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
-{
-    border: 1px solid #444;
-}</string>
+       <string notr="true"/>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="Ajouter_2">
        <attribute name="title">
@@ -2660,9 +1930,9 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
         </property>
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>30</y>
-          <width>171</width>
+          <x>200</x>
+          <y>60</y>
+          <width>371</width>
           <height>41</height>
          </rect>
         </property>
@@ -2684,8 +1954,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QLineEdit" name="nom">
         <property name="geometry">
          <rect>
-          <x>140</x>
-          <y>100</y>
+          <x>300</x>
+          <y>130</y>
           <width>111</width>
           <height>20</height>
          </rect>
@@ -2697,8 +1967,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QLineEdit" name="telephone">
         <property name="geometry">
          <rect>
-          <x>430</x>
-          <y>100</y>
+          <x>590</x>
+          <y>130</y>
           <width>111</width>
           <height>20</height>
          </rect>
@@ -2713,8 +1983,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QPushButton" name="reset_2_reservation">
         <property name="geometry">
          <rect>
-          <x>440</x>
-          <y>240</y>
+          <x>600</x>
+          <y>270</y>
           <width>100</width>
           <height>23</height>
          </rect>
@@ -2733,10 +2003,10 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QLabel" name="label_23">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>100</y>
-          <width>71</width>
-          <height>16</height>
+          <x>200</x>
+          <y>130</y>
+          <width>91</width>
+          <height>21</height>
          </rect>
         </property>
         <property name="text">
@@ -2746,8 +2016,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QPushButton" name="ajouter_reservation">
         <property name="geometry">
          <rect>
-          <x>330</x>
-          <y>240</y>
+          <x>490</x>
+          <y>270</y>
           <width>100</width>
           <height>23</height>
          </rect>
@@ -2766,10 +2036,10 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QLabel" name="label_25">
         <property name="geometry">
          <rect>
-          <x>320</x>
-          <y>100</y>
-          <width>91</width>
-          <height>16</height>
+          <x>460</x>
+          <y>130</y>
+          <width>121</width>
+          <height>20</height>
          </rect>
         </property>
         <property name="text">
@@ -2779,10 +2049,10 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QLabel" name="label_26">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>160</y>
+          <x>200</x>
+          <y>190</y>
           <width>71</width>
-          <height>16</height>
+          <height>21</height>
          </rect>
         </property>
         <property name="text">
@@ -2792,8 +2062,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QComboBox" name="tables">
         <property name="geometry">
          <rect>
-          <x>140</x>
-          <y>160</y>
+          <x>300</x>
+          <y>190</y>
           <width>81</width>
           <height>22</height>
          </rect>
@@ -2805,8 +2075,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QLabel" name="table_msg">
         <property name="geometry">
          <rect>
-          <x>50</x>
-          <y>190</y>
+          <x>210</x>
+          <y>220</y>
           <width>241</width>
           <height>16</height>
          </rect>
@@ -2818,8 +2088,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QLineEdit" name="nombre">
         <property name="geometry">
          <rect>
-          <x>430</x>
-          <y>160</y>
+          <x>590</x>
+          <y>190</y>
           <width>111</width>
           <height>20</height>
          </rect>
@@ -2834,10 +2104,10 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QLabel" name="label_27">
         <property name="geometry">
          <rect>
-          <x>320</x>
-          <y>160</y>
-          <width>91</width>
-          <height>16</height>
+          <x>440</x>
+          <y>190</y>
+          <width>151</width>
+          <height>21</height>
          </rect>
         </property>
         <property name="text">
@@ -2847,8 +2117,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QLabel" name="nom_msg">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>130</y>
+          <x>200</x>
+          <y>160</y>
           <width>241</width>
           <height>16</height>
          </rect>
@@ -2860,8 +2130,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QLabel" name="telephone_msg">
         <property name="geometry">
          <rect>
-          <x>320</x>
-          <y>120</y>
+          <x>480</x>
+          <y>150</y>
           <width>241</width>
           <height>16</height>
          </rect>
@@ -2873,8 +2143,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QLabel" name="nombre_places_msg">
         <property name="geometry">
          <rect>
-          <x>320</x>
-          <y>190</y>
+          <x>480</x>
+          <y>220</y>
           <width>241</width>
           <height>16</height>
          </rect>
@@ -2886,10 +2156,10 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QPushButton" name="retour_reservation">
         <property name="geometry">
          <rect>
-          <x>600</x>
-          <y>20</y>
+          <x>1040</x>
+          <y>10</y>
           <width>91</width>
-          <height>31</height>
+          <height>41</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -2909,6 +2179,39 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
          </size>
         </property>
        </widget>
+       <widget class="QPushButton" name="pushButton_17">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>121</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+ 
+    background-color: #1e272e;
+    
+    border-color: #1e272e;
+   
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="Ressources.qrc">
+          <normaloff>:/new/images/images/Image4.png</normaloff>:/new/images/images/Image4.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>80</width>
+          <height>80</height>
+         </size>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="Affichage_2">
        <attribute name="title">
@@ -2917,8 +2220,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QTableView" name="tableView_reservation">
         <property name="geometry">
          <rect>
-          <x>60</x>
-          <y>90</y>
+          <x>180</x>
+          <y>100</y>
           <width>501</width>
           <height>241</height>
          </rect>
@@ -2938,9 +2241,9 @@ QTableView QTableCornerButton::section {
        <widget class="QLabel" name="label_28">
         <property name="geometry">
          <rect>
-          <x>50</x>
-          <y>20</y>
-          <width>171</width>
+          <x>170</x>
+          <y>30</y>
+          <width>291</width>
           <height>41</height>
          </rect>
         </property>
@@ -2959,8 +2262,8 @@ QTableView QTableCornerButton::section {
        <widget class="QPushButton" name="supprimer_reservation">
         <property name="geometry">
          <rect>
-          <x>570</x>
-          <y>200</y>
+          <x>690</x>
+          <y>210</y>
           <width>101</width>
           <height>31</height>
          </rect>
@@ -2985,8 +2288,8 @@ QTableView QTableCornerButton::section {
        <widget class="QLineEdit" name="recherche">
         <property name="geometry">
          <rect>
-          <x>430</x>
-          <y>60</y>
+          <x>550</x>
+          <y>70</y>
           <width>131</width>
           <height>21</height>
          </rect>
@@ -2998,10 +2301,10 @@ QTableView QTableCornerButton::section {
        <widget class="QPushButton" name="retour_2_reservation">
         <property name="geometry">
          <rect>
-          <x>570</x>
-          <y>120</y>
+          <x>1030</x>
+          <y>10</y>
           <width>101</width>
-          <height>31</height>
+          <height>41</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -3024,8 +2327,8 @@ QTableView QTableCornerButton::section {
        <widget class="QPushButton" name="pushButton_13_reservation">
         <property name="geometry">
          <rect>
-          <x>570</x>
-          <y>160</y>
+          <x>690</x>
+          <y>170</y>
           <width>101</width>
           <height>31</height>
          </rect>
@@ -3037,10 +2340,10 @@ QTableView QTableCornerButton::section {
        <widget class="QLabel" name="label_29">
         <property name="geometry">
          <rect>
-          <x>90</x>
-          <y>360</y>
-          <width>331</width>
-          <height>71</height>
+          <x>210</x>
+          <y>370</y>
+          <width>381</width>
+          <height>121</height>
          </rect>
         </property>
         <property name="font">
@@ -3053,6 +2356,39 @@ QTableView QTableCornerButton::section {
          <string/>
         </property>
        </widget>
+       <widget class="QPushButton" name="pushButton_16">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>121</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+ 
+    background-color: #1e272e;
+    
+    border-color: #1e272e;
+   
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="Ressources.qrc">
+          <normaloff>:/new/images/images/Image4.png</normaloff>:/new/images/images/Image4.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>80</width>
+          <height>80</height>
+         </size>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="Modifier_2">
        <attribute name="title">
@@ -3061,8 +2397,8 @@ QTableView QTableCornerButton::section {
        <widget class="QPushButton" name="modifier_reservation">
         <property name="geometry">
          <rect>
-          <x>340</x>
-          <y>220</y>
+          <x>730</x>
+          <y>290</y>
           <width>100</width>
           <height>23</height>
          </rect>
@@ -3087,8 +2423,8 @@ QTableView QTableCornerButton::section {
        <widget class="QPushButton" name="reset_3_reservation">
         <property name="geometry">
          <rect>
-          <x>450</x>
-          <y>220</y>
+          <x>840</x>
+          <y>290</y>
           <width>100</width>
           <height>23</height>
          </rect>
@@ -3113,9 +2449,9 @@ QTableView QTableCornerButton::section {
        <widget class="QLabel" name="label_30">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>20</y>
-          <width>281</width>
+          <x>440</x>
+          <y>90</y>
+          <width>361</width>
           <height>41</height>
          </rect>
         </property>
@@ -3134,8 +2470,8 @@ QTableView QTableCornerButton::section {
        <widget class="QLabel" name="ID">
         <property name="geometry">
          <rect>
-          <x>320</x>
-          <y>20</y>
+          <x>790</x>
+          <y>90</y>
           <width>91</width>
           <height>41</height>
          </rect>
@@ -3152,10 +2488,10 @@ QTableView QTableCornerButton::section {
        <widget class="QLabel" name="label_31">
         <property name="geometry">
          <rect>
-          <x>330</x>
-          <y>140</y>
-          <width>91</width>
-          <height>16</height>
+          <x>670</x>
+          <y>210</y>
+          <width>141</width>
+          <height>20</height>
          </rect>
         </property>
         <property name="text">
@@ -3165,8 +2501,8 @@ QTableView QTableCornerButton::section {
        <widget class="QLineEdit" name="nombre2">
         <property name="geometry">
          <rect>
-          <x>440</x>
-          <y>140</y>
+          <x>830</x>
+          <y>210</y>
           <width>111</width>
           <height>20</height>
          </rect>
@@ -3181,10 +2517,10 @@ QTableView QTableCornerButton::section {
        <widget class="QLabel" name="label_32">
         <property name="geometry">
          <rect>
-          <x>50</x>
-          <y>80</y>
-          <width>71</width>
-          <height>16</height>
+          <x>440</x>
+          <y>150</y>
+          <width>91</width>
+          <height>21</height>
          </rect>
         </property>
         <property name="text">
@@ -3194,8 +2530,8 @@ QTableView QTableCornerButton::section {
        <widget class="QLineEdit" name="telephone2">
         <property name="geometry">
          <rect>
-          <x>440</x>
-          <y>80</y>
+          <x>830</x>
+          <y>150</y>
           <width>111</width>
           <height>20</height>
          </rect>
@@ -3210,8 +2546,8 @@ QTableView QTableCornerButton::section {
        <widget class="QComboBox" name="tables2_reservation">
         <property name="geometry">
          <rect>
-          <x>150</x>
-          <y>140</y>
+          <x>540</x>
+          <y>210</y>
           <width>81</width>
           <height>22</height>
          </rect>
@@ -3223,10 +2559,10 @@ QTableView QTableCornerButton::section {
        <widget class="QLabel" name="label_56">
         <property name="geometry">
          <rect>
-          <x>50</x>
-          <y>140</y>
+          <x>440</x>
+          <y>210</y>
           <width>71</width>
-          <height>16</height>
+          <height>21</height>
          </rect>
         </property>
         <property name="text">
@@ -3236,8 +2572,8 @@ QTableView QTableCornerButton::section {
        <widget class="QLineEdit" name="nom_2">
         <property name="geometry">
          <rect>
-          <x>150</x>
-          <y>80</y>
+          <x>540</x>
+          <y>150</y>
           <width>111</width>
           <height>20</height>
          </rect>
@@ -3290,10 +2626,10 @@ QHeaderView::section {
        <widget class="QLabel" name="label_57">
         <property name="geometry">
          <rect>
-          <x>330</x>
-          <y>80</y>
-          <width>91</width>
-          <height>16</height>
+          <x>690</x>
+          <y>150</y>
+          <width>121</width>
+          <height>20</height>
          </rect>
         </property>
         <property name="text">
@@ -3303,8 +2639,8 @@ QHeaderView::section {
        <widget class="QLabel" name="nom_msg_2">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>110</y>
+          <x>430</x>
+          <y>180</y>
           <width>241</width>
           <height>16</height>
          </rect>
@@ -3316,8 +2652,8 @@ QHeaderView::section {
        <widget class="QLabel" name="telephone_msg_2">
         <property name="geometry">
          <rect>
-          <x>330</x>
-          <y>110</y>
+          <x>720</x>
+          <y>180</y>
           <width>241</width>
           <height>16</height>
          </rect>
@@ -3329,8 +2665,8 @@ QHeaderView::section {
        <widget class="QLabel" name="nombre_places_msg_2">
         <property name="geometry">
          <rect>
-          <x>320</x>
-          <y>170</y>
+          <x>710</x>
+          <y>240</y>
           <width>241</width>
           <height>16</height>
          </rect>
@@ -3342,10 +2678,10 @@ QHeaderView::section {
        <widget class="QPushButton" name="retour_3_reservation">
         <property name="geometry">
          <rect>
-          <x>570</x>
+          <x>1040</x>
           <y>10</y>
-          <width>91</width>
-          <height>31</height>
+          <width>101</width>
+          <height>41</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -3365,6 +2701,39 @@ QHeaderView::section {
          </size>
         </property>
        </widget>
+       <widget class="QPushButton" name="pushButton_18">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>121</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+ 
+    background-color: #1e272e;
+    
+    border-color: #1e272e;
+   
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="Ressources.qrc">
+          <normaloff>:/new/images/images/Image4.png</normaloff>:/new/images/images/Image4.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>80</width>
+          <height>80</height>
+         </size>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="stat">
        <attribute name="title">
@@ -3373,8 +2742,8 @@ QHeaderView::section {
        <widget class="QcustomPlot" name="GRAPH" native="true">
         <property name="geometry">
          <rect>
-          <x>30</x>
-          <y>10</y>
+          <x>240</x>
+          <y>40</y>
           <width>491</width>
           <height>361</height>
          </rect>
@@ -3383,10 +2752,10 @@ QHeaderView::section {
        <widget class="QPushButton" name="retour_4_reservation">
         <property name="geometry">
          <rect>
-          <x>550</x>
+          <x>1030</x>
           <y>10</y>
-          <width>91</width>
-          <height>31</height>
+          <width>101</width>
+          <height>41</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -3403,6 +2772,39 @@ QHeaderView::section {
          <size>
           <width>30</width>
           <height>30</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_19">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>121</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+ 
+    background-color: #1e272e;
+    
+    border-color: #1e272e;
+   
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="Ressources.qrc">
+          <normaloff>:/new/images/images/Image4.png</normaloff>:/new/images/images/Image4.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>80</width>
+          <height>80</height>
          </size>
         </property>
        </widget>
@@ -3433,9 +2835,9 @@ QHeaderView::section {
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>80</y>
+          <y>130</y>
           <width>791</width>
-          <height>371</height>
+          <height>321</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -3487,7 +2889,7 @@ QHeaderView::section {
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>40</y>
+          <y>100</y>
           <width>441</width>
           <height>22</height>
          </rect>
@@ -3549,9 +2951,9 @@ QHeaderView::section {
         <property name="geometry">
          <rect>
           <x>820</x>
-          <y>70</y>
+          <y>120</y>
           <width>271</width>
-          <height>381</height>
+          <height>331</height>
          </rect>
         </property>
         <property name="title">
@@ -3560,8 +2962,8 @@ QHeaderView::section {
         <widget class="QPushButton" name="pb_ajouter">
          <property name="geometry">
           <rect>
-           <x>110</x>
-           <y>300</y>
+           <x>100</x>
+           <y>290</y>
            <width>93</width>
            <height>28</height>
           </rect>
@@ -3714,8 +3116,8 @@ QHeaderView::section {
          <rect>
           <x>20</x>
           <y>470</y>
-          <width>93</width>
-          <height>28</height>
+          <width>101</width>
+          <height>31</height>
          </rect>
         </property>
         <property name="text">
@@ -3725,7 +3127,7 @@ QHeaderView::section {
        <widget class="QPushButton" name="Retour_2">
         <property name="geometry">
          <rect>
-          <x>970</x>
+          <x>1000</x>
           <y>10</y>
           <width>121</width>
           <height>41</height>
@@ -3742,6 +3144,39 @@ QHeaderView::section {
           <normaloff>:/new/images/images/return.png</normaloff>:/new/images/images/return.png</iconset>
         </property>
        </widget>
+       <widget class="QPushButton" name="pushButton_20">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>111</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+ 
+    background-color: #1e272e;
+    
+    border-color: #1e272e;
+   
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="Ressources.qrc">
+          <normaloff>:/new/images/images/Image4.png</normaloff>:/new/images/images/Image4.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>80</width>
+          <height>80</height>
+         </size>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="tab_4">
        <attribute name="title">
@@ -3751,7 +3186,7 @@ QHeaderView::section {
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>30</y>
+          <y>110</y>
           <width>401</width>
           <height>231</height>
          </rect>
@@ -3933,7 +3368,7 @@ QHeaderView::section {
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>320</y>
+          <y>350</y>
           <width>401</width>
           <height>141</height>
          </rect>
@@ -4028,7 +3463,7 @@ QHeaderView::section {
        <widget class="QPushButton" name="Retour">
         <property name="geometry">
          <rect>
-          <x>980</x>
+          <x>1010</x>
           <y>10</y>
           <width>111</width>
           <height>41</height>
@@ -4043,6 +3478,39 @@ QHeaderView::section {
         <property name="icon">
          <iconset resource="Ressources.qrc">
           <normaloff>:/new/images/images/return.png</normaloff>:/new/images/images/return.png</iconset>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_21">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>121</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+ 
+    background-color: #1e272e;
+    
+    border-color: #1e272e;
+   
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="Ressources.qrc">
+          <normaloff>:/new/images/images/Image4.png</normaloff>:/new/images/images/Image4.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>80</width>
+          <height>80</height>
+         </size>
         </property>
        </widget>
       </widget>
@@ -4074,7 +3542,7 @@ QHeaderView::section {
           <x>10</x>
           <y>20</y>
           <width>1101</width>
-          <height>451</height>
+          <height>501</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -4086,8 +3554,8 @@ QHeaderView::section {
         <widget class="QLabel" name="label_33">
          <property name="geometry">
           <rect>
-           <x>50</x>
-           <y>40</y>
+           <x>40</x>
+           <y>140</y>
            <width>81</width>
            <height>16</height>
           </rect>
@@ -4099,8 +3567,8 @@ QHeaderView::section {
         <widget class="QLabel" name="label_34">
          <property name="geometry">
           <rect>
-           <x>50</x>
-           <y>80</y>
+           <x>40</x>
+           <y>180</y>
            <width>111</width>
            <height>16</height>
           </rect>
@@ -4112,8 +3580,8 @@ QHeaderView::section {
         <widget class="QLabel" name="label_35">
          <property name="geometry">
           <rect>
-           <x>50</x>
-           <y>120</y>
+           <x>40</x>
+           <y>220</y>
            <width>56</width>
            <height>16</height>
           </rect>
@@ -4125,8 +3593,8 @@ QHeaderView::section {
         <widget class="QLabel" name="label_36">
          <property name="geometry">
           <rect>
-           <x>50</x>
-           <y>160</y>
+           <x>40</x>
+           <y>260</y>
            <width>56</width>
            <height>16</height>
           </rect>
@@ -4138,8 +3606,8 @@ QHeaderView::section {
         <widget class="QLabel" name="label_37">
          <property name="geometry">
           <rect>
-           <x>50</x>
-           <y>200</y>
+           <x>40</x>
+           <y>300</y>
            <width>56</width>
            <height>16</height>
           </rect>
@@ -4151,8 +3619,8 @@ QHeaderView::section {
         <widget class="QLabel" name="label_38">
          <property name="geometry">
           <rect>
-           <x>50</x>
-           <y>240</y>
+           <x>40</x>
+           <y>340</y>
            <width>121</width>
            <height>16</height>
           </rect>
@@ -4164,8 +3632,8 @@ QHeaderView::section {
         <widget class="QLineEdit" name="nomclient">
          <property name="geometry">
           <rect>
-           <x>180</x>
-           <y>200</y>
+           <x>170</x>
+           <y>300</y>
            <width>131</width>
            <height>22</height>
           </rect>
@@ -4184,8 +3652,8 @@ QHeaderView::section {
         <widget class="QLineEdit" name="numcommande">
          <property name="geometry">
           <rect>
-           <x>180</x>
-           <y>80</y>
+           <x>170</x>
+           <y>180</y>
            <width>131</width>
            <height>22</height>
           </rect>
@@ -4194,8 +3662,8 @@ QHeaderView::section {
         <widget class="QLineEdit" name="region">
          <property name="geometry">
           <rect>
-           <x>180</x>
-           <y>120</y>
+           <x>170</x>
+           <y>220</y>
            <width>131</width>
            <height>22</height>
           </rect>
@@ -4204,8 +3672,8 @@ QHeaderView::section {
         <widget class="QLineEdit" name="ville">
          <property name="geometry">
           <rect>
-           <x>180</x>
-           <y>240</y>
+           <x>170</x>
+           <y>340</y>
            <width>131</width>
            <height>22</height>
           </rect>
@@ -4214,8 +3682,8 @@ QHeaderView::section {
         <widget class="QLineEdit" name="tel">
          <property name="geometry">
           <rect>
-           <x>180</x>
-           <y>50</y>
+           <x>170</x>
+           <y>140</y>
            <width>131</width>
            <height>22</height>
           </rect>
@@ -4224,8 +3692,8 @@ QHeaderView::section {
         <widget class="QLineEdit" name="adresse">
          <property name="geometry">
           <rect>
-           <x>180</x>
-           <y>160</y>
+           <x>170</x>
+           <y>260</y>
            <width>131</width>
            <height>22</height>
           </rect>
@@ -4234,8 +3702,8 @@ QHeaderView::section {
         <widget class="QPushButton" name="pushButton_5">
          <property name="geometry">
           <rect>
-           <x>130</x>
-           <y>310</y>
+           <x>120</x>
+           <y>410</y>
            <width>91</width>
            <height>61</height>
           </rect>
@@ -4251,8 +3719,8 @@ QHeaderView::section {
         <widget class="QGroupBox" name="groupBox_5">
          <property name="geometry">
           <rect>
-           <x>800</x>
-           <y>20</y>
+           <x>810</x>
+           <y>60</y>
            <width>271</width>
            <height>331</height>
           </rect>
@@ -4451,8 +3919,8 @@ QHeaderView::section {
         <widget class="QPushButton" name="pushButton_8">
          <property name="geometry">
           <rect>
-           <x>890</x>
-           <y>310</y>
+           <x>990</x>
+           <y>410</y>
            <width>93</width>
            <height>31</height>
           </rect>
@@ -4464,9 +3932,9 @@ QHeaderView::section {
         <widget class="QPushButton" name="Retour_5">
          <property name="geometry">
           <rect>
-           <x>940</x>
-           <y>370</y>
-           <width>121</width>
+           <x>990</x>
+           <y>10</y>
+           <width>101</width>
            <height>51</height>
           </rect>
          </property>
@@ -4481,6 +3949,39 @@ QHeaderView::section {
            <normaloff>:/new/images/images/return.png</normaloff>:/new/images/images/return.png</iconset>
          </property>
         </widget>
+        <widget class="QPushButton" name="pushButton_22">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>121</width>
+           <height>91</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton
+{
+ 
+    background-color: #1e272e;
+    
+    border-color: #1e272e;
+   
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="Ressources.qrc">
+           <normaloff>:/new/images/images/Image4.png</normaloff>:/new/images/images/Image4.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>80</width>
+           <height>80</height>
+          </size>
+         </property>
+        </widget>
        </widget>
       </widget>
       <widget class="QWidget" name="tab_5">
@@ -4490,18 +3991,18 @@ QHeaderView::section {
        <widget class="QTableView" name="tab_livreur">
         <property name="geometry">
          <rect>
-          <x>25</x>
-          <y>100</y>
+          <x>20</x>
+          <y>180</y>
           <width>471</width>
-          <height>231</height>
+          <height>261</height>
          </rect>
         </property>
        </widget>
        <widget class="QLabel" name="label_46">
         <property name="geometry">
          <rect>
-          <x>170</x>
-          <y>30</y>
+          <x>160</x>
+          <y>110</y>
           <width>171</width>
           <height>16</height>
          </rect>
@@ -4513,8 +4014,8 @@ QHeaderView::section {
        <widget class="QPushButton" name="pushButton_9">
         <property name="geometry">
          <rect>
-          <x>200</x>
-          <y>350</y>
+          <x>160</x>
+          <y>460</y>
           <width>151</width>
           <height>61</height>
          </rect>
@@ -4530,10 +4031,10 @@ QHeaderView::section {
        <widget class="QGroupBox" name="groupBox_7">
         <property name="geometry">
          <rect>
-          <x>540</x>
-          <y>10</y>
+          <x>560</x>
+          <y>0</y>
           <width>381</width>
-          <height>261</height>
+          <height>251</height>
          </rect>
         </property>
         <property name="title">
@@ -4652,8 +4153,8 @@ QHeaderView::section {
        <widget class="QGroupBox" name="groupBox_8">
         <property name="geometry">
          <rect>
-          <x>540</x>
-          <y>330</y>
+          <x>560</x>
+          <y>340</y>
           <width>381</width>
           <height>201</height>
          </rect>
@@ -4711,7 +4212,7 @@ QHeaderView::section {
          <property name="geometry">
           <rect>
            <x>280</x>
-           <y>170</y>
+           <y>150</y>
            <width>93</width>
            <height>28</height>
           </rect>
@@ -4771,12 +4272,45 @@ QHeaderView::section {
          </property>
         </widget>
        </widget>
+       <widget class="QLineEdit" name="lineEdit_recherche">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>140</y>
+          <width>311</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="placeholderText">
+         <string>Recherche</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Retour_6">
+        <property name="geometry">
+         <rect>
+          <x>990</x>
+          <y>10</y>
+          <width>111</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Retour</string>
+        </property>
+        <property name="icon">
+         <iconset resource="Ressources.qrc">
+          <normaloff>:/new/images/images/return.png</normaloff>:/new/images/images/return.png</iconset>
+        </property>
+       </widget>
        <widget class="QGroupBox" name="groupBox_10">
         <property name="geometry">
          <rect>
-          <x>90</x>
-          <y>430</y>
-          <width>301</width>
+          <x>560</x>
+          <y>250</y>
+          <width>381</width>
           <height>81</height>
          </rect>
         </property>
@@ -4809,8 +4343,8 @@ QHeaderView::section {
         <widget class="QPushButton" name="pushButton_12">
          <property name="geometry">
           <rect>
-           <x>200</x>
-           <y>40</y>
+           <x>270</x>
+           <y>30</y>
            <width>93</width>
            <height>28</height>
           </rect>
@@ -4824,37 +4358,37 @@ QHeaderView::section {
          </property>
         </widget>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_recherche">
+       <widget class="QPushButton" name="pushButton_23">
         <property name="geometry">
          <rect>
-          <x>30</x>
-          <y>60</y>
-          <width>311</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <property name="placeholderText">
-         <string>Recherche</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="Retour_6">
-        <property name="geometry">
-         <rect>
-          <x>990</x>
-          <y>10</y>
-          <width>111</width>
-          <height>51</height>
+          <x>0</x>
+          <y>0</y>
+          <width>121</width>
+          <height>91</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true"/>
+         <string notr="true">QPushButton
+{
+ 
+    background-color: #1e272e;
+    
+    border-color: #1e272e;
+   
+}</string>
         </property>
         <property name="text">
-         <string>Retour</string>
+         <string/>
         </property>
         <property name="icon">
          <iconset resource="Ressources.qrc">
-          <normaloff>:/new/images/images/return.png</normaloff>:/new/images/images/return.png</iconset>
+          <normaloff>:/new/images/images/Image4.png</normaloff>:/new/images/images/Image4.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>80</width>
+          <height>80</height>
+         </size>
         </property>
        </widget>
       </widget>
@@ -4864,10 +4398,10 @@ QHeaderView::section {
      <widget class="QSplitter" name="splitter_4">
       <property name="geometry">
        <rect>
-        <x>420</x>
-        <y>270</y>
-        <width>331</width>
-        <height>61</height>
+        <x>390</x>
+        <y>250</y>
+        <width>351</width>
+        <height>81</height>
        </rect>
       </property>
       <property name="orientation">
@@ -4903,11 +4437,14 @@ QHeaderView::section {
      <widget class="QPushButton" name="pushButton_2_login">
       <property name="geometry">
        <rect>
-        <x>630</x>
-        <y>350</y>
-        <width>121</width>
-        <height>41</height>
+        <x>530</x>
+        <y>360</y>
+        <width>131</width>
+        <height>51</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
       </property>
       <property name="text">
        <string>Se connecter</string>
@@ -4931,8 +4468,8 @@ QHeaderView::section {
        <rect>
         <x>440</x>
         <y>430</y>
-        <width>301</width>
-        <height>41</height>
+        <width>311</width>
+        <height>51</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -4940,74 +4477,6 @@ QHeaderView::section {
       </property>
       <property name="text">
        <string>CONNEXION ...</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_2">
-      <property name="geometry">
-       <rect>
-        <x>1050</x>
-        <y>40</y>
-        <width>351</width>
-        <height>151</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">
-QPushButton
-{
- 
-    background-color: brown;
-    
-    border-color: brown;
-   
-}</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="icon">
-       <iconset resource="Ressources.qrc">
-        <normaloff>:/new/images/images/ESPRIT.png</normaloff>:/new/images/images/ESPRIT.png</iconset>
-      </property>
-      <property name="iconSize">
-       <size>
-        <width>140</width>
-        <height>140</height>
-       </size>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_10">
-      <property name="geometry">
-       <rect>
-        <x>-220</x>
-        <y>20</y>
-        <width>381</width>
-        <height>251</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">
-QPushButton
-{
- 
-    background-color: brown;
-    
-    border-color: brown;
-   
-}</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="icon">
-       <iconset resource="Ressources.qrc">
-        <normaloff>:/new/images/images/Image4.png</normaloff>:/new/images/images/Image4.png</iconset>
-      </property>
-      <property name="iconSize">
-       <size>
-        <width>80</width>
-        <height>80</height>
-       </size>
       </property>
      </widget>
      <widget class="QScrollArea" name="scrollArea">
@@ -5033,6 +4502,72 @@ QPushButton
        </property>
       </widget>
      </widget>
+     <widget class="QPushButton" name="pushButton_10">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>40</y>
+        <width>371</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+ 
+    background-color: #1e272e;
+    
+    border-color: #1e272e;
+   
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="Ressources.qrc">
+        <normaloff>:/new/images/images/Image4.png</normaloff>:/new/images/images/Image4.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>140</width>
+        <height>140</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>810</x>
+        <y>110</y>
+        <width>281</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+ 
+    background-color: #1e272e;
+    
+    border-color: #1e272e;
+   
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="Ressources.qrc">
+        <normaloff>:/new/images/images/ESPRIT.png</normaloff>:/new/images/images/ESPRIT.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>160</width>
+        <height>160</height>
+       </size>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="table">
      <widget class="QTabWidget" name="tabWidget_4">
@@ -5045,468 +4580,10 @@ QPushButton
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">QToolTip
-{
-     border: 1px solid black;
-     background-color: #ffa02f;
-     padding: 1px;
-     border-radius: 3px;
-     opacity: 100;
-}
-
-QWidget
-{
-    color: #b1b1b1;
-       background-color: brown ;
-}
-
-QWidget:item:hover
-{
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #ca0619);
-    color: #000000;
-}
-
-QWidget:item:selected
-{
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
-}
-
-QMenuBar::item
-{
-    background: transparent;
-}
-
-QMenuBar::item:selected
-{
-    background: transparent;
-    border: 1px solid #ffaa00;
-}
-
-QMenuBar::item:pressed
-{
-    background: #444;
-    border: 1px solid #000;
-    background-color: QLinearGradient(
-        x1:0, y1:0,
-        x2:0, y2:1,
-        stop:1 #212121,
-        stop:0.4 #343434/*,
-        stop:0.2 #343434,
-        stop:0.1 #ffaa00*/
-    );
-    margin-bottom:-1px;
-    padding-bottom:1px;
-}
-
-QMenu
-{
-    border: 1px solid #000;
-}
-
-QMenu::item
-{
-    padding: 2px 20px 2px 20px;
-}
-
-QMenu::item:selected
-{
-    color: #000000;
-}
-
-QWidget:disabled
-{
-    color: #404040;
-    background-color: #323232;
-}
-
-QAbstractItemView
-{
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #4d4d4d, stop: 0.1 #646464, stop: 1 #5d5d5d);
-}
-
-QWidget:focus
-{
-    /*border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);*/
-}
-
-QLineEdit
-{
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #4d4d4d, stop: 0 #646464, stop: 1 #5d5d5d);
-    padding: 1px;
-    border-style: solid;
-    border: 1px solid #1e1e1e;
-    border-radius: 5;
-}
-
-QPushButton
-{
-    color: #b1b1b1;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #565656, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);
-    border-width: 1px;
-    border-color: #1e1e1e;
-    border-style: solid;
-    border-radius: 6;
-    padding: 3px;
-    font-size: 12px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-QPushButton:pressed
-{
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
-}
-
-QComboBox
-{
-    selection-background-color: #ffaa00;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #565656, stop: 0.1 #525252, stop: 0.5 #4e4e4e, stop: 0.9 #4a4a4a, stop: 1 #464646);
-    border-style: solid;
-    border: 1px solid #1e1e1e;
-    border-radius: 5;
-}
-
-QComboBox:hover,QPushButton:hover
-{
-    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
-}
-
-
-QComboBox:on
-{
-    padding-top: 3px;
-    padding-left: 4px;
-    background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #2d2d2d, stop: 0.1 #2b2b2b, stop: 0.5 #292929, stop: 0.9 #282828, stop: 1 #252525);
-    selection-background-color: #ffaa00;
-}
-
-QComboBox QAbstractItemView
-{
-    border: 2px solid darkgray;
-    selection-background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
-}
-
-QComboBox::drop-down
-{
-     subcontrol-origin: padding;
-     subcontrol-position: top right;
-     width: 15px;
-
-     border-left-width: 0px;
-     border-left-color: darkgray;
-     border-left-style: solid; /* just a single line */
-     border-top-right-radius: 3px; /* same radius as the QComboBox */
-     border-bottom-right-radius: 3px;
- }
-
-QComboBox::down-arrow
-{
-     image: url(:/down_arrow.png);
-}
-
-QGroupBox:focus
-{
-border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
-}
-
-QTextEdit:focus
-{
-    border: 2px solid QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
-}
-
-QScrollBar:horizontal {
-     border: 1px solid #222222;
-     background: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0.0 #121212, stop: 0.2 #282828, stop: 1 #484848);
-     height: 7px;
-     margin: 0px 16px 0 16px;
-}
-
-QScrollBar::handle:horizontal
-{
-      background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #ffa02f, stop: 0.5 #d7801a, stop: 1 #ffa02f);
-      min-height: 20px;
-      border-radius: 2px;
-}
-
-QScrollBar::add-line:horizontal {
-      border: 1px solid #1b1b19;
-      border-radius: 2px;
-      background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #ffa02f, stop: 1 #d7801a);
-      width: 14px;
-      subcontrol-position: right;
-      subcontrol-origin: margin;
-}
-
-QScrollBar::sub-line:horizontal {
-      border: 1px solid #1b1b19;
-      border-radius: 2px;
-      background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #ffa02f, stop: 1 #d7801a);
-      width: 14px;
-     subcontrol-position: left;
-     subcontrol-origin: margin;
-}
-
-QScrollBar::right-arrow:horizontal, QScrollBar::left-arrow:horizontal
-{
-      border: 1px solid black;
-      width: 1px;
-      height: 1px;
-      background: white;
-}
-
-QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
-{
-      background: none;
-}
-
-QScrollBar:vertical
-{
-      background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0, stop: 0.0 #121212, stop: 0.2 #282828, stop: 1 #484848);
-      width: 7px;
-      margin: 16px 0 16px 0;
-      border: 1px solid #222222;
-}
-
-QScrollBar::handle:vertical
-{
-      background: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 0.5 #d7801a, stop: 1 #ffa02f);
-      min-height: 20px;
-      border-radius: 2px;
-}
-
-QScrollBar::add-line:vertical
-{
-      border: 1px solid #1b1b19;
-      border-radius: 2px;
-      background: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #ffa02f, stop: 1 #d7801a);
-      height: 14px;
-      subcontrol-position: bottom;
-      subcontrol-origin: margin;
-}
-
-QScrollBar::sub-line:vertical
-{
-      border: 1px solid #1b1b19;
-      border-radius: 2px;
-      background: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #d7801a, stop: 1 #ffa02f);
-      height: 14px;
-      subcontrol-position: top;
-      subcontrol-origin: margin;
-}
-
-QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical
-{
-      border: 1px solid black;
-      width: 1px;
-      height: 1px;
-      background: white;
-}
-
-
-QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical
-{
-      background: none;
-}
-
-QTextEdit
-{
-    background-color: #242424;
-}
-
-QPlainTextEdit
-{
-    background-color: #242424;
-}
-
-QHeaderView::section
-{
-    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:0 #616161, stop: 0.5 #505050, stop: 0.6 #434343, stop:1 #656565);
-    color: white;
-    padding-left: 4px;
-    border: 1px solid #6c6c6c;
-}
-
-QCheckBox:disabled
-{
-color: #414141;
-}
-
-QDockWidget::title
-{
-    text-align: center;
-    spacing: 3px; /* spacing between items in the tool bar */
-    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:0 #323232, stop: 0.5 #242424, stop:1 #323232);
-}
-
-QDockWidget::close-button, QDockWidget::float-button
-{
-    text-align: center;
-    spacing: 1px; /* spacing between items in the tool bar */
-    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:0 #323232, stop: 0.5 #242424, stop:1 #323232);
-}
-
-QDockWidget::close-button:hover, QDockWidget::float-button:hover
-{
-    background: #242424;
-}
-
-QDockWidget::close-button:pressed, QDockWidget::float-button:pressed
-{
-    padding: 1px -1px -1px 1px;
-}
-
-QMainWindow::separator
-{
-    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:0 #161616, stop: 0.5 #151515, stop: 0.6 #212121, stop:1 #343434);
-    color: white;
-    padding-left: 4px;
-    border: 1px solid #4c4c4c;
-    spacing: 3px; /* spacing between items in the tool bar */
-}
-
-QMainWindow::separator:hover
-{
-
-    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:0 #d7801a, stop:0.5 #b56c17 stop:1 #ffa02f);
-    color: white;
-    padding-left: 4px;
-    border: 1px solid #6c6c6c;
-    spacing: 3px; /* spacing between items in the tool bar */
-}
-
-QToolBar::handle
-{
-     spacing: 3px; /* spacing between items in the tool bar */
-     background: url(:/images/handle.png);
-}
-
-QMenu::separator
-{
-    height: 2px;
-    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:0 #161616, stop: 0.5 #151515, stop: 0.6 #212121, stop:1 #343434);
-    color: white;
-    padding-left: 4px;
-    margin-left: 10px;
-    margin-right: 5px;
-}
-
-QProgressBar
-{
-    border: 2px solid grey;
-    border-radius: 5px;
-    text-align: center;
-}
-
-QProgressBar::chunk
-{
-    background-color: #d7801a;
-    width: 2.15px;
-    margin: 0.5px;
-}
-
-QTabBar::tab {
-    color: #b1b1b1;
-    border: 1px solid #444;
-    border-bottom-style: none;
-    background-color: #323232;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 3px;
-    padding-bottom: 2px;
-    margin-right: -1px;
-}
-
-QTabWidget::pane {
-    border: 1px solid #444;
-    top: 1px;
-}
-
-QTabBar::tab:last
-{
-    margin-right: 0; /* the last selected tab has nothing to overlap with on the right */
-    border-top-right-radius: 3px;
-}
-
-QTabBar::tab:first:!selected
-{
- margin-left: 0px; /* the last selected tab has nothing to overlap with on the right */
-
-
-    border-top-left-radius: 3px;
-}
-
-QTabBar::tab:!selected
-{
-    color: #b1b1b1;
-    border-bottom-style: solid;
-    margin-top: 3px;
-    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:1 #212121, stop:.4 #343434);
-}
-
-QTabBar::tab:selected
-{
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    margin-bottom: 0px;
-}
-
-QTabBar::tab:!selected:hover
-{
-    /*border-top: 2px solid #ffaa00;
-    padding-bottom: 3px;*/
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop:1 #212121, stop:0.4 #343434, stop:0.2 #343434, stop:0.1 #ffaa00);
-}
-
-QRadioButton::indicator:checked, QRadioButton::indicator:unchecked{
-    color: #b1b1b1;
-    background-color: #323232;
-    border: 1px solid #b1b1b1;
-    border-radius: 6px;
-}
-
-QRadioButton::indicator:checked
-{
-    background-color: qradialgradient(
-        cx: 0.5, cy: 0.5,
-        fx: 0.5, fy: 0.5,
-        radius: 1.0,
-        stop: 0.25 #ffaa00,
-        stop: 0.3 #323232
-    );
-}
-
-QCheckBox::indicator{
-    color: #b1b1b1;
-    background-color: #323232;
-    border: 1px solid #b1b1b1;
-    width: 9px;
-    height: 9px;
-}
-
-QRadioButton::indicator
-{
-    border-radius: 6px;
-}
-
-QRadioButton::indicator:hover, QCheckBox::indicator:hover
-{
-    border: 1px solid #ffaa00;
-}
-
-QCheckBox::indicator:checked
-{
-    image:url(:/images/checkbox.png);
-}
-
-QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
-{
-    border: 1px solid #444;
-}</string>
+       <string notr="true"/>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="Ajouter">
        <attribute name="title">
@@ -5515,9 +4592,9 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QLabel" name="label_11">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>30</y>
-          <width>171</width>
+          <x>300</x>
+          <y>60</y>
+          <width>261</width>
           <height>41</height>
          </rect>
         </property>
@@ -5539,8 +4616,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QLineEdit" name="NUM_TABLE">
         <property name="geometry">
          <rect>
-          <x>140</x>
-          <y>110</y>
+          <x>430</x>
+          <y>140</y>
           <width>121</width>
           <height>20</height>
          </rect>
@@ -5552,8 +4629,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QLineEdit" name="nbre_personnes">
         <property name="geometry">
          <rect>
-          <x>420</x>
-          <y>110</y>
+          <x>800</x>
+          <y>140</y>
           <width>111</width>
           <height>20</height>
          </rect>
@@ -5568,8 +4645,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QPushButton" name="reset_2_table">
         <property name="geometry">
          <rect>
-          <x>430</x>
-          <y>180</y>
+          <x>690</x>
+          <y>210</y>
           <width>100</width>
           <height>23</height>
          </rect>
@@ -5588,9 +4665,9 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QLabel" name="label_12">
         <property name="geometry">
          <rect>
-          <x>50</x>
-          <y>110</y>
-          <width>91</width>
+          <x>310</x>
+          <y>140</y>
+          <width>101</width>
           <height>16</height>
          </rect>
         </property>
@@ -5601,8 +4678,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QPushButton" name="ajouter_table">
         <property name="geometry">
          <rect>
-          <x>320</x>
-          <y>180</y>
+          <x>580</x>
+          <y>210</y>
           <width>100</width>
           <height>23</height>
          </rect>
@@ -5627,9 +4704,9 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QLabel" name="label_13">
         <property name="geometry">
          <rect>
-          <x>300</x>
-          <y>110</y>
-          <width>111</width>
+          <x>610</x>
+          <y>140</y>
+          <width>171</width>
           <height>20</height>
          </rect>
         </property>
@@ -5640,8 +4717,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QLabel" name="mesagenombre">
         <property name="geometry">
          <rect>
-          <x>310</x>
-          <y>140</y>
+          <x>570</x>
+          <y>170</y>
           <width>301</width>
           <height>16</height>
          </rect>
@@ -5653,8 +4730,8 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QLabel" name="messagenum">
         <property name="geometry">
          <rect>
-          <x>30</x>
-          <y>140</y>
+          <x>290</x>
+          <y>170</y>
           <width>241</width>
           <height>16</height>
          </rect>
@@ -5666,10 +4743,10 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QPushButton" name="retour_table">
         <property name="geometry">
          <rect>
-          <x>510</x>
+          <x>1020</x>
           <y>10</y>
-          <width>101</width>
-          <height>31</height>
+          <width>111</width>
+          <height>41</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -5689,6 +4766,39 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
          </size>
         </property>
        </widget>
+       <widget class="QPushButton" name="pushButton_28">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>121</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+ 
+    background-color: #1e272e;
+    
+    border-color: #1e272e;
+   
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="Ressources.qrc">
+          <normaloff>:/new/images/images/Image4.png</normaloff>:/new/images/images/Image4.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>80</width>
+          <height>80</height>
+         </size>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="Affichage">
        <attribute name="title">
@@ -5697,7 +4807,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QTableView" name="tableView">
         <property name="geometry">
          <rect>
-          <x>40</x>
+          <x>300</x>
           <y>60</y>
           <width>431</width>
           <height>241</height>
@@ -5717,9 +4827,9 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QLabel" name="label_17">
         <property name="geometry">
          <rect>
-          <x>40</x>
+          <x>300</x>
           <y>10</y>
-          <width>131</width>
+          <width>281</width>
           <height>41</height>
          </rect>
         </property>
@@ -5738,7 +4848,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QPushButton" name="supprimer_table">
         <property name="geometry">
          <rect>
-          <x>500</x>
+          <x>760</x>
           <y>160</y>
           <width>101</width>
           <height>31</height>
@@ -5764,7 +4874,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QRadioButton" name="radioButton_2_table">
         <property name="geometry">
          <rect>
-          <x>500</x>
+          <x>760</x>
           <y>110</y>
           <width>111</width>
           <height>17</height>
@@ -5807,9 +4917,9 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QRadioButton" name="radioButton_table">
         <property name="geometry">
          <rect>
-          <x>500</x>
+          <x>760</x>
           <y>90</y>
-          <width>121</width>
+          <width>181</width>
           <height>17</height>
          </rect>
         </property>
@@ -5850,7 +4960,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QRadioButton" name="radioButton_3_table">
         <property name="geometry">
          <rect>
-          <x>500</x>
+          <x>760</x>
           <y>130</y>
           <width>111</width>
           <height>17</height>
@@ -5893,10 +5003,10 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QPushButton" name="retour_2_table">
         <property name="geometry">
          <rect>
-          <x>500</x>
-          <y>240</y>
-          <width>101</width>
-          <height>31</height>
+          <x>1020</x>
+          <y>10</y>
+          <width>111</width>
+          <height>41</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -5919,7 +5029,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QPushButton" name="pushButton_13_table">
         <property name="geometry">
          <rect>
-          <x>500</x>
+          <x>760</x>
           <y>200</y>
           <width>101</width>
           <height>31</height>
@@ -5932,10 +5042,10 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QLabel" name="label">
         <property name="geometry">
          <rect>
-          <x>60</x>
+          <x>320</x>
           <y>340</y>
-          <width>391</width>
-          <height>81</height>
+          <width>401</width>
+          <height>121</height>
          </rect>
         </property>
         <property name="font">
@@ -5948,6 +5058,39 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
          <string/>
         </property>
        </widget>
+       <widget class="QPushButton" name="pushButton_27">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>121</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+ 
+    background-color: #1e272e;
+    
+    border-color: #1e272e;
+   
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="Ressources.qrc">
+          <normaloff>:/new/images/images/Image4.png</normaloff>:/new/images/images/Image4.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>80</width>
+          <height>80</height>
+         </size>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="Modifier">
        <attribute name="title">
@@ -5956,7 +5099,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QPushButton" name="modifier_table">
         <property name="geometry">
          <rect>
-          <x>300</x>
+          <x>450</x>
           <y>160</y>
           <width>100</width>
           <height>23</height>
@@ -5982,7 +5125,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QPushButton" name="reset_3_table">
         <property name="geometry">
          <rect>
-          <x>410</x>
+          <x>560</x>
           <y>160</y>
           <width>100</width>
           <height>23</height>
@@ -6008,9 +5151,9 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QLabel" name="label_18">
         <property name="geometry">
          <rect>
-          <x>40</x>
+          <x>190</x>
           <y>20</y>
-          <width>211</width>
+          <width>351</width>
           <height>41</height>
          </rect>
         </property>
@@ -6042,9 +5185,9 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QLabel" name="label_20">
         <property name="geometry">
          <rect>
-          <x>290</x>
+          <x>470</x>
           <y>100</y>
-          <width>111</width>
+          <width>171</width>
           <height>20</height>
          </rect>
         </property>
@@ -6055,10 +5198,10 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QLabel" name="label_21">
         <property name="geometry">
          <rect>
-          <x>40</x>
+          <x>190</x>
           <y>100</y>
-          <width>91</width>
-          <height>16</height>
+          <width>131</width>
+          <height>21</height>
          </rect>
         </property>
         <property name="text">
@@ -6068,7 +5211,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QLineEdit" name="NUM_TABLE2">
         <property name="geometry">
          <rect>
-          <x>130</x>
+          <x>330</x>
           <y>100</y>
           <width>111</width>
           <height>20</height>
@@ -6081,7 +5224,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QLineEdit" name="nbre_personnes2">
         <property name="geometry">
          <rect>
-          <x>410</x>
+          <x>640</x>
           <y>100</y>
           <width>111</width>
           <height>20</height>
@@ -6097,10 +5240,10 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
        <widget class="QPushButton" name="retour_3_table">
         <property name="geometry">
          <rect>
-          <x>510</x>
-          <y>20</y>
-          <width>101</width>
-          <height>31</height>
+          <x>1020</x>
+          <y>10</y>
+          <width>111</width>
+          <height>41</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -6117,6 +5260,39 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
          <size>
           <width>30</width>
           <height>30</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_26">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>121</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton
+{
+ 
+    background-color: #1e272e;
+    
+    border-color: #1e272e;
+   
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="Ressources.qrc">
+          <normaloff>:/new/images/images/Image4.png</normaloff>:/new/images/images/Image4.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>80</width>
+          <height>80</height>
          </size>
         </property>
        </widget>

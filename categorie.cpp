@@ -3,6 +3,7 @@
 #include "categorie_impl.h"
 #include "mainwindow.h"
 #include <QMessageBox>
+#include <QMediaPlayer>
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
@@ -35,6 +36,9 @@ void MainWindow::on_Ajouter_categorie_clicked()
         Categorie_Impl cat ;
         cat.ajouter(nom);
            ui->tableView_categorie->setModel(cat.afficher());
+           QMediaPlayer * music = new QMediaPlayer();
+           music->setMedia(QUrl("qrc:/sounds/ajout.mp3"));
+           music->play();
     }
 
 
@@ -45,6 +49,9 @@ void MainWindow::on_Supprimer_categorie_clicked()
     Categorie_Impl cat ;
     cat.supprimer()->removeRow(ui->tableView_categorie->currentIndex().row());
       ui->tableView_categorie->setModel(cat.afficher());
+      QMediaPlayer * music = new QMediaPlayer();
+      music->setMedia(QUrl("qrc:/sounds/supprime.mp3"));
+      music->play();
 
 }
 

@@ -46,6 +46,7 @@
 
 #include "reservation.h"
 
+#include <QMediaPlayer>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -109,6 +110,10 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(timer, SIGNAL(timeout()),this,SLOT(myfunction()));
     timer->start(1000);
 
+    //livraison
+    ui->tab_livreur->setModel(L.afficher());
+    ui->tab_livraison->setModel(liv.afficher());
+
     //reservation
     timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()),this,SLOT(myfunction_reservation()));
@@ -143,6 +148,7 @@ void MainWindow::on_gestio_tables_clicked()
 {
 
        ui->stackedWidget->setCurrentIndex(9);
+
 }
 
 
@@ -151,6 +157,7 @@ void MainWindow::on_pushButton_acceuil_clicked()
 {
 
     ui->stackedWidget->setCurrentIndex(5);
+
 }
 
 void MainWindow::on_menu_clicked()
@@ -166,35 +173,34 @@ void MainWindow::on_gestion_personnel_clicked()
 {
 
     ui->stackedWidget->setCurrentIndex(6);
+
 }
 
 void MainWindow::on_gestion_livraison_clicked()
 {
   ui->stackedWidget->setCurrentIndex(7);
+
 }
 
 void MainWindow::on_gestion_article_clicked()
 {
-   /* hide();
-       articles *m = new articles();
-       m->show();*/
+
        ui->stackedWidget->setCurrentIndex(2);
+
 }
 
 void MainWindow::on_gestion_fournisseur_clicked()
 {
-   /* hide();
-    Fournisseur *m = new Fournisseur();
-    m->show();*/
+
     ui->stackedWidget->setCurrentIndex(3);
+
 }
 
 void MainWindow::on_gestion_categorie_clicked()
 {
-   /* hide();
-        Categorie *m = new Categorie();
-        m->show();*/
+
          ui->stackedWidget->setCurrentIndex(4);
+
 }
 
 void MainWindow::on_pushButton_4_clicked()
@@ -248,6 +254,9 @@ if(test)
     ui->le_mdp->setText("");
     mysystem->show();
     mysystem->showMessage(tr("notification"),tr("Ajout effectué avec succés"));
+    QMediaPlayer * music = new QMediaPlayer();
+    music->setMedia(QUrl("qrc:/sounds/ajout.mp3"));
+    music->play();
 
 }
 else
@@ -280,6 +289,9 @@ void MainWindow::on_supprimer_pb_clicked()
                 QMessageBox::information(nullptr,QObject::tr("OK"),
                                          QObject::tr("suppression succful .\n"),
                         QMessageBox::Cancel);
+                QMediaPlayer * music = new QMediaPlayer();
+                music->setMedia(QUrl("qrc:/sounds/supprime.mp3"));
+                music->play();
             }
 
             else
@@ -305,6 +317,9 @@ void MainWindow::on_Ajouter_absence_clicked()
        //ui->id_absence->setText("");
        mysystem->show();
        mysystem->showMessage(tr("notification"),tr("Ajout effectué avec succés"));
+       QMediaPlayer * music = new QMediaPlayer();
+       music->setMedia(QUrl("qrc:/sounds/ajout.mp3"));
+       music->play();
    }
    else
        QMessageBox::critical(nullptr,QObject::tr("Not OK"),
@@ -323,6 +338,9 @@ void MainWindow::on_Supprimer_absence_clicked()
               ui->comboBox_id3->setModel(A.afficher_ID());
               mysystem->show();
               mysystem->showMessage(tr("notification"),tr("suppression effectuée avec succés"));
+              QMediaPlayer * music = new QMediaPlayer();
+              music->setMedia(QUrl("qrc:/sounds/supprime.mp3"));
+              music->play();
         }
 
         else
@@ -399,6 +417,9 @@ void MainWindow::on_ajouter_livreur_clicked()
     { QMessageBox::information(nullptr,QObject::tr("OK"),
                 QObject::tr("Ajout effectué"), QMessageBox::Cancel);
         ui->tab_livreur->setModel(L.afficher());
+        QMediaPlayer * music = new QMediaPlayer();
+        music->setMedia(QUrl("qrc:/sounds/ajout.mp3"));
+        music->play();
     }
     else
         QMessageBox::critical(nullptr,QObject::tr("Not OK"),
@@ -417,6 +438,9 @@ void MainWindow::on_pushButton_12_clicked()
                {
                 msgBox.setText("Suppression avec succes.");
                 ui->tab_livreur->setModel(L.afficher());
+                QMediaPlayer * music = new QMediaPlayer();
+                music->setMedia(QUrl("qrc:/sounds/supprime.mp3"));
+                music->play();
                 }
             else
                { msgBox.setText("Echec de suppression");
@@ -437,6 +461,9 @@ void MainWindow::on_pushButton_11_clicked()
         if(test)
           {  msgBox.setText("Modifier avec succes.");
              ui->tab_livreur->setModel(L.afficher());
+             QMediaPlayer * music = new QMediaPlayer();
+             music->setMedia(QUrl("qrc:/sounds/modifie.mp3"));
+             music->play();
           }
         else
            { msgBox.setText("Echec de modification");
@@ -478,6 +505,9 @@ void MainWindow::on_pushButton_5_clicked()
     { QMessageBox::information(nullptr,QObject::tr("OK"),
                 QObject::tr("Ajout effectué"), QMessageBox::Cancel);
         ui->tab_livraison->setModel(L.afficher());
+        QMediaPlayer * music = new QMediaPlayer();
+        music->setMedia(QUrl("qrc:/sounds/ajout.mp3"));
+        music->play();
     }
     else
         QMessageBox::critical(nullptr,QObject::tr("Not OK"),
@@ -502,6 +532,9 @@ void MainWindow::on_pushButton_8_clicked()
         if(test)
           {  msgBox.setText("Modifier avec succes.");
              ui->tab_livraison->setModel(L.afficher());
+             QMediaPlayer * music = new QMediaPlayer();
+             music->setMedia(QUrl("qrc:/sounds/modifie.mp3"));
+             music->play();
           }
         else
            { msgBox.setText("Echec de modification");
@@ -522,6 +555,9 @@ void MainWindow::on_pushButton_7_clicked()
                {
                 msgBox.setText("Suppression avec succes.");
                 ui->tab_livraison->setModel(liv.afficher());
+                QMediaPlayer * music = new QMediaPlayer();
+                music->setMedia(QUrl("qrc:/sounds/supprime.mp3"));
+                music->play();
                 }
             else
                { msgBox.setText("Echec de suppression");
@@ -549,4 +585,5 @@ void MainWindow::on_Retour_6_clicked()
 {
     ui->stackedWidget->setCurrentIndex(0);
 }
+
 
