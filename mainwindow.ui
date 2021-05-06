@@ -116,7 +116,7 @@ QTabBar::tab:selected
      <string>Categorie</string>
     </property>
     <property name="icon">
-     <iconset resource="Ressource.qrc">
+     <iconset>
       <normaloff>:/new/prefix1/attachments (4)/reservation.png</normaloff>:/new/prefix1/attachments (4)/reservation.png</iconset>
     </property>
    </widget>
@@ -222,7 +222,7 @@ QTabBar::tab:selected
      <string>Fournisseur</string>
     </property>
     <property name="icon">
-     <iconset resource="Ressource.qrc">
+     <iconset>
       <normaloff>:/new/prefix1/attachments (4)/stock.png</normaloff>:/new/prefix1/attachments (4)/stock.png</iconset>
     </property>
    </widget>
@@ -328,7 +328,7 @@ QTabBar::tab:selected
      <string>Article</string>
     </property>
     <property name="icon">
-     <iconset resource="Ressource.qrc">
+     <iconset>
       <normaloff>:/new/prefix1/attachments (4)/stock.png</normaloff>:/new/prefix1/attachments (4)/stock.png</iconset>
     </property>
    </widget>
@@ -345,8 +345,6 @@ QTabBar::tab:selected
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources>
-  <include location="Ressource.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

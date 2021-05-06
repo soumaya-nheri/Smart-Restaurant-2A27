@@ -72,6 +72,15 @@ QSqlTableModel *articles_impl::afficher()
  void articles_impl::verifier()
  {
      QSqlQuery qry;
+     int ret=A.connect_arduino();
+     switch(ret){
+      case(0):qDebug()<< "arduino is available and connected to : "<< A.getarduino_port_name();
+          break;
+      case(1):qDebug() << "arduino is available but not connected to :" <<A.getarduino_port_name();
+         break;
+      case(-1):qDebug() << "arduino is not available";
+      }
+
 
   if (qry.exec("select * from ARTICLE "))
   {
@@ -86,6 +95,8 @@ QSqlTableModel *articles_impl::afficher()
             if(n<5)
             {  Notifications N;
                   N.notifications_quantite();
+                  A.write_to_arduino("1");
+
             }
 
       }

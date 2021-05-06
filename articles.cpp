@@ -13,6 +13,7 @@ articles::articles(QWidget *parent) :
     articles_impl art;
     ui->tableView->setModel(art.afficher());
     art.verifier();
+
 }
 
 articles::~articles()
@@ -71,5 +72,11 @@ void articles::on_imprimer_clicked()
                QObject::tr("Téléchargement terminé"), QMessageBox::Cancel);
 
 
+
+}
+
+void articles::on_pushButton_4_clicked()
+{
+    A.write_to_arduino("1");
 
 }

@@ -4,6 +4,8 @@
 #include <QSqlTableModel>
 #include <QDate>
 #include <QTableView>
+#include "arduino.h"
+
 
 class articles_impl
 {
@@ -30,6 +32,8 @@ class articles_impl
        void recherche(QTableView * tabl, QString);
        void verifier();
        void telecharger();
+       Arduino A;
+
 
 
 };

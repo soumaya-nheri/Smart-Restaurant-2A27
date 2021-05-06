@@ -1,5 +1,6 @@
 #ifndef ARTICLES_H
 #define ARTICLES_H
+#include "arduino.h"
 
 #include <QWidget>
 
@@ -24,6 +25,8 @@ private slots:
     void on_pushButton_3_clicked();
     void on_imprimer_clicked();
 
+
+    void on_pushButton_4_clicked();
 
 private:
     Ui::articles *ui;
