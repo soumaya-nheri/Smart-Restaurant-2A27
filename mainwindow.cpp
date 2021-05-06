@@ -242,8 +242,8 @@ void MainWindow::on_pb_ajouter_clicked()
         }
    else{ bool test=P.ajouter();
 if(test)
-{ QMessageBox::information(nullptr,QObject::tr("OK"),
-            QObject::tr("Ajout effectué"), QMessageBox::Cancel);
+{ /*QMessageBox::information(nullptr,QObject::tr("OK"),
+            QObject::tr("Ajout effectué"), QMessageBox::Cancel);*/
     ui->tab_personnel->setModel(P.afficher());
     ui->comboBox_supp->setModel(P.afficher_CIN());
     ui->comboBox_nom->setModel(P.afficher_NOM());
@@ -286,9 +286,9 @@ void MainWindow::on_supprimer_pb_clicked()
         bool test=P.supprimer(ui->comboBox_supp->currentText());
         if(test)
         {ui->tab_personnel->setModel(P.afficher());
-                QMessageBox::information(nullptr,QObject::tr("OK"),
+                /*QMessageBox::information(nullptr,QObject::tr("OK"),
                                          QObject::tr("suppression succful .\n"),
-                        QMessageBox::Cancel);
+                        QMessageBox::Cancel);*/
                 QMediaPlayer * music = new QMediaPlayer();
                 music->setMedia(QUrl("qrc:/sounds/supprime.mp3"));
                 music->play();
@@ -310,8 +310,8 @@ void MainWindow::on_Ajouter_absence_clicked()
     Absence A(ui->id_absence->text().toInt(),ui->comboBox_nom->currentText(),ui->comboBox_motif->currentText(),ui->date->text());
    bool test= A.ajouterAB();
    if(test)
-   { QMessageBox::information(nullptr,QObject::tr("OK"),
-               QObject::tr("Ajout effectué"), QMessageBox::Cancel);
+   { /*QMessageBox::information(nullptr,QObject::tr("OK"),
+               QObject::tr("Ajout effectué"), QMessageBox::Cancel);*/
        ui->tab_absence->setModel(A.afficher());
        ui->comboBox_id3->setModel(A.afficher_ID());
        //ui->id_absence->setText("");
@@ -332,9 +332,9 @@ void MainWindow::on_Supprimer_absence_clicked()
     bool test=A.supprimerAB(ui->comboBox_id3->currentText().toInt());
     if(test)
     {ui->tab_absence->setModel(A.afficher());
-            QMessageBox::information(nullptr,QObject::tr("ok"),
+            /*QMessageBox::information(nullptr,QObject::tr("ok"),
                                      QObject::tr("suppression succful .\n"),
-                    QMessageBox::Cancel);
+                    QMessageBox::Cancel);*/
               ui->comboBox_id3->setModel(A.afficher_ID());
               mysystem->show();
               mysystem->showMessage(tr("notification"),tr("suppression effectuée avec succés"));
