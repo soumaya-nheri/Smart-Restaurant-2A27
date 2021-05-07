@@ -13,7 +13,7 @@ db.setDatabaseName("pro");//inserer le nom de la source de données ODBC
 db.setUserName("mohamed");//inserer nom de l'utilisateur
 db.setPassword("mohamed");//inserer mot de passe de cet utilisateur
 
-
+/*aaaaaa*/
 /*db.setDatabaseName("Projet_2A");//inserer le nom de la source de données ODBC
 db.setUserName("ahmed");//inserer nom de l'utilisateur
 db.setPassword("ahmed");//inserer mot de passe de cet utilisateur*/
