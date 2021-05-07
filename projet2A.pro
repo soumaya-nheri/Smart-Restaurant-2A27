@@ -39,7 +39,6 @@ SOURCES += \
     reservation.cpp \
     stat_article.cpp \
     stat_commande.cpp \
-    statistique.cpp \
     table.cpp
 
 HEADERS += \
@@ -69,19 +68,10 @@ HEADERS += \
     reservation.h \
     stat_article.h \
     stat_commande.h \
-    statistique.h \
     table.h
 
 FORMS += \
-    article2.ui \
-    articles.ui \
-    categorie.ui \
-    fournisseur.ui \
-    gestion_livraison.ui \
-    gestion_personnel.ui \
-    login.ui \
     mainwindow.ui \
-    menu.ui \
     stat_article.ui \
     stat_commande.ui
 

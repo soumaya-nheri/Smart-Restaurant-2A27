@@ -122,12 +122,14 @@ private slots:
     void on_retour_3_reservation_clicked();
     void on_retour_4_reservation_clicked();
     void on_pushButton_13_reservation_clicked();
-    void on_label_linkActivated(const QString &link);
+    /*void on_label_linkActivated(const QString &link);*/
 
 
 
 
     void on_statistique_article_clicked();
+
+    void on_pushButton_13_reservation_2_clicked();
 
 private:
     Ui::MainWindow *ui;

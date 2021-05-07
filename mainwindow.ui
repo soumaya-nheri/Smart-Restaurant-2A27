@@ -492,7 +492,7 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
      <string notr="true">color:white;</string>
     </property>
     <property name="currentIndex">
-     <number>8</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="acceuil">
      <widget class="QPushButton" name="gestion_personnel">
@@ -1918,7 +1918,7 @@ QTabBar::tab:selected
        <string notr="true"/>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="Ajouter_2">
        <attribute name="title">
@@ -2389,6 +2389,19 @@ QTableView QTableCornerButton::section {
          </size>
         </property>
        </widget>
+       <widget class="QPushButton" name="pushButton_13_reservation_2">
+        <property name="geometry">
+         <rect>
+          <x>690</x>
+          <y>130</y>
+          <width>101</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Telecharger</string>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="Modifier_2">
        <attribute name="title">
@@ -2691,7 +2704,7 @@ QHeaderView::section {
          <string>Retour</string>
         </property>
         <property name="icon">
-         <iconset>
+         <iconset resource="images.qrc">
           <normaloff>:/images/return.png</normaloff>:/images/return.png</iconset>
         </property>
         <property name="iconSize">
@@ -2765,7 +2778,7 @@ QHeaderView::section {
          <string>Retour</string>
         </property>
         <property name="icon">
-         <iconset>
+         <iconset resource="images.qrc">
           <normaloff>:/images/return.png</normaloff>:/images/return.png</iconset>
         </property>
         <property name="iconSize">
@@ -4861,7 +4874,7 @@ QHeaderView::section {
          <string>Supprimer</string>
         </property>
         <property name="icon">
-         <iconset>
+         <iconset resource="images.qrc">
           <normaloff>:/images/delete.png</normaloff>:/images/delete.png</iconset>
         </property>
         <property name="iconSize">
@@ -5016,7 +5029,7 @@ QHeaderView::section {
          <string>Retour</string>
         </property>
         <property name="icon">
-         <iconset>
+         <iconset resource="images.qrc">
           <normaloff>:/images/return.png</normaloff>:/images/return.png</iconset>
         </property>
         <property name="iconSize">
@@ -5307,7 +5320,7 @@ QHeaderView::section {
      <x>0</x>
      <y>0</y>
      <width>1155</width>
-     <height>26</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>
@@ -5323,6 +5336,7 @@ QHeaderView::section {
   </customwidget>
  </customwidgets>
  <resources>
+  <include location="images.qrc"/>
   <include location="Ressources.qrc"/>
  </resources>
  <connections/>
