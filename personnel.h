@@ -8,7 +8,8 @@
 class Personnel
 {
 public:
-    Personnel();
+//test   
+Personnel();
     Personnel(QString,QString,QString,QString,QString,QString);
     QString getcin();
     QString gettel();
